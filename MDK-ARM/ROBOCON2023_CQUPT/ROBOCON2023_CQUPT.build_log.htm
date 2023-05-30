@@ -1,0 +1,80 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: dd Administrator, ¶Ô, LIC=D0D7S-LCPXD-QDUKD-8MQBA-0NQ0S-FAAYZ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\Compiler_5.06u7\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      CMSIS_AGDI.dll V1.33.12.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+C:\Users\Administrator\Desktop\ER\MDK-ARM\ROBOCON2023_CQUPT.uvprojx
+Project File Date:  05/02/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\Compiler_5.06u7\Bin'
+Build target 'ROBOCON2023_CQUPT'
+compiling solenoid_task.c...
+..\Task\solenoid_task.h(44): warning:  #1295-D: Deprecated declaration Solenoid_End - give arg types
+  void Solenoid_End();
+..\Task\solenoid_task.h(45): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Task\solenoid_task.c(161): warning:  #111-D: statement is unreachable
+  	osDelay(10);
+..\Task\solenoid_task.c(245): warning:  #940-D: missing return statement at end of non-void function "Solenoid_Start_Fetch_ring" 
+  }
+..\Task\solenoid_task.c(251): warning:  #940-D: missing return statement at end of non-void function "Solenoid_Start_Lift_ring" 
+  }
+..\Task\solenoid_task.c(257): warning:  #940-D: missing return statement at end of non-void function "Solenoid_Start_Push_ring" 
+  }
+..\Task\solenoid_task.c(264): warning:  #1-D: last line of file ends without a newline
+  }
+..\Task\solenoid_task.c(264): warning:  #940-D: missing return statement at end of non-void function "Solenoid_Start_Shot_ring" 
+  }
+..\Task\solenoid_task.c(19): warning:  #550-D: variable "state"  was set but never used
+  static Solenoid_State_e state;
+..\Task\solenoid_task.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=45812 RO-data=3176 RW-data=392 ZI-data=25256  
+FromELF: creating hex file...
+"ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf" - 0 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_ROBOCON2023_CQUPT
+  C:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

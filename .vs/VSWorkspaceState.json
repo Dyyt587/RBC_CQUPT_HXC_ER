@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Core",
+    "\\Hardware",
+    "\\Middlewares",
+    "\\Middlewares\\Third_Party",
+    "\\Middlewares\\Third_Party\\LetterShell",
+    "\\Middlewares\\Third_Party\\LetterShell\\src"
+  ],
+  "SelectedNode": "\\Middlewares\\Third_Party\\LetterShell\\src\\shell_cmd_list.c",
+  "PreviewInSolutionExplorer": false
+}
