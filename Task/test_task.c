@@ -16,6 +16,7 @@
 #include "commend.h"
 #include <stdarg.h>
 #include <stdlib.h>
+#include "log.h"
 		#define _SET_TRIPOD_HEAD_ICURRENT(xx) do{set_motor_A(&hcan2,0,xx,0,0);}while(0)
 		//#define _GET_ANGLE_DEGREE() ((float)get_total_angle(&motor_can2[1])*3.14f/18000.0f)
 		//#define _GET_ANGLE_DEGREE() ((float)get_total_angle(&motor_can2[1])/819200.0f)
@@ -55,7 +56,7 @@ void test_task(void const * argument)
 		if(rc.ch12==1)//通道12为发射机构加速和发射
 		{
 			float data = ((float)rc.ch16+672)*50;
-			printf("fdata %f\r\n",data);
+			logError("fdata %f\r\n",data);
 			//在2000-4000之间
 //			float data = ((float)rc.ch16+500)/1000*2000+2000;
 //			if(data>4000)data=4000;

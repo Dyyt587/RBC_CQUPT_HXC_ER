@@ -69,3 +69,4 @@ robocon2023_cqupt\test_task.o: ../Middlewares/Third_Party/LetterShell/src/shell_
 robocon2023_cqupt\test_task.o: ../Middlewares/Third_Party/LetterShell/src/commend.h
 robocon2023_cqupt\test_task.o: C:\Keil_v5\ARM\Compiler_5.06u7\Bin\..\include\stdarg.h
 robocon2023_cqupt\test_task.o: C:\Keil_v5\ARM\Compiler_5.06u7\Bin\..\include\stdlib.h
+robocon2023_cqupt\test_task.o: ../Middlewares/Third_Party/LetterShell/extensions/log/log.h
