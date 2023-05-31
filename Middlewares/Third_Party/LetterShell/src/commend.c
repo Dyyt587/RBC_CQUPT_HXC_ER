@@ -222,6 +222,8 @@ void var_arr_register(void *var,const char* name, var_type_e type,int size)
                 var_register(&((char*)var)[i],name1,type);
             }
             break;
+			
+			
         //case _8:
         //    logInfo("%s is %d", _var->name, *(unsigned char*)_var->body);
 
