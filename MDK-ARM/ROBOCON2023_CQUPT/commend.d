@@ -47,3 +47,4 @@ robocon2023_cqupt\commend.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/
 robocon2023_cqupt\commend.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 robocon2023_cqupt\commend.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
 robocon2023_cqupt\commend.o: ../Control/pid.h
+robocon2023_cqupt\commend.o: ../Middlewares/Third_Party/LetterShell/extensions/log/log.h

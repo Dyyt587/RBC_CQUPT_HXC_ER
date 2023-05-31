@@ -11,6 +11,7 @@
 #include "commend.h"
 #include "shell.h"
 #include "pid.h"
+#include "log.h"
 
 var_list_t var_list;
 var_list_t* _var_begin = 0;
@@ -68,13 +69,13 @@ void var(int argc, char** argv)
     var_list_t* _var = _var_begin;
     var_list_t* _var_second=0;
     int is_assign=0;
-    //printf("var enter\r\n",0);
+    //logInfo("var enter\r\n",0);
     if(argc==1)
     {
-        printf("\r\n");
+        logInfo("\r\n");
        while (_var)
        {
-                printf("\t-- %s \r\n", _var->name);
+                logInfo("\t-- %s \r\n", _var->name);
               _var = _var->next;
 
        }
@@ -83,7 +84,7 @@ void var(int argc, char** argv)
     }
 
     if (argc > 4) {
-        printf("paramer error\r\n");
+        logInfo("paramer error\r\n");
         return;
     }
 
@@ -91,7 +92,7 @@ void var(int argc, char** argv)
 
         while (_var)
         {
-            printf("\t--%s \r\n", _var->name);
+            logInfo("\t--%s \r\n", _var->name);
             _var = _var->next;
 
         }
@@ -104,7 +105,7 @@ void var(int argc, char** argv)
         _var = _var->next;
         if (_var == 0)
         {
-            printf("There's no variable here\r\n");
+            logInfo("There's no variable here\r\n");
             return;
         }//未找到变量
     }//已经找到变量
@@ -119,7 +120,7 @@ void var(int argc, char** argv)
                         _var_second = _var_second->next;
                         if (_var_second == 0)
                         {
-                            printf("There's no variable here(var tow)\r\n");
+                            logInfo("There's no variable here(var tow)\r\n");
                             return;
                         }//未找到变量
                     }//已经找到变量
@@ -140,10 +141,10 @@ void var(int argc, char** argv)
         }else if(is_assign==1){
             *(char*)_var->body = *(char*)_var_second->body;
         }
-        printf("%s is %d\r\n", _var->name, *(char*)_var->body);
+        logInfo("%s is %d\r\n", _var->name, *(char*)_var->body);
         break;
     //case _8:
-    //    printf("%s is %d", _var->name, *(unsigned char*)_var->body);
+    //    logInfo("%s is %d", _var->name, *(unsigned char*)_var->body);
 
     //    break;
     case _16:
@@ -152,26 +153,26 @@ void var(int argc, char** argv)
         }else if(is_assign==1){
             *(short*)_var->body = *(short*)_var_second->body;
         }
-        printf("%s is %d\r\n", _var->name, *(short*)_var->body);
+        logInfo("%s is %d\r\n", _var->name, *(short*)_var->body);
 
         break;
     //case _u16:
-    //    printf("%s is %d", _var->name, *( unsigned short*)_var->body);
+    //    logInfo("%s is %d", _var->name, *( unsigned short*)_var->body);
 
     //    break;
     case _32:
         if(argc == 3&& is_assign==0){
             *(int*)_var->body = atoi(argv[2]);
         }else if(is_assign==1){
-            //printf("test\r\n",0);
+            //logInfo("test\r\n",0);
 
             *(int*)_var->body = *(int*)_var_second->body;
         }
-        printf("%s is %d\r\n", _var->name, *(int*)_var->body);
+        logInfo("%s is %d\r\n", _var->name, *(int*)_var->body);
 
         break;
     //case _u32:
-    //    printf("%s is %d", _var->name, *(unsigned int*)_var->body);
+    //    logInfo("%s is %d", _var->name, *(unsigned int*)_var->body);
     //    break;
     case _64:
         if(argc == 3&& is_assign==0){
@@ -179,11 +180,11 @@ void var(int argc, char** argv)
         }else if(is_assign==1){
             *(long long*)_var->body = *(long long*)_var_second->body;
         }
-        printf("%s is %d\r\n", _var->name, *(long long*)_var->body);
+        logInfo("%s is %d\r\n", _var->name, *(long long*)_var->body);
 
         break;
     //case _u64:
-    //    printf("%s is %d", _var->name, *(unsigned long long*)_var->body);
+    //    logInfo("%s is %d", _var->name, *(unsigned long long*)_var->body);
 
     //    break;
     case _f:
@@ -192,7 +193,7 @@ void var(int argc, char** argv)
         }else if(is_assign==1){
             *(float*)_var->body = *(float*)_var_second->body;
         }
-        printf("%s is %f\r\n", _var->name, *(float*)_var->body);
+        logInfo("%s is %f\r\n", _var->name, *(float*)_var->body);
 
         break;
     case _lf:
@@ -201,7 +202,7 @@ void var(int argc, char** argv)
         }else if(is_assign==1){
             *(double*)_var->body = *(double*)_var_second->body;
         }
-        printf("%s is %lf\r\n", _var->name, *(double*)_var->body);
+        logInfo("%s is %lf\r\n", _var->name, *(double*)_var->body);
 
         break;
     default:
@@ -222,7 +223,7 @@ void var_arr_register(void *var,const char* name, var_type_e type,int size)
             }
             break;
         //case _8:
-        //    printf("%s is %d", _var->name, *(unsigned char*)_var->body);
+        //    logInfo("%s is %d", _var->name, *(unsigned char*)_var->body);
 
         //    break;
         case _16:
@@ -232,7 +233,7 @@ void var_arr_register(void *var,const char* name, var_type_e type,int size)
             }
             break;
         //case _u16:
-        //    printf("%s is %d", _var->name, *( unsigned short*)_var->body);
+        //    logInfo("%s is %d", _var->name, *( unsigned short*)_var->body);
 
         //    break;
         case _32:
@@ -242,7 +243,7 @@ void var_arr_register(void *var,const char* name, var_type_e type,int size)
             }
             break;
         //case _u32:
-        //    printf("%s is %d", _var->name, *(unsigned int*)_var->body);
+        //    logInfo("%s is %d", _var->name, *(unsigned int*)_var->body);
         //    break;
         case _64:
             for(int i=0;i<size;++i){
@@ -251,7 +252,7 @@ void var_arr_register(void *var,const char* name, var_type_e type,int size)
             }
             break;
         //case _u64:
-        //    printf("%s is %d", _var->name, *(unsigned long long*)_var->body);
+        //    logInfo("%s is %d", _var->name, *(unsigned long long*)_var->body);
 
         //    break;
         case _f:
