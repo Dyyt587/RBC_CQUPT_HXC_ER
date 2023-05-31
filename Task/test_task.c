@@ -40,6 +40,8 @@ void test_task(void const * argument)
 
 	while(1)
 	{
+//printf("fdata \r\n");
+
 //		Test_AS5048();
 //vofa_send_protocol("a",&data,1);
 //		target= ((float)rc->ch15)*90.0f/673.f;
@@ -52,7 +54,8 @@ void test_task(void const * argument)
 		//vesc_set_rmp(5000);
 		if(rc.ch12==1)//通道12为发射机构加速和发射
 		{
-			float data = ((float)rc.ch16+500)/1000*2000;
+			float data = ((float)rc.ch16+672)*40;
+			printf("fdata %f\r\n",data);
 			//在2000-4000之间
 //			float data = ((float)rc.ch16+500)/1000*2000+2000;
 //			if(data>4000)data=4000;
@@ -60,6 +63,7 @@ void test_task(void const * argument)
 //			TIM8 ->CCR3 = data;
 //			TIM8 ->CCR4 = data;
 			vesc_set_rmp(data);	
+			//vesc_set_rmp(2000);	
 //			time_count++;
 //			if(time_count == 100)
 //			{

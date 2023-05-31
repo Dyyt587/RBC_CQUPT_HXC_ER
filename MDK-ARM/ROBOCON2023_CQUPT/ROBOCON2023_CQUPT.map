@@ -1493,6 +1493,8 @@ Section Cross References
     bsp_vesc.o(i.vesc_set_point) refers to bsp_vesc.o(.data) for .data
     bsp_vesc.o(i.vesc_set_rmp) refers to buffer.o(i.buffer_append_int32) for buffer_append_int32
     bsp_vesc.o(i.vesc_set_rmp) refers to bldc_interface.o(.data) for send_func
+    bsp_vesc.o(i.vesc_smooth_set_vel) refers to bsp_vesc.o(i.vesc_set_rmp) for vesc_set_rmp
+    bsp_vesc.o(i.vesc_smooth_set_vel) refers to cmsis_os.o(i.osDelay) for osDelay
     chassis_behaviour.o(i.chassis_behaviour_control_set) refers to chassis_behaviour.o(.data) for .data
     chassis_behaviour.o(i.chassis_behaviour_mode_set) refers to chassis_behaviour.o(.data) for .data
     chassis_task.o(i.chassis_control_loop) refers to chassis_task.o(i.chassis_set_kinematics) for chassis_set_kinematics
@@ -1555,6 +1557,8 @@ Section Cross References
     test_task.o(i.test_task) refers to bsp_vesc.o(i.vesc_init) for vesc_init
     test_task.o(i.test_task) refers to bsp_vesc.o(i.vesc_set_point) for vesc_set_point
     test_task.o(i.test_task) refers to pid.o(i.PID_struct_init) for PID_struct_init
+    test_task.o(i.test_task) refers to f2d.o(.text) for __aeabi_f2d
+    test_task.o(i.test_task) refers to printfa.o(i.__0printf) for __2printf
     test_task.o(i.test_task) refers to bsp_vesc.o(i.vesc_set_rmp) for vesc_set_rmp
     test_task.o(i.test_task) refers to bsp_can.o(i.get_total_angle) for get_total_angle
     test_task.o(i.test_task) refers to pid.o(i.pid_calc) for pid_calc
@@ -1604,6 +1608,7 @@ Section Cross References
     solenoid_task.o(i._IS_READY_SHOT) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_ReadPin) for HAL_GPIO_ReadPin
     solenoid_task.o(i._IS_READY_SHOT) refers to printfa.o(i.__0printf) for __2printf
     solenoid_task.o(i.solenoid_task) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    solenoid_task.o(i.solenoid_task) refers to cmsis_os.o(i.osDelay) for osDelay
     solenoid_task.o(i.solenoid_task) refers to solenoid_task.o(i.Solenoid_Reset) for Solenoid_Reset
     solenoid_task.o(i.solenoid_task) refers to solenoid_task.o(i.Fetch_ring) for Fetch_ring
     solenoid_task.o(i.solenoid_task) refers to bsp_sbus.o(.bss) for rc
@@ -2982,6 +2987,7 @@ Removing Unused input sections from the image.
     Removing bsp_vesc.o(.rev16_text), (4 bytes).
     Removing bsp_vesc.o(.revsh_text), (4 bytes).
     Removing bsp_vesc.o(.rrx_text), (6 bytes).
+    Removing bsp_vesc.o(i.vesc_smooth_set_vel), (38 bytes).
     Removing bsp_vesc.o(.data), (1 bytes).
     Removing chassis_behaviour.o(.rev16_text), (4 bytes).
     Removing chassis_behaviour.o(.revsh_text), (4 bytes).
@@ -3094,7 +3100,7 @@ Removing Unused input sections from the image.
     Removing fpstat.o(.text), (4 bytes).
     Removing bsp_as5048.o(i.GET_AS5048A_ANGLE), (56 bytes).
 
-813 unused section(s) (total 53662 bytes) removed from the image.
+814 unused section(s) (total 53700 bytes) removed from the image.
 
 ==============================================================================
 
@@ -3774,125 +3780,123 @@ Image Symbol Table
     shellWriteReturnValue                    0x0800a261   Thumb Code    92  shell.o(i.shellWriteReturnValue)
     i.shellWriteString                       0x0800a2e0   Section        0  shell.o(i.shellWriteString)
     i.solenoid_task                          0x0800a304   Section        0  solenoid_task.o(i.solenoid_task)
-    i.sqrt                                   0x0800a3cc   Section        0  sqrt.o(i.sqrt)
-    i.sw_judge                               0x0800a43a   Section        0  bsp_sbus.o(i.sw_judge)
-    i.test_task                              0x0800a4fc   Section        0  test_task.o(i.test_task)
-    i.uartLogWrite                           0x0800a644   Section        0  shell_port.o(i.uartLogWrite)
-    i.uart_receive_handler                   0x0800a65c   Section        0  bsp_sbus.o(i.uart_receive_handler)
-    i.userShellInit                          0x0800a6bc   Section        0  shell_port.o(i.userShellInit)
-    i.userShellLock                          0x0800a788   Section        0  shell_port.o(i.userShellLock)
-    i.userShellRead                          0x0800a78c   Section        0  shell_port.o(i.userShellRead)
-    i.userShellUnlock                        0x0800a7ac   Section        0  shell_port.o(i.userShellUnlock)
-    i.userShellWrite                         0x0800a7b0   Section        0  shell_port.o(i.userShellWrite)
-    i.uxListRemove                           0x0800a7cc   Section        0  list.o(i.uxListRemove)
-    i.vApplicationGetIdleTaskMemory          0x0800a7f4   Section        0  freertos.o(i.vApplicationGetIdleTaskMemory)
-    i.vListInitialise                        0x0800a808   Section        0  list.o(i.vListInitialise)
-    i.vListInitialiseItem                    0x0800a81e   Section        0  list.o(i.vListInitialiseItem)
-    i.vListInsert                            0x0800a824   Section        0  list.o(i.vListInsert)
-    i.vListInsertEnd                         0x0800a854   Section        0  list.o(i.vListInsertEnd)
-    i.vPortEnterCritical                     0x0800a86c   Section        0  port.o(i.vPortEnterCritical)
-    i.vPortExitCritical                      0x0800a8ac   Section        0  port.o(i.vPortExitCritical)
-    i.vPortFree                              0x0800a8d4   Section        0  heap_4.o(i.vPortFree)
-    i.vPortSetupTimerInterrupt               0x0800a938   Section        0  port.o(i.vPortSetupTimerInterrupt)
-    i.vTaskDelay                             0x0800a95c   Section        0  tasks.o(i.vTaskDelay)
-    i.vTaskInternalSetTimeOutState           0x0800a9a8   Section        0  tasks.o(i.vTaskInternalSetTimeOutState)
-    i.vTaskMissedYield                       0x0800a9b8   Section        0  tasks.o(i.vTaskMissedYield)
-    i.vTaskPlaceOnEventList                  0x0800a9c4   Section        0  tasks.o(i.vTaskPlaceOnEventList)
-    i.vTaskStartScheduler                    0x0800a9f4   Section        0  tasks.o(i.vTaskStartScheduler)
-    i.vTaskSuspendAll                        0x0800aa60   Section        0  tasks.o(i.vTaskSuspendAll)
-    i.vTaskSwitchContext                     0x0800aa70   Section        0  tasks.o(i.vTaskSwitchContext)
-    i.var                                    0x0800aacc   Section        0  commend.o(i.var)
-    i.vesc_init                              0x0800ad30   Section        0  bsp_vesc.o(i.vesc_init)
-    i.vesc_set_point                         0x0800ad60   Section        0  bsp_vesc.o(i.vesc_set_point)
-    i.vesc_set_rmp                           0x0800ad84   Section        0  bsp_vesc.o(i.vesc_set_rmp)
-    i.xPortStartScheduler                    0x0800adb4   Section        0  port.o(i.xPortStartScheduler)
-    i.xQueueCreateMutex                      0x0800aea8   Section        0  queue.o(i.xQueueCreateMutex)
-    i.xQueueCreateMutexStatic                0x0800aebe   Section        0  queue.o(i.xQueueCreateMutexStatic)
-    i.xQueueGenericCreate                    0x0800aed8   Section        0  queue.o(i.xQueueGenericCreate)
-    i.xQueueGenericCreateStatic              0x0800af1a   Section        0  queue.o(i.xQueueGenericCreateStatic)
-    i.xQueueGenericReset                     0x0800af80   Section        0  queue.o(i.xQueueGenericReset)
-    i.xQueueGenericSend                      0x0800b008   Section        0  queue.o(i.xQueueGenericSend)
-    i.xTaskCheckForTimeOut                   0x0800b168   Section        0  tasks.o(i.xTaskCheckForTimeOut)
-    i.xTaskCreate                            0x0800b1dc   Section        0  tasks.o(i.xTaskCreate)
-    i.xTaskCreateStatic                      0x0800b236   Section        0  tasks.o(i.xTaskCreateStatic)
-    i.xTaskGetSchedulerState                 0x0800b28c   Section        0  tasks.o(i.xTaskGetSchedulerState)
-    i.xTaskIncrementTick                     0x0800b2a8   Section        0  tasks.o(i.xTaskIncrementTick)
-    i.xTaskPriorityDisinherit                0x0800b374   Section        0  tasks.o(i.xTaskPriorityDisinherit)
-    i.xTaskRemoveFromEventList               0x0800b40c   Section        0  tasks.o(i.xTaskRemoveFromEventList)
-    i.xTaskResumeAll                         0x0800b480   Section        0  tasks.o(i.xTaskResumeAll)
-    .constdata                               0x0800b544   Section      112  freertos.o(.constdata)
-    .constdata                               0x0800b5b4   Section        8  stm32f4xx_hal_dma.o(.constdata)
-    flagBitshiftOffset                       0x0800b5b4   Data           8  stm32f4xx_hal_dma.o(.constdata)
-    .constdata                               0x0800b5bc   Section       16  system_stm32f4xx.o(.constdata)
-    .constdata                               0x0800b5cc   Section        8  system_stm32f4xx.o(.constdata)
-    .constdata                               0x0800b5d4   Section        7  shell.o(.constdata)
-    .constdata                               0x0800b5db   Section        1  shell.o(.constdata)
-    .constdata                               0x0800b5dc   Section       13  shell.o(.constdata)
-    .constdata                               0x0800b5e9   Section        7  shell.o(.constdata)
-    .constdata                               0x0800b5f0   Section        8  shell.o(.constdata)
-    .constdata                               0x0800b5f8   Section        3  shell.o(.constdata)
-    .constdata                               0x0800b5fb   Section        5  shell.o(.constdata)
-    .constdata                               0x0800b600   Section        6  shell.o(.constdata)
-    .constdata                               0x0800b606   Section        5  shell.o(.constdata)
-    .constdata                               0x0800b60b   Section        4  shell.o(.constdata)
-    .constdata                               0x0800b60f   Section       10  shell.o(.constdata)
-    .constdata                               0x0800b619   Section       10  shell.o(.constdata)
-    .constdata                               0x0800b623   Section        7  shell.o(.constdata)
-    .constdata                               0x0800b62a   Section        6  shell.o(.constdata)
-    .constdata                               0x0800b630   Section        6  shell.o(.constdata)
-    .constdata                               0x0800b636   Section        5  shell.o(.constdata)
-    .constdata                               0x0800b63b   Section       30  shell.o(.constdata)
-    .constdata                               0x0800b659   Section        6  shell.o(.constdata)
-    .constdata                               0x0800b65f   Section       14  shell.o(.constdata)
-    .constdata                               0x0800b66d   Section        5  shell.o(.constdata)
-    .constdata                               0x0800b672   Section       13  shell.o(.constdata)
-    .constdata                               0x0800b67f   Section        5  shell.o(.constdata)
-    .constdata                               0x0800b684   Section       13  shell.o(.constdata)
-    .constdata                               0x0800b691   Section        5  shell.o(.constdata)
-    .constdata                               0x0800b696   Section       13  shell.o(.constdata)
-    .constdata                               0x0800b6a3   Section        6  shell.o(.constdata)
-    .constdata                               0x0800b6a9   Section       14  shell.o(.constdata)
-    .constdata                               0x0800b6b7   Section       12  log.o(.constdata)
-    .constdata                               0x0800b6c3   Section       36  log.o(.constdata)
-    .constdata                               0x0800b6e7   Section        8  log.o(.constdata)
-    .constdata                               0x0800b6ef   Section       32  log.o(.constdata)
-    .constdata                               0x0800b70f   Section       17  log.o(.constdata)
-    .constdata                               0x0800b720   Section       12  log.o(.constdata)
-    __FUNCTION__                             0x0800b720   Data          12  log.o(.constdata)
-    .constdata                               0x0800b72c   Section       14  shell_port.o(.constdata)
-    __FUNCTION__                             0x0800b72c   Data          14  shell_port.o(.constdata)
-    .constdata                               0x0800b73a   Section        4  commend.o(.constdata)
-    .constdata                               0x0800b73e   Section       23  commend.o(.constdata)
-    .constdata                               0x0800b755   Section        3  test_task.o(.constdata)
-    .constdata                               0x0800b758   Section        5  test_task.o(.constdata)
-    .constdata                               0x0800b75d   Section        3  test_task.o(.constdata)
-    .constdata                               0x0800b760   Section        5  test_task.o(.constdata)
-    .constdata                               0x0800b765   Section        3  test_task.o(.constdata)
-    .constdata                               0x0800b768   Section        5  test_task.o(.constdata)
-    .constdata                               0x0800b76d   Section        2  test_task.o(.constdata)
-    .constdata                               0x0800b76f   Section        5  test_task.o(.constdata)
-    .constdata                               0x0800b774   Section      512  crc.o(.constdata)
-    .constdata                               0x0800b978   Section      136  pow.o(.constdata)
-    bp                                       0x0800b978   Data          16  pow.o(.constdata)
-    dp_h                                     0x0800b988   Data          16  pow.o(.constdata)
-    dp_l                                     0x0800b998   Data          16  pow.o(.constdata)
-    L                                        0x0800b9a8   Data          48  pow.o(.constdata)
-    P                                        0x0800b9d8   Data          40  pow.o(.constdata)
-    .constdata                               0x0800ba00   Section      152  atan.o(.constdata)
-    atanhi                                   0x0800ba00   Data          32  atan.o(.constdata)
-    atanlo                                   0x0800ba20   Data          32  atan.o(.constdata)
-    aTodd                                    0x0800ba40   Data          40  atan.o(.constdata)
-    aTeven                                   0x0800ba68   Data          48  atan.o(.constdata)
-    .constdata                               0x0800ba98   Section        8  qnan.o(.constdata)
-    .constdata                               0x0800baa0   Section      129  ctype_o.o(.constdata)
-    .constdata                               0x0800bb24   Section        4  ctype_o.o(.constdata)
-    table                                    0x0800bb24   Data           4  ctype_o.o(.constdata)
-    .conststring                             0x0800bb28   Section       45  freertos.o(.conststring)
-    .conststring                             0x0800bb58   Section      673  shell.o(.conststring)
-    .conststring                             0x0800bdfc   Section       72  log.o(.conststring)
-    shellCommand                             0x0800be64   Section      288  shell.o(shellCommand)
-    __tagsym$$used                           0x0800be64   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x0800be74   Number         0  shell.o(shellCommand)
+    i.sqrt                                   0x0800a3d4   Section        0  sqrt.o(i.sqrt)
+    i.sw_judge                               0x0800a442   Section        0  bsp_sbus.o(i.sw_judge)
+    i.test_task                              0x0800a504   Section        0  test_task.o(i.test_task)
+    i.uartLogWrite                           0x0800a664   Section        0  shell_port.o(i.uartLogWrite)
+    i.uart_receive_handler                   0x0800a67c   Section        0  bsp_sbus.o(i.uart_receive_handler)
+    i.userShellInit                          0x0800a6dc   Section        0  shell_port.o(i.userShellInit)
+    i.userShellLock                          0x0800a7a8   Section        0  shell_port.o(i.userShellLock)
+    i.userShellRead                          0x0800a7ac   Section        0  shell_port.o(i.userShellRead)
+    i.userShellUnlock                        0x0800a7cc   Section        0  shell_port.o(i.userShellUnlock)
+    i.userShellWrite                         0x0800a7d0   Section        0  shell_port.o(i.userShellWrite)
+    i.uxListRemove                           0x0800a7ec   Section        0  list.o(i.uxListRemove)
+    i.vApplicationGetIdleTaskMemory          0x0800a814   Section        0  freertos.o(i.vApplicationGetIdleTaskMemory)
+    i.vListInitialise                        0x0800a828   Section        0  list.o(i.vListInitialise)
+    i.vListInitialiseItem                    0x0800a83e   Section        0  list.o(i.vListInitialiseItem)
+    i.vListInsert                            0x0800a844   Section        0  list.o(i.vListInsert)
+    i.vListInsertEnd                         0x0800a874   Section        0  list.o(i.vListInsertEnd)
+    i.vPortEnterCritical                     0x0800a88c   Section        0  port.o(i.vPortEnterCritical)
+    i.vPortExitCritical                      0x0800a8cc   Section        0  port.o(i.vPortExitCritical)
+    i.vPortFree                              0x0800a8f4   Section        0  heap_4.o(i.vPortFree)
+    i.vPortSetupTimerInterrupt               0x0800a958   Section        0  port.o(i.vPortSetupTimerInterrupt)
+    i.vTaskDelay                             0x0800a97c   Section        0  tasks.o(i.vTaskDelay)
+    i.vTaskInternalSetTimeOutState           0x0800a9c8   Section        0  tasks.o(i.vTaskInternalSetTimeOutState)
+    i.vTaskMissedYield                       0x0800a9d8   Section        0  tasks.o(i.vTaskMissedYield)
+    i.vTaskPlaceOnEventList                  0x0800a9e4   Section        0  tasks.o(i.vTaskPlaceOnEventList)
+    i.vTaskStartScheduler                    0x0800aa14   Section        0  tasks.o(i.vTaskStartScheduler)
+    i.vTaskSuspendAll                        0x0800aa80   Section        0  tasks.o(i.vTaskSuspendAll)
+    i.vTaskSwitchContext                     0x0800aa90   Section        0  tasks.o(i.vTaskSwitchContext)
+    i.var                                    0x0800aaec   Section        0  commend.o(i.var)
+    i.vesc_init                              0x0800ad50   Section        0  bsp_vesc.o(i.vesc_init)
+    i.vesc_set_point                         0x0800ad80   Section        0  bsp_vesc.o(i.vesc_set_point)
+    i.vesc_set_rmp                           0x0800ada4   Section        0  bsp_vesc.o(i.vesc_set_rmp)
+    i.xPortStartScheduler                    0x0800add4   Section        0  port.o(i.xPortStartScheduler)
+    i.xQueueCreateMutex                      0x0800aec8   Section        0  queue.o(i.xQueueCreateMutex)
+    i.xQueueCreateMutexStatic                0x0800aede   Section        0  queue.o(i.xQueueCreateMutexStatic)
+    i.xQueueGenericCreate                    0x0800aef8   Section        0  queue.o(i.xQueueGenericCreate)
+    i.xQueueGenericCreateStatic              0x0800af3a   Section        0  queue.o(i.xQueueGenericCreateStatic)
+    i.xQueueGenericReset                     0x0800afa0   Section        0  queue.o(i.xQueueGenericReset)
+    i.xQueueGenericSend                      0x0800b028   Section        0  queue.o(i.xQueueGenericSend)
+    i.xTaskCheckForTimeOut                   0x0800b188   Section        0  tasks.o(i.xTaskCheckForTimeOut)
+    i.xTaskCreate                            0x0800b1fc   Section        0  tasks.o(i.xTaskCreate)
+    i.xTaskCreateStatic                      0x0800b256   Section        0  tasks.o(i.xTaskCreateStatic)
+    i.xTaskGetSchedulerState                 0x0800b2ac   Section        0  tasks.o(i.xTaskGetSchedulerState)
+    i.xTaskIncrementTick                     0x0800b2c8   Section        0  tasks.o(i.xTaskIncrementTick)
+    i.xTaskPriorityDisinherit                0x0800b394   Section        0  tasks.o(i.xTaskPriorityDisinherit)
+    i.xTaskRemoveFromEventList               0x0800b42c   Section        0  tasks.o(i.xTaskRemoveFromEventList)
+    i.xTaskResumeAll                         0x0800b4a0   Section        0  tasks.o(i.xTaskResumeAll)
+    .constdata                               0x0800b564   Section      112  freertos.o(.constdata)
+    .constdata                               0x0800b5d4   Section        8  stm32f4xx_hal_dma.o(.constdata)
+    flagBitshiftOffset                       0x0800b5d4   Data           8  stm32f4xx_hal_dma.o(.constdata)
+    .constdata                               0x0800b5dc   Section       16  system_stm32f4xx.o(.constdata)
+    .constdata                               0x0800b5ec   Section        8  system_stm32f4xx.o(.constdata)
+    .constdata                               0x0800b5f4   Section        7  shell.o(.constdata)
+    .constdata                               0x0800b5fb   Section        1  shell.o(.constdata)
+    .constdata                               0x0800b5fc   Section       13  shell.o(.constdata)
+    .constdata                               0x0800b609   Section        7  shell.o(.constdata)
+    .constdata                               0x0800b610   Section        8  shell.o(.constdata)
+    .constdata                               0x0800b618   Section        3  shell.o(.constdata)
+    .constdata                               0x0800b61b   Section        5  shell.o(.constdata)
+    .constdata                               0x0800b620   Section        6  shell.o(.constdata)
+    .constdata                               0x0800b626   Section        5  shell.o(.constdata)
+    .constdata                               0x0800b62b   Section        4  shell.o(.constdata)
+    .constdata                               0x0800b62f   Section       10  shell.o(.constdata)
+    .constdata                               0x0800b639   Section       10  shell.o(.constdata)
+    .constdata                               0x0800b643   Section        7  shell.o(.constdata)
+    .constdata                               0x0800b64a   Section        6  shell.o(.constdata)
+    .constdata                               0x0800b650   Section        6  shell.o(.constdata)
+    .constdata                               0x0800b656   Section        5  shell.o(.constdata)
+    .constdata                               0x0800b65b   Section       30  shell.o(.constdata)
+    .constdata                               0x0800b679   Section        6  shell.o(.constdata)
+    .constdata                               0x0800b67f   Section       14  shell.o(.constdata)
+    .constdata                               0x0800b68d   Section        5  shell.o(.constdata)
+    .constdata                               0x0800b692   Section       13  shell.o(.constdata)
+    .constdata                               0x0800b69f   Section        5  shell.o(.constdata)
+    .constdata                               0x0800b6a4   Section       13  shell.o(.constdata)
+    .constdata                               0x0800b6b1   Section        5  shell.o(.constdata)
+    .constdata                               0x0800b6b6   Section       13  shell.o(.constdata)
+    .constdata                               0x0800b6c3   Section        6  shell.o(.constdata)
+    .constdata                               0x0800b6c9   Section       14  shell.o(.constdata)
+    .constdata                               0x0800b6d7   Section       12  log.o(.constdata)
+    .constdata                               0x0800b6e3   Section       36  log.o(.constdata)
+    .constdata                               0x0800b707   Section        8  log.o(.constdata)
+    .constdata                               0x0800b70f   Section       32  log.o(.constdata)
+    .constdata                               0x0800b72f   Section       17  log.o(.constdata)
+    .constdata                               0x0800b740   Section       12  log.o(.constdata)
+    __FUNCTION__                             0x0800b740   Data          12  log.o(.constdata)
+    .constdata                               0x0800b74c   Section       14  shell_port.o(.constdata)
+    __FUNCTION__                             0x0800b74c   Data          14  shell_port.o(.constdata)
+    .constdata                               0x0800b75a   Section        4  commend.o(.constdata)
+    .constdata                               0x0800b75e   Section       23  commend.o(.constdata)
+    .constdata                               0x0800b775   Section        3  test_task.o(.constdata)
+    .constdata                               0x0800b778   Section        5  test_task.o(.constdata)
+    .constdata                               0x0800b77d   Section        3  test_task.o(.constdata)
+    .constdata                               0x0800b780   Section        5  test_task.o(.constdata)
+    .constdata                               0x0800b785   Section        3  test_task.o(.constdata)
+    .constdata                               0x0800b788   Section        5  test_task.o(.constdata)
+    .constdata                               0x0800b78d   Section        2  test_task.o(.constdata)
+    .constdata                               0x0800b78f   Section        5  test_task.o(.constdata)
+    .constdata                               0x0800b794   Section      512  crc.o(.constdata)
+    .constdata                               0x0800b998   Section      136  pow.o(.constdata)
+    bp                                       0x0800b998   Data          16  pow.o(.constdata)
+    dp_h                                     0x0800b9a8   Data          16  pow.o(.constdata)
+    dp_l                                     0x0800b9b8   Data          16  pow.o(.constdata)
+    L                                        0x0800b9c8   Data          48  pow.o(.constdata)
+    P                                        0x0800b9f8   Data          40  pow.o(.constdata)
+    .constdata                               0x0800ba20   Section      152  atan.o(.constdata)
+    atanhi                                   0x0800ba20   Data          32  atan.o(.constdata)
+    atanlo                                   0x0800ba40   Data          32  atan.o(.constdata)
+    aTodd                                    0x0800ba60   Data          40  atan.o(.constdata)
+    aTeven                                   0x0800ba88   Data          48  atan.o(.constdata)
+    .constdata                               0x0800bab8   Section        8  qnan.o(.constdata)
+    .constdata                               0x0800bac0   Section      129  ctype_o.o(.constdata)
+    .constdata                               0x0800bb44   Section        4  ctype_o.o(.constdata)
+    table                                    0x0800bb44   Data           4  ctype_o.o(.constdata)
+    .conststring                             0x0800bb48   Section       45  freertos.o(.conststring)
+    .conststring                             0x0800bb78   Section      673  shell.o(.conststring)
+    .conststring                             0x0800be1c   Section       72  log.o(.conststring)
+    shellCommand                             0x0800be84   Section      288  shell.o(shellCommand)
     __tagsym$$used                           0x0800be84   Number         0  shell.o(shellCommand)
     __tagsym$$used                           0x0800be94   Number         0  shell.o(shellCommand)
     __tagsym$$used                           0x0800bea4   Number         0  shell.o(shellCommand)
@@ -3909,17 +3913,19 @@ Image Symbol Table
     __tagsym$$used                           0x0800bf54   Number         0  shell.o(shellCommand)
     __tagsym$$used                           0x0800bf64   Number         0  shell.o(shellCommand)
     __tagsym$$used                           0x0800bf74   Number         0  shell.o(shellCommand)
-    shellCommand                             0x0800bf84   Section       48  log.o(shellCommand)
-    __tagsym$$used                           0x0800bf84   Number         0  log.o(shellCommand)
-    __tagsym$$used                           0x0800bf94   Number         0  log.o(shellCommand)
+    __tagsym$$used                           0x0800bf84   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x0800bf94   Number         0  shell.o(shellCommand)
+    shellCommand                             0x0800bfa4   Section       48  log.o(shellCommand)
     __tagsym$$used                           0x0800bfa4   Number         0  log.o(shellCommand)
-    shellCommand                             0x0800bfb4   Section       16  commend.o(shellCommand)
-    __tagsym$$used                           0x0800bfb4   Number         0  commend.o(shellCommand)
-    shellCommand                             0x0800bfc4   Section       64  test_task.o(shellCommand)
-    __tagsym$$used                           0x0800bfc4   Number         0  test_task.o(shellCommand)
-    __tagsym$$used                           0x0800bfd4   Number         0  test_task.o(shellCommand)
+    __tagsym$$used                           0x0800bfb4   Number         0  log.o(shellCommand)
+    __tagsym$$used                           0x0800bfc4   Number         0  log.o(shellCommand)
+    shellCommand                             0x0800bfd4   Section       16  commend.o(shellCommand)
+    __tagsym$$used                           0x0800bfd4   Number         0  commend.o(shellCommand)
+    shellCommand                             0x0800bfe4   Section       64  test_task.o(shellCommand)
     __tagsym$$used                           0x0800bfe4   Number         0  test_task.o(shellCommand)
     __tagsym$$used                           0x0800bff4   Number         0  test_task.o(shellCommand)
+    __tagsym$$used                           0x0800c004   Number         0  test_task.o(shellCommand)
+    __tagsym$$used                           0x0800c014   Number         0  test_task.o(shellCommand)
     .data                                    0x20000000   Section       20  freertos.o(.data)
     .data                                    0x20000014   Section        4  can.o(.data)
     HAL_RCC_CAN1_CLK_ENABLED                 0x20000014   Data           4  can.o(.data)
@@ -4512,130 +4518,130 @@ Image Symbol Table
     shellVars                                0x0800a125   Thumb Code    20  shell.o(i.shellVars)
     shellWriteEndLine                        0x0800a191   Thumb Code   110  shell.o(i.shellWriteEndLine)
     shellWriteString                         0x0800a2e1   Thumb Code    36  shell.o(i.shellWriteString)
-    solenoid_task                            0x0800a305   Thumb Code   180  solenoid_task.o(i.solenoid_task)
-    sqrt                                     0x0800a3cd   Thumb Code   110  sqrt.o(i.sqrt)
-    sw_judge                                 0x0800a43b   Thumb Code   192  bsp_sbus.o(i.sw_judge)
-    test_task                                0x0800a4fd   Thumb Code   264  test_task.o(i.test_task)
-    uartLogWrite                             0x0800a645   Thumb Code    20  shell_port.o(i.uartLogWrite)
-    uart_receive_handler                     0x0800a65d   Thumb Code    86  bsp_sbus.o(i.uart_receive_handler)
-    userShellInit                            0x0800a6bd   Thumb Code   110  shell_port.o(i.userShellInit)
-    userShellLock                            0x0800a789   Thumb Code     4  shell_port.o(i.userShellLock)
-    userShellRead                            0x0800a78d   Thumb Code    26  shell_port.o(i.userShellRead)
-    userShellUnlock                          0x0800a7ad   Thumb Code     4  shell_port.o(i.userShellUnlock)
-    userShellWrite                           0x0800a7b1   Thumb Code    22  shell_port.o(i.userShellWrite)
-    uxListRemove                             0x0800a7cd   Thumb Code    38  list.o(i.uxListRemove)
-    vApplicationGetIdleTaskMemory            0x0800a7f5   Thumb Code    16  freertos.o(i.vApplicationGetIdleTaskMemory)
-    vListInitialise                          0x0800a809   Thumb Code    22  list.o(i.vListInitialise)
-    vListInitialiseItem                      0x0800a81f   Thumb Code     6  list.o(i.vListInitialiseItem)
-    vListInsert                              0x0800a825   Thumb Code    48  list.o(i.vListInsert)
-    vListInsertEnd                           0x0800a855   Thumb Code    24  list.o(i.vListInsertEnd)
-    vPortEnterCritical                       0x0800a86d   Thumb Code    54  port.o(i.vPortEnterCritical)
-    vPortExitCritical                        0x0800a8ad   Thumb Code    34  port.o(i.vPortExitCritical)
-    vPortFree                                0x0800a8d5   Thumb Code    94  heap_4.o(i.vPortFree)
-    vPortSetupTimerInterrupt                 0x0800a939   Thumb Code    32  port.o(i.vPortSetupTimerInterrupt)
-    vTaskDelay                               0x0800a95d   Thumb Code    66  tasks.o(i.vTaskDelay)
-    vTaskInternalSetTimeOutState             0x0800a9a9   Thumb Code    12  tasks.o(i.vTaskInternalSetTimeOutState)
-    vTaskMissedYield                         0x0800a9b9   Thumb Code     8  tasks.o(i.vTaskMissedYield)
-    vTaskPlaceOnEventList                    0x0800a9c5   Thumb Code    44  tasks.o(i.vTaskPlaceOnEventList)
-    vTaskStartScheduler                      0x0800a9f5   Thumb Code    90  tasks.o(i.vTaskStartScheduler)
-    vTaskSuspendAll                          0x0800aa61   Thumb Code    10  tasks.o(i.vTaskSuspendAll)
-    vTaskSwitchContext                       0x0800aa71   Thumb Code    82  tasks.o(i.vTaskSwitchContext)
-    var                                      0x0800aacd   Thumb Code   454  commend.o(i.var)
-    vesc_init                                0x0800ad31   Thumb Code    30  bsp_vesc.o(i.vesc_init)
-    vesc_set_point                           0x0800ad61   Thumb Code    32  bsp_vesc.o(i.vesc_set_point)
-    vesc_set_rmp                             0x0800ad85   Thumb Code    42  bsp_vesc.o(i.vesc_set_rmp)
-    xPortStartScheduler                      0x0800adb5   Thumb Code   222  port.o(i.xPortStartScheduler)
-    xQueueCreateMutex                        0x0800aea9   Thumb Code    22  queue.o(i.xQueueCreateMutex)
-    xQueueCreateMutexStatic                  0x0800aebf   Thumb Code    26  queue.o(i.xQueueCreateMutexStatic)
-    xQueueGenericCreate                      0x0800aed9   Thumb Code    66  queue.o(i.xQueueGenericCreate)
-    xQueueGenericCreateStatic                0x0800af1b   Thumb Code   102  queue.o(i.xQueueGenericCreateStatic)
-    xQueueGenericReset                       0x0800af81   Thumb Code   132  queue.o(i.xQueueGenericReset)
-    xQueueGenericSend                        0x0800b009   Thumb Code   346  queue.o(i.xQueueGenericSend)
-    xTaskCheckForTimeOut                     0x0800b169   Thumb Code   112  tasks.o(i.xTaskCheckForTimeOut)
-    xTaskCreate                              0x0800b1dd   Thumb Code    90  tasks.o(i.xTaskCreate)
-    xTaskCreateStatic                        0x0800b237   Thumb Code    86  tasks.o(i.xTaskCreateStatic)
-    xTaskGetSchedulerState                   0x0800b28d   Thumb Code    22  tasks.o(i.xTaskGetSchedulerState)
-    xTaskIncrementTick                       0x0800b2a9   Thumb Code   194  tasks.o(i.xTaskIncrementTick)
-    xTaskPriorityDisinherit                  0x0800b375   Thumb Code   144  tasks.o(i.xTaskPriorityDisinherit)
-    xTaskRemoveFromEventList                 0x0800b40d   Thumb Code   108  tasks.o(i.xTaskRemoveFromEventList)
-    xTaskResumeAll                           0x0800b481   Thumb Code   182  tasks.o(i.xTaskResumeAll)
-    AHBPrescTable                            0x0800b5bc   Data          16  system_stm32f4xx.o(.constdata)
-    APBPrescTable                            0x0800b5cc   Data           8  system_stm32f4xx.o(.constdata)
-    shellCmdDefaultUser                      0x0800b5d4   Data           7  shell.o(.constdata)
-    shellPasswordDefaultUser                 0x0800b5db   Data           1  shell.o(.constdata)
-    shellDesDefaultUser                      0x0800b5dc   Data          13  shell.o(.constdata)
-    shellCmdsetVar                           0x0800b5e9   Data           7  shell.o(.constdata)
-    shellDescsetVar                          0x0800b5f0   Data           8  shell.o(.constdata)
-    shellDesc0x1B5B4100                      0x0800b5f8   Data           3  shell.o(.constdata)
-    shellDesc0x1B5B4200                      0x0800b5fb   Data           5  shell.o(.constdata)
-    shellDesc0x1B5B4300                      0x0800b600   Data           6  shell.o(.constdata)
-    shellDesc0x1B5B4400                      0x0800b606   Data           5  shell.o(.constdata)
-    shellDesc0x09000000                      0x0800b60b   Data           4  shell.o(.constdata)
-    shellDesc0x08000000                      0x0800b60f   Data          10  shell.o(.constdata)
-    shellDesc0x7F000000                      0x0800b619   Data          10  shell.o(.constdata)
-    shellDesc0x1B5B337E                      0x0800b623   Data           7  shell.o(.constdata)
-    shellDesc0x0A000000                      0x0800b62a   Data           6  shell.o(.constdata)
-    shellDesc0x0D000000                      0x0800b630   Data           6  shell.o(.constdata)
-    shellCmdhelp                             0x0800b636   Data           5  shell.o(.constdata)
-    shellDeschelp                            0x0800b63b   Data          30  shell.o(.constdata)
-    shellCmdusers                            0x0800b659   Data           6  shell.o(.constdata)
-    shellDescusers                           0x0800b65f   Data          14  shell.o(.constdata)
-    shellCmdcmds                             0x0800b66d   Data           5  shell.o(.constdata)
-    shellDesccmds                            0x0800b672   Data          13  shell.o(.constdata)
-    shellCmdvars                             0x0800b67f   Data           5  shell.o(.constdata)
-    shellDescvars                            0x0800b684   Data          13  shell.o(.constdata)
-    shellCmdkeys                             0x0800b691   Data           5  shell.o(.constdata)
-    shellDesckeys                            0x0800b696   Data          13  shell.o(.constdata)
-    shellCmdclear                            0x0800b6a3   Data           6  shell.o(.constdata)
-    shellDescclear                           0x0800b6a9   Data          14  shell.o(.constdata)
-    shellCmdlogSetLevel                      0x0800b6b7   Data          12  log.o(.constdata)
-    shellDesclogSetLevel                     0x0800b6c3   Data          36  log.o(.constdata)
-    shellCmdhexdump                          0x0800b6e7   Data           8  log.o(.constdata)
-    shellDeschexdump                         0x0800b6ef   Data          32  log.o(.constdata)
-    shellDesc0x04000000                      0x0800b70f   Data          17  log.o(.constdata)
-    shellCmdvar                              0x0800b73a   Data           4  commend.o(.constdata)
-    shellDescvar                             0x0800b73e   Data          23  commend.o(.constdata)
-    shellCmdkp                               0x0800b755   Data           3  test_task.o(.constdata)
-    shellDesckp                              0x0800b758   Data           5  test_task.o(.constdata)
-    shellCmdki                               0x0800b75d   Data           3  test_task.o(.constdata)
-    shellDescki                              0x0800b760   Data           5  test_task.o(.constdata)
-    shellCmdkd                               0x0800b765   Data           3  test_task.o(.constdata)
-    shellDesckd                              0x0800b768   Data           5  test_task.o(.constdata)
-    shellCmdt                                0x0800b76d   Data           2  test_task.o(.constdata)
-    shellDesct                               0x0800b76f   Data           5  test_task.o(.constdata)
-    crc16_tab                                0x0800b774   Data         512  crc.o(.constdata)
-    __mathlib_zero                           0x0800ba98   Data           8  qnan.o(.constdata)
-    __ctype_table                            0x0800baa0   Data         129  ctype_o.o(.constdata)
-    Region$$Table$$Base                      0x0800be44   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800be64   Number         0  anon$$obj.o(Region$$Table)
-    shellCommand$$Base                       0x0800be64   Number         0  shell.o(shellCommand)
-    shellUserDefault                         0x0800be64   Data          16  shell.o(shellCommand)
-    shellCommandsetVar                       0x0800be74   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B4100                       0x0800be84   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B4200                       0x0800be94   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B4300                       0x0800bea4   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B4400                       0x0800beb4   Data          16  shell.o(shellCommand)
-    shellKey0x09000000                       0x0800bec4   Data          16  shell.o(shellCommand)
-    shellKey0x08000000                       0x0800bed4   Data          16  shell.o(shellCommand)
-    shellKey0x7F000000                       0x0800bee4   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B337E                       0x0800bef4   Data          16  shell.o(shellCommand)
-    shellKey0x0A000000                       0x0800bf04   Data          16  shell.o(shellCommand)
-    shellKey0x0D000000                       0x0800bf14   Data          16  shell.o(shellCommand)
-    shellCommandhelp                         0x0800bf24   Data          16  shell.o(shellCommand)
-    shellCommandusers                        0x0800bf34   Data          16  shell.o(shellCommand)
-    shellCommandcmds                         0x0800bf44   Data          16  shell.o(shellCommand)
-    shellCommandvars                         0x0800bf54   Data          16  shell.o(shellCommand)
-    shellCommandkeys                         0x0800bf64   Data          16  shell.o(shellCommand)
-    shellCommandclear                        0x0800bf74   Data          16  shell.o(shellCommand)
-    shellCommandlogSetLevel                  0x0800bf84   Data          16  log.o(shellCommand)
-    shellCommandhexdump                      0x0800bf94   Data          16  log.o(shellCommand)
-    shellKey0x04000000                       0x0800bfa4   Data          16  log.o(shellCommand)
-    shellCommandvar                          0x0800bfb4   Data          16  commend.o(shellCommand)
-    shellCommandkp                           0x0800bfc4   Data          16  test_task.o(shellCommand)
-    shellCommandki                           0x0800bfd4   Data          16  test_task.o(shellCommand)
-    shellCommandkd                           0x0800bfe4   Data          16  test_task.o(shellCommand)
-    shellCommandt                            0x0800bff4   Data          16  test_task.o(shellCommand)
-    shellCommand$$Limit                      0x0800c004   Number         0  test_task.o(shellCommand)
+    solenoid_task                            0x0800a305   Thumb Code   186  solenoid_task.o(i.solenoid_task)
+    sqrt                                     0x0800a3d5   Thumb Code   110  sqrt.o(i.sqrt)
+    sw_judge                                 0x0800a443   Thumb Code   192  bsp_sbus.o(i.sw_judge)
+    test_task                                0x0800a505   Thumb Code   278  test_task.o(i.test_task)
+    uartLogWrite                             0x0800a665   Thumb Code    20  shell_port.o(i.uartLogWrite)
+    uart_receive_handler                     0x0800a67d   Thumb Code    86  bsp_sbus.o(i.uart_receive_handler)
+    userShellInit                            0x0800a6dd   Thumb Code   110  shell_port.o(i.userShellInit)
+    userShellLock                            0x0800a7a9   Thumb Code     4  shell_port.o(i.userShellLock)
+    userShellRead                            0x0800a7ad   Thumb Code    26  shell_port.o(i.userShellRead)
+    userShellUnlock                          0x0800a7cd   Thumb Code     4  shell_port.o(i.userShellUnlock)
+    userShellWrite                           0x0800a7d1   Thumb Code    22  shell_port.o(i.userShellWrite)
+    uxListRemove                             0x0800a7ed   Thumb Code    38  list.o(i.uxListRemove)
+    vApplicationGetIdleTaskMemory            0x0800a815   Thumb Code    16  freertos.o(i.vApplicationGetIdleTaskMemory)
+    vListInitialise                          0x0800a829   Thumb Code    22  list.o(i.vListInitialise)
+    vListInitialiseItem                      0x0800a83f   Thumb Code     6  list.o(i.vListInitialiseItem)
+    vListInsert                              0x0800a845   Thumb Code    48  list.o(i.vListInsert)
+    vListInsertEnd                           0x0800a875   Thumb Code    24  list.o(i.vListInsertEnd)
+    vPortEnterCritical                       0x0800a88d   Thumb Code    54  port.o(i.vPortEnterCritical)
+    vPortExitCritical                        0x0800a8cd   Thumb Code    34  port.o(i.vPortExitCritical)
+    vPortFree                                0x0800a8f5   Thumb Code    94  heap_4.o(i.vPortFree)
+    vPortSetupTimerInterrupt                 0x0800a959   Thumb Code    32  port.o(i.vPortSetupTimerInterrupt)
+    vTaskDelay                               0x0800a97d   Thumb Code    66  tasks.o(i.vTaskDelay)
+    vTaskInternalSetTimeOutState             0x0800a9c9   Thumb Code    12  tasks.o(i.vTaskInternalSetTimeOutState)
+    vTaskMissedYield                         0x0800a9d9   Thumb Code     8  tasks.o(i.vTaskMissedYield)
+    vTaskPlaceOnEventList                    0x0800a9e5   Thumb Code    44  tasks.o(i.vTaskPlaceOnEventList)
+    vTaskStartScheduler                      0x0800aa15   Thumb Code    90  tasks.o(i.vTaskStartScheduler)
+    vTaskSuspendAll                          0x0800aa81   Thumb Code    10  tasks.o(i.vTaskSuspendAll)
+    vTaskSwitchContext                       0x0800aa91   Thumb Code    82  tasks.o(i.vTaskSwitchContext)
+    var                                      0x0800aaed   Thumb Code   454  commend.o(i.var)
+    vesc_init                                0x0800ad51   Thumb Code    30  bsp_vesc.o(i.vesc_init)
+    vesc_set_point                           0x0800ad81   Thumb Code    32  bsp_vesc.o(i.vesc_set_point)
+    vesc_set_rmp                             0x0800ada5   Thumb Code    42  bsp_vesc.o(i.vesc_set_rmp)
+    xPortStartScheduler                      0x0800add5   Thumb Code   222  port.o(i.xPortStartScheduler)
+    xQueueCreateMutex                        0x0800aec9   Thumb Code    22  queue.o(i.xQueueCreateMutex)
+    xQueueCreateMutexStatic                  0x0800aedf   Thumb Code    26  queue.o(i.xQueueCreateMutexStatic)
+    xQueueGenericCreate                      0x0800aef9   Thumb Code    66  queue.o(i.xQueueGenericCreate)
+    xQueueGenericCreateStatic                0x0800af3b   Thumb Code   102  queue.o(i.xQueueGenericCreateStatic)
+    xQueueGenericReset                       0x0800afa1   Thumb Code   132  queue.o(i.xQueueGenericReset)
+    xQueueGenericSend                        0x0800b029   Thumb Code   346  queue.o(i.xQueueGenericSend)
+    xTaskCheckForTimeOut                     0x0800b189   Thumb Code   112  tasks.o(i.xTaskCheckForTimeOut)
+    xTaskCreate                              0x0800b1fd   Thumb Code    90  tasks.o(i.xTaskCreate)
+    xTaskCreateStatic                        0x0800b257   Thumb Code    86  tasks.o(i.xTaskCreateStatic)
+    xTaskGetSchedulerState                   0x0800b2ad   Thumb Code    22  tasks.o(i.xTaskGetSchedulerState)
+    xTaskIncrementTick                       0x0800b2c9   Thumb Code   194  tasks.o(i.xTaskIncrementTick)
+    xTaskPriorityDisinherit                  0x0800b395   Thumb Code   144  tasks.o(i.xTaskPriorityDisinherit)
+    xTaskRemoveFromEventList                 0x0800b42d   Thumb Code   108  tasks.o(i.xTaskRemoveFromEventList)
+    xTaskResumeAll                           0x0800b4a1   Thumb Code   182  tasks.o(i.xTaskResumeAll)
+    AHBPrescTable                            0x0800b5dc   Data          16  system_stm32f4xx.o(.constdata)
+    APBPrescTable                            0x0800b5ec   Data           8  system_stm32f4xx.o(.constdata)
+    shellCmdDefaultUser                      0x0800b5f4   Data           7  shell.o(.constdata)
+    shellPasswordDefaultUser                 0x0800b5fb   Data           1  shell.o(.constdata)
+    shellDesDefaultUser                      0x0800b5fc   Data          13  shell.o(.constdata)
+    shellCmdsetVar                           0x0800b609   Data           7  shell.o(.constdata)
+    shellDescsetVar                          0x0800b610   Data           8  shell.o(.constdata)
+    shellDesc0x1B5B4100                      0x0800b618   Data           3  shell.o(.constdata)
+    shellDesc0x1B5B4200                      0x0800b61b   Data           5  shell.o(.constdata)
+    shellDesc0x1B5B4300                      0x0800b620   Data           6  shell.o(.constdata)
+    shellDesc0x1B5B4400                      0x0800b626   Data           5  shell.o(.constdata)
+    shellDesc0x09000000                      0x0800b62b   Data           4  shell.o(.constdata)
+    shellDesc0x08000000                      0x0800b62f   Data          10  shell.o(.constdata)
+    shellDesc0x7F000000                      0x0800b639   Data          10  shell.o(.constdata)
+    shellDesc0x1B5B337E                      0x0800b643   Data           7  shell.o(.constdata)
+    shellDesc0x0A000000                      0x0800b64a   Data           6  shell.o(.constdata)
+    shellDesc0x0D000000                      0x0800b650   Data           6  shell.o(.constdata)
+    shellCmdhelp                             0x0800b656   Data           5  shell.o(.constdata)
+    shellDeschelp                            0x0800b65b   Data          30  shell.o(.constdata)
+    shellCmdusers                            0x0800b679   Data           6  shell.o(.constdata)
+    shellDescusers                           0x0800b67f   Data          14  shell.o(.constdata)
+    shellCmdcmds                             0x0800b68d   Data           5  shell.o(.constdata)
+    shellDesccmds                            0x0800b692   Data          13  shell.o(.constdata)
+    shellCmdvars                             0x0800b69f   Data           5  shell.o(.constdata)
+    shellDescvars                            0x0800b6a4   Data          13  shell.o(.constdata)
+    shellCmdkeys                             0x0800b6b1   Data           5  shell.o(.constdata)
+    shellDesckeys                            0x0800b6b6   Data          13  shell.o(.constdata)
+    shellCmdclear                            0x0800b6c3   Data           6  shell.o(.constdata)
+    shellDescclear                           0x0800b6c9   Data          14  shell.o(.constdata)
+    shellCmdlogSetLevel                      0x0800b6d7   Data          12  log.o(.constdata)
+    shellDesclogSetLevel                     0x0800b6e3   Data          36  log.o(.constdata)
+    shellCmdhexdump                          0x0800b707   Data           8  log.o(.constdata)
+    shellDeschexdump                         0x0800b70f   Data          32  log.o(.constdata)
+    shellDesc0x04000000                      0x0800b72f   Data          17  log.o(.constdata)
+    shellCmdvar                              0x0800b75a   Data           4  commend.o(.constdata)
+    shellDescvar                             0x0800b75e   Data          23  commend.o(.constdata)
+    shellCmdkp                               0x0800b775   Data           3  test_task.o(.constdata)
+    shellDesckp                              0x0800b778   Data           5  test_task.o(.constdata)
+    shellCmdki                               0x0800b77d   Data           3  test_task.o(.constdata)
+    shellDescki                              0x0800b780   Data           5  test_task.o(.constdata)
+    shellCmdkd                               0x0800b785   Data           3  test_task.o(.constdata)
+    shellDesckd                              0x0800b788   Data           5  test_task.o(.constdata)
+    shellCmdt                                0x0800b78d   Data           2  test_task.o(.constdata)
+    shellDesct                               0x0800b78f   Data           5  test_task.o(.constdata)
+    crc16_tab                                0x0800b794   Data         512  crc.o(.constdata)
+    __mathlib_zero                           0x0800bab8   Data           8  qnan.o(.constdata)
+    __ctype_table                            0x0800bac0   Data         129  ctype_o.o(.constdata)
+    Region$$Table$$Base                      0x0800be64   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800be84   Number         0  anon$$obj.o(Region$$Table)
+    shellCommand$$Base                       0x0800be84   Number         0  shell.o(shellCommand)
+    shellUserDefault                         0x0800be84   Data          16  shell.o(shellCommand)
+    shellCommandsetVar                       0x0800be94   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B4100                       0x0800bea4   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B4200                       0x0800beb4   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B4300                       0x0800bec4   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B4400                       0x0800bed4   Data          16  shell.o(shellCommand)
+    shellKey0x09000000                       0x0800bee4   Data          16  shell.o(shellCommand)
+    shellKey0x08000000                       0x0800bef4   Data          16  shell.o(shellCommand)
+    shellKey0x7F000000                       0x0800bf04   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B337E                       0x0800bf14   Data          16  shell.o(shellCommand)
+    shellKey0x0A000000                       0x0800bf24   Data          16  shell.o(shellCommand)
+    shellKey0x0D000000                       0x0800bf34   Data          16  shell.o(shellCommand)
+    shellCommandhelp                         0x0800bf44   Data          16  shell.o(shellCommand)
+    shellCommandusers                        0x0800bf54   Data          16  shell.o(shellCommand)
+    shellCommandcmds                         0x0800bf64   Data          16  shell.o(shellCommand)
+    shellCommandvars                         0x0800bf74   Data          16  shell.o(shellCommand)
+    shellCommandkeys                         0x0800bf84   Data          16  shell.o(shellCommand)
+    shellCommandclear                        0x0800bf94   Data          16  shell.o(shellCommand)
+    shellCommandlogSetLevel                  0x0800bfa4   Data          16  log.o(shellCommand)
+    shellCommandhexdump                      0x0800bfb4   Data          16  log.o(shellCommand)
+    shellKey0x04000000                       0x0800bfc4   Data          16  log.o(shellCommand)
+    shellCommandvar                          0x0800bfd4   Data          16  commend.o(shellCommand)
+    shellCommandkp                           0x0800bfe4   Data          16  test_task.o(shellCommand)
+    shellCommandki                           0x0800bff4   Data          16  test_task.o(shellCommand)
+    shellCommandkd                           0x0800c004   Data          16  test_task.o(shellCommand)
+    shellCommandt                            0x0800c014   Data          16  test_task.o(shellCommand)
+    shellCommand$$Limit                      0x0800c024   Number         0  test_task.o(shellCommand)
     testTaskHandle                           0x20000000   Data           4  freertos.o(.data)
     chassisTaskHandle                        0x20000004   Data           4  freertos.o(.data)
     ledTaskHandle                            0x20000008   Data           4  freertos.o(.data)
@@ -4693,64 +4699,64 @@ Memory Map of the image
 
   Image Entry point : 0x080001ad
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000c18c, Max: 0x00200000, ABSOLUTE, COMPRESSED[0x0000c068])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000c1ac, Max: 0x00200000, ABSOLUTE, COMPRESSED[0x0000c088])
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000c004, Max: 0x00200000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000c024, Max: 0x00200000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x000001ac   Data   RO            3    RESET               startup_stm32f427xx.o
-    0x080001ac   0x080001ac   0x00000000   Code   RO         7433  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080001ac   0x080001ac   0x00000004   Code   RO         7818    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080001b0   0x080001b0   0x00000004   Code   RO         7821    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080001b4   0x080001b4   0x00000000   Code   RO         7823    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080001b4   0x080001b4   0x00000000   Code   RO         7825    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080001b4   0x080001b4   0x00000008   Code   RO         7826    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080001bc   0x080001bc   0x00000004   Code   RO         7833    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x080001c0   0x080001c0   0x00000000   Code   RO         7828    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x080001c0   0x080001c0   0x00000000   Code   RO         7830    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x080001c0   0x080001c0   0x00000004   Code   RO         7819    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080001ac   0x080001ac   0x00000000   Code   RO         7445  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080001ac   0x080001ac   0x00000004   Code   RO         7830    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080001b0   0x080001b0   0x00000004   Code   RO         7833    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080001b4   0x080001b4   0x00000000   Code   RO         7835    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080001b4   0x080001b4   0x00000000   Code   RO         7837    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080001b4   0x080001b4   0x00000008   Code   RO         7838    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080001bc   0x080001bc   0x00000004   Code   RO         7845    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x080001c0   0x080001c0   0x00000000   Code   RO         7840    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x080001c0   0x080001c0   0x00000000   Code   RO         7842    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x080001c0   0x080001c0   0x00000004   Code   RO         7831    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x080001c4   0x080001c4   0x000000be   Code   RO         5153    .emb_text           port.o
     0x08000282   0x08000282   0x00000002   PAD
     0x08000284   0x08000284   0x00000024   Code   RO            4    .text               startup_stm32f427xx.o
-    0x080002a8   0x080002a8   0x00000062   Code   RO         7436    .text               mc_w.l(uldiv.o)
-    0x0800030a   0x0800030a   0x00000024   Code   RO         7438    .text               mc_w.l(memcpya.o)
-    0x0800032e   0x0800032e   0x00000024   Code   RO         7442    .text               mc_w.l(memseta.o)
-    0x08000352   0x08000352   0x0000000e   Code   RO         7444    .text               mc_w.l(strlen.o)
-    0x08000360   0x08000360   0x0000001c   Code   RO         7446    .text               mc_w.l(strcmp.o)
-    0x0800037c   0x0800037c   0x0000001e   Code   RO         7450    .text               mc_w.l(strncmp.o)
-    0x0800039a   0x0800039a   0x0000001a   Code   RO         7745    .text               mc_w.l(atoi.o)
-    0x080003b4   0x080003b4   0x0000014e   Code   RO         7747    .text               mf_w.l(dadd.o)
-    0x08000502   0x08000502   0x000000e4   Code   RO         7749    .text               mf_w.l(dmul.o)
-    0x080005e6   0x080005e6   0x000000de   Code   RO         7751    .text               mf_w.l(ddiv.o)
-    0x080006c4   0x080006c4   0x00000022   Code   RO         7753    .text               mf_w.l(dflti.o)
-    0x080006e6   0x080006e6   0x00000026   Code   RO         7761    .text               mf_w.l(f2d.o)
-    0x0800070c   0x0800070c   0x00000038   Code   RO         7763    .text               mf_w.l(d2f.o)
-    0x08000744   0x08000744   0x0000002c   Code   RO         7835    .text               mc_w.l(uidiv.o)
-    0x08000770   0x08000770   0x0000001e   Code   RO         7837    .text               mc_w.l(llshl.o)
-    0x0800078e   0x0800078e   0x00000020   Code   RO         7839    .text               mc_w.l(llushr.o)
-    0x080007ae   0x080007ae   0x00000024   Code   RO         7841    .text               mc_w.l(llsshr.o)
+    0x080002a8   0x080002a8   0x00000062   Code   RO         7448    .text               mc_w.l(uldiv.o)
+    0x0800030a   0x0800030a   0x00000024   Code   RO         7450    .text               mc_w.l(memcpya.o)
+    0x0800032e   0x0800032e   0x00000024   Code   RO         7454    .text               mc_w.l(memseta.o)
+    0x08000352   0x08000352   0x0000000e   Code   RO         7456    .text               mc_w.l(strlen.o)
+    0x08000360   0x08000360   0x0000001c   Code   RO         7458    .text               mc_w.l(strcmp.o)
+    0x0800037c   0x0800037c   0x0000001e   Code   RO         7462    .text               mc_w.l(strncmp.o)
+    0x0800039a   0x0800039a   0x0000001a   Code   RO         7757    .text               mc_w.l(atoi.o)
+    0x080003b4   0x080003b4   0x0000014e   Code   RO         7759    .text               mf_w.l(dadd.o)
+    0x08000502   0x08000502   0x000000e4   Code   RO         7761    .text               mf_w.l(dmul.o)
+    0x080005e6   0x080005e6   0x000000de   Code   RO         7763    .text               mf_w.l(ddiv.o)
+    0x080006c4   0x080006c4   0x00000022   Code   RO         7765    .text               mf_w.l(dflti.o)
+    0x080006e6   0x080006e6   0x00000026   Code   RO         7773    .text               mf_w.l(f2d.o)
+    0x0800070c   0x0800070c   0x00000038   Code   RO         7775    .text               mf_w.l(d2f.o)
+    0x08000744   0x08000744   0x0000002c   Code   RO         7847    .text               mc_w.l(uidiv.o)
+    0x08000770   0x08000770   0x0000001e   Code   RO         7849    .text               mc_w.l(llshl.o)
+    0x0800078e   0x0800078e   0x00000020   Code   RO         7851    .text               mc_w.l(llushr.o)
+    0x080007ae   0x080007ae   0x00000024   Code   RO         7853    .text               mc_w.l(llsshr.o)
     0x080007d2   0x080007d2   0x00000002   PAD
-    0x080007d4   0x080007d4   0x00000360   Code   RO         7858    .text               mc_w.l(scanf_fp.o)
-    0x08000b34   0x08000b34   0x00000040   Code   RO         7864    .text               mc_w.l(_sgetc.o)
-    0x08000b74   0x08000b74   0x0000009c   Code   RO         7866    .text               mc_w.l(strtod.o)
-    0x08000c10   0x08000c10   0x00000070   Code   RO         7868    .text               mc_w.l(strtol.o)
-    0x08000c80   0x08000c80   0x00000000   Code   RO         7870    .text               mc_w.l(iusefp.o)
-    0x08000c80   0x08000c80   0x0000006e   Code   RO         7871    .text               mf_w.l(fepilogue.o)
-    0x08000cee   0x08000cee   0x00000018   Code   RO         7873    .text               mf_w.l(fscalb.o)
-    0x08000d06   0x08000d06   0x000000ba   Code   RO         7875    .text               mf_w.l(depilogue.o)
-    0x08000dc0   0x08000dc0   0x0000002e   Code   RO         7879    .text               mf_w.l(dscalb.o)
-    0x08000dee   0x08000dee   0x000000a2   Code   RO         7881    .text               mf_w.l(dsqrt.o)
-    0x08000e90   0x08000e90   0x00000030   Code   RO         7883    .text               mf_w.l(dfixul.o)
-    0x08000ec0   0x08000ec0   0x00000030   Code   RO         7885    .text               mf_w.l(cdcmple.o)
-    0x08000ef0   0x08000ef0   0x00000030   Code   RO         7887    .text               mf_w.l(cdrcmple.o)
-    0x08000f20   0x08000f20   0x00000024   Code   RO         7891    .text               mc_w.l(init.o)
-    0x08000f44   0x08000f44   0x00000008   Code   RO         7895    .text               mc_w.l(ctype_o.o)
-    0x08000f4c   0x08000f4c   0x00000012   Code   RO         7917    .text               mc_w.l(isspace_o.o)
-    0x08000f5e   0x08000f5e   0x0000001c   Code   RO         7923    .text               mc_w.l(_chval.o)
-    0x08000f7a   0x08000f7a   0x0000009e   Code   RO         7927    .text               mc_w.l(_strtoul.o)
-    0x08001018   0x08001018   0x00000018   Code   RO         7929    .text               mf_w.l(dfltul.o)
-    0x08001030   0x08001030   0x00000056   Code   RO         7942    .text               mc_w.l(__dczerorl2.o)
+    0x080007d4   0x080007d4   0x00000360   Code   RO         7870    .text               mc_w.l(scanf_fp.o)
+    0x08000b34   0x08000b34   0x00000040   Code   RO         7876    .text               mc_w.l(_sgetc.o)
+    0x08000b74   0x08000b74   0x0000009c   Code   RO         7878    .text               mc_w.l(strtod.o)
+    0x08000c10   0x08000c10   0x00000070   Code   RO         7880    .text               mc_w.l(strtol.o)
+    0x08000c80   0x08000c80   0x00000000   Code   RO         7882    .text               mc_w.l(iusefp.o)
+    0x08000c80   0x08000c80   0x0000006e   Code   RO         7883    .text               mf_w.l(fepilogue.o)
+    0x08000cee   0x08000cee   0x00000018   Code   RO         7885    .text               mf_w.l(fscalb.o)
+    0x08000d06   0x08000d06   0x000000ba   Code   RO         7887    .text               mf_w.l(depilogue.o)
+    0x08000dc0   0x08000dc0   0x0000002e   Code   RO         7891    .text               mf_w.l(dscalb.o)
+    0x08000dee   0x08000dee   0x000000a2   Code   RO         7893    .text               mf_w.l(dsqrt.o)
+    0x08000e90   0x08000e90   0x00000030   Code   RO         7895    .text               mf_w.l(dfixul.o)
+    0x08000ec0   0x08000ec0   0x00000030   Code   RO         7897    .text               mf_w.l(cdcmple.o)
+    0x08000ef0   0x08000ef0   0x00000030   Code   RO         7899    .text               mf_w.l(cdrcmple.o)
+    0x08000f20   0x08000f20   0x00000024   Code   RO         7903    .text               mc_w.l(init.o)
+    0x08000f44   0x08000f44   0x00000008   Code   RO         7907    .text               mc_w.l(ctype_o.o)
+    0x08000f4c   0x08000f4c   0x00000012   Code   RO         7929    .text               mc_w.l(isspace_o.o)
+    0x08000f5e   0x08000f5e   0x0000001c   Code   RO         7935    .text               mc_w.l(_chval.o)
+    0x08000f7a   0x08000f7a   0x0000009e   Code   RO         7939    .text               mc_w.l(_strtoul.o)
+    0x08001018   0x08001018   0x00000018   Code   RO         7941    .text               mf_w.l(dfltul.o)
+    0x08001030   0x08001030   0x00000056   Code   RO         7954    .text               mc_w.l(__dczerorl2.o)
     0x08001086   0x08001086   0x00000002   Code   RO          599    i.BusFault_Handler  stm32f4xx_it.o
     0x08001088   0x08001088   0x0000000c   Code   RO          600    i.CAN1_RX0_IRQHandler  stm32f4xx_it.o
     0x08001094   0x08001094   0x0000000c   Code   RO          601    i.CAN1_TX_IRQHandler  stm32f4xx_it.o
@@ -4766,7 +4772,7 @@ Memory Map of the image
     0x080011d0   0x080011d0   0x00000002   Code   RO          607    i.DebugMon_Handler  stm32f4xx_it.o
     0x080011d2   0x080011d2   0x00000004   Code   RO           13    i.Error_Handler     main.o
     0x080011d6   0x080011d6   0x00000002   PAD
-    0x080011d8   0x080011d8   0x00000018   Code   RO         6662    i.Fetch_ring        solenoid_task.o
+    0x080011d8   0x080011d8   0x00000018   Code   RO         6674    i.Fetch_ring        solenoid_task.o
     0x080011f0   0x080011f0   0x00000024   Code   RO          799    i.HAL_CAN_ActivateNotification  stm32f4xx_hal_can.o
     0x08001214   0x08001214   0x000000dc   Code   RO          800    i.HAL_CAN_AddTxMessage  stm32f4xx_hal_can.o
     0x080012f0   0x080012f0   0x0000010c   Code   RO          801    i.HAL_CAN_ConfigFilter  stm32f4xx_hal_can.o
@@ -4852,7 +4858,7 @@ Memory Map of the image
     0x0800368e   0x0800368e   0x00000002   Code   RO         3581    i.HAL_UART_TxCpltCallback  stm32f4xx_hal_uart.o
     0x08003690   0x08003690   0x00000002   Code   RO          608    i.HardFault_Handler  stm32f4xx_it.o
     0x08003692   0x08003692   0x00000002   PAD
-    0x08003694   0x08003694   0x0000005c   Code   RO         6500    i.LED_ALL_OFF       led_task.o
+    0x08003694   0x08003694   0x0000005c   Code   RO         6512    i.LED_ALL_OFF       led_task.o
     0x080036f0   0x080036f0   0x00000044   Code   RO          318    i.MX_CAN1_Init      can.o
     0x08003734   0x08003734   0x00000044   Code   RO          319    i.MX_CAN2_Init      can.o
     0x08003778   0x08003778   0x0000005c   Code   RO          365    i.MX_DMA_Init       dma.o
@@ -4869,9 +4875,9 @@ Memory Map of the image
     0x08003cac   0x08003cac   0x00000038   Code   RO          493    i.MX_USART6_UART_Init  usart.o
     0x08003ce4   0x08003ce4   0x00000002   Code   RO          609    i.MemManage_Handler  stm32f4xx_it.o
     0x08003ce6   0x08003ce6   0x00000002   Code   RO          610    i.NMI_Handler       stm32f4xx_it.o
-    0x08003ce8   0x08003ce8   0x0000003c   Code   RO         6793    i.PID_struct_init   pid.o
-    0x08003d24   0x08003d24   0x000000ac   Code   RO         6503    i.RUN_LED           led_task.o
-    0x08003dd0   0x08003dd0   0x0000003c   Code   RO         6668    i.Solenoid_Reset    solenoid_task.o
+    0x08003ce8   0x08003ce8   0x0000003c   Code   RO         6805    i.PID_struct_init   pid.o
+    0x08003d24   0x08003d24   0x000000ac   Code   RO         6515    i.RUN_LED           led_task.o
+    0x08003dd0   0x08003dd0   0x0000003c   Code   RO         6680    i.Solenoid_Reset    solenoid_task.o
     0x08003e0c   0x08003e0c   0x0000002c   Code   RO         5154    i.SysTick_Handler   port.o
     0x08003e38   0x08003e38   0x000000a0   Code   RO           15    i.SystemClock_Config  main.o
     0x08003ed8   0x08003ed8   0x00000010   Code   RO         3899    i.SystemInit        system_stm32f4xx.o
@@ -4903,85 +4909,85 @@ Memory Map of the image
     0x080044f4   0x080044f4   0x0000000c   Code   RO          616    i.USART6_IRQHandler  stm32f4xx_it.o
     0x08004500   0x08004500   0x00000002   Code   RO          617    i.UsageFault_Handler  stm32f4xx_it.o
     0x08004502   0x08004502   0x00000002   PAD
-    0x08004504   0x08004504   0x00000020   Code   RO         7687    i.__0printf         mc_w.l(printfa.o)
-    0x08004524   0x08004524   0x00000034   Code   RO         7688    i.__0snprintf       mc_w.l(printfa.o)
-    0x08004558   0x08004558   0x00000028   Code   RO         7689    i.__0sprintf        mc_w.l(printfa.o)
-    0x08004580   0x08004580   0x00000034   Code   RO         7692    i.__0vsnprintf      mc_w.l(printfa.o)
-    0x080045b4   0x080045b4   0x00000030   Code   RO         7799    i.__ARM_fpclassify  m_wm.l(fpclassify.o)
+    0x08004504   0x08004504   0x00000020   Code   RO         7699    i.__0printf         mc_w.l(printfa.o)
+    0x08004524   0x08004524   0x00000034   Code   RO         7700    i.__0snprintf       mc_w.l(printfa.o)
+    0x08004558   0x08004558   0x00000028   Code   RO         7701    i.__0sprintf        mc_w.l(printfa.o)
+    0x08004580   0x08004580   0x00000034   Code   RO         7704    i.__0vsnprintf      mc_w.l(printfa.o)
+    0x080045b4   0x080045b4   0x00000030   Code   RO         7811    i.__ARM_fpclassify  m_wm.l(fpclassify.o)
     0x080045e4   0x080045e4   0x00000020   Code   RO         1859    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
-    0x08004604   0x08004604   0x00000008   Code   RO         7845    i.__aeabi_errno_addr  mc_w.l(errno.o)
+    0x08004604   0x08004604   0x00000008   Code   RO         7857    i.__aeabi_errno_addr  mc_w.l(errno.o)
     0x0800460c   0x0800460c   0x00000004   PAD
-    0x08004610   0x08004610   0x000002d8   Code   RO         7765    i.__hardfp_atan     m_wm.l(atan.o)
-    0x080048e8   0x080048e8   0x00000200   Code   RO         7371    i.__hardfp_atan2    m_wm.l(atan2.o)
-    0x08004ae8   0x08004ae8   0x00000038   Code   RO         7383    i.__hardfp_atof     m_wm.l(atof.o)
-    0x08004b20   0x08004b20   0x0000008e   Code   RO         7395    i.__hardfp_ldexpf   m_wm.l(ldexpf.o)
+    0x08004610   0x08004610   0x000002d8   Code   RO         7777    i.__hardfp_atan     m_wm.l(atan.o)
+    0x080048e8   0x080048e8   0x00000200   Code   RO         7383    i.__hardfp_atan2    m_wm.l(atan2.o)
+    0x08004ae8   0x08004ae8   0x00000038   Code   RO         7395    i.__hardfp_atof     m_wm.l(atof.o)
+    0x08004b20   0x08004b20   0x0000008e   Code   RO         7407    i.__hardfp_ldexpf   m_wm.l(ldexpf.o)
     0x08004bae   0x08004bae   0x00000002   PAD
-    0x08004bb0   0x08004bb0   0x00000c50   Code   RO         7407    i.__hardfp_pow      m_wm.l(pow.o)
-    0x08005800   0x08005800   0x0000007a   Code   RO         7421    i.__hardfp_sqrt     m_wm.l(sqrt.o)
-    0x0800587a   0x0800587a   0x000000f8   Code   RO         7815    i.__kernel_poly     m_wm.l(poly.o)
-    0x08005972   0x08005972   0x00000036   Code   RO         6845    i.__kfifo_in_data   kfifo.o
-    0x080059a8   0x080059a8   0x00000036   Code   RO         6847    i.__kfifo_out_data  kfifo.o
+    0x08004bb0   0x08004bb0   0x00000c50   Code   RO         7419    i.__hardfp_pow      m_wm.l(pow.o)
+    0x08005800   0x08005800   0x0000007a   Code   RO         7433    i.__hardfp_sqrt     m_wm.l(sqrt.o)
+    0x0800587a   0x0800587a   0x000000f8   Code   RO         7827    i.__kernel_poly     m_wm.l(poly.o)
+    0x08005972   0x08005972   0x00000036   Code   RO         6857    i.__kfifo_in_data   kfifo.o
+    0x080059a8   0x080059a8   0x00000036   Code   RO         6859    i.__kfifo_out_data  kfifo.o
     0x080059de   0x080059de   0x00000002   PAD
-    0x080059e0   0x080059e0   0x00000030   Code   RO         7779    i.__mathlib_dbl_divzero  m_wm.l(dunder.o)
-    0x08005a10   0x08005a10   0x00000014   Code   RO         7780    i.__mathlib_dbl_infnan  m_wm.l(dunder.o)
-    0x08005a24   0x08005a24   0x00000014   Code   RO         7781    i.__mathlib_dbl_infnan2  m_wm.l(dunder.o)
-    0x08005a38   0x08005a38   0x00000020   Code   RO         7782    i.__mathlib_dbl_invalid  m_wm.l(dunder.o)
-    0x08005a58   0x08005a58   0x00000020   Code   RO         7783    i.__mathlib_dbl_overflow  m_wm.l(dunder.o)
-    0x08005a78   0x08005a78   0x00000020   Code   RO         7785    i.__mathlib_dbl_underflow  m_wm.l(dunder.o)
-    0x08005a98   0x08005a98   0x00000010   Code   RO         7805    i.__mathlib_flt_overflow  m_wm.l(funder.o)
-    0x08005aa8   0x08005aa8   0x00000010   Code   RO         7807    i.__mathlib_flt_underflow  m_wm.l(funder.o)
-    0x08005ab8   0x08005ab8   0x0000000c   Code   RO         7846    i.__read_errno      mc_w.l(errno.o)
-    0x08005ac4   0x08005ac4   0x0000000e   Code   RO         7936    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08005ad2   0x08005ad2   0x00000002   Code   RO         7937    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08005ad4   0x08005ad4   0x0000000e   Code   RO         7938    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x080059e0   0x080059e0   0x00000030   Code   RO         7791    i.__mathlib_dbl_divzero  m_wm.l(dunder.o)
+    0x08005a10   0x08005a10   0x00000014   Code   RO         7792    i.__mathlib_dbl_infnan  m_wm.l(dunder.o)
+    0x08005a24   0x08005a24   0x00000014   Code   RO         7793    i.__mathlib_dbl_infnan2  m_wm.l(dunder.o)
+    0x08005a38   0x08005a38   0x00000020   Code   RO         7794    i.__mathlib_dbl_invalid  m_wm.l(dunder.o)
+    0x08005a58   0x08005a58   0x00000020   Code   RO         7795    i.__mathlib_dbl_overflow  m_wm.l(dunder.o)
+    0x08005a78   0x08005a78   0x00000020   Code   RO         7797    i.__mathlib_dbl_underflow  m_wm.l(dunder.o)
+    0x08005a98   0x08005a98   0x00000010   Code   RO         7817    i.__mathlib_flt_overflow  m_wm.l(funder.o)
+    0x08005aa8   0x08005aa8   0x00000010   Code   RO         7819    i.__mathlib_flt_underflow  m_wm.l(funder.o)
+    0x08005ab8   0x08005ab8   0x0000000c   Code   RO         7858    i.__read_errno      mc_w.l(errno.o)
+    0x08005ac4   0x08005ac4   0x0000000e   Code   RO         7948    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08005ad2   0x08005ad2   0x00000002   Code   RO         7949    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08005ad4   0x08005ad4   0x0000000e   Code   RO         7950    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x08005ae2   0x08005ae2   0x00000002   PAD
-    0x08005ae4   0x08005ae4   0x0000000c   Code   RO         7847    i.__set_errno       mc_w.l(errno.o)
-    0x08005af0   0x08005af0   0x00000184   Code   RO         7694    i._fp_digits        mc_w.l(printfa.o)
-    0x08005c74   0x08005c74   0x0000000e   Code   RO         7860    i._is_digit         mc_w.l(scanf_fp.o)
+    0x08005ae4   0x08005ae4   0x0000000c   Code   RO         7859    i.__set_errno       mc_w.l(errno.o)
+    0x08005af0   0x08005af0   0x00000184   Code   RO         7706    i._fp_digits        mc_w.l(printfa.o)
+    0x08005c74   0x08005c74   0x0000000e   Code   RO         7872    i._is_digit         mc_w.l(scanf_fp.o)
     0x08005c82   0x08005c82   0x00000002   PAD
-    0x08005c84   0x08005c84   0x000006b4   Code   RO         7695    i._printf_core      mc_w.l(printfa.o)
-    0x08006338   0x08006338   0x00000024   Code   RO         7696    i._printf_post_padding  mc_w.l(printfa.o)
-    0x0800635c   0x0800635c   0x0000002e   Code   RO         7697    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x0800638a   0x0800638a   0x00000016   Code   RO         7698    i._snputc           mc_w.l(printfa.o)
-    0x080063a0   0x080063a0   0x0000000a   Code   RO         7699    i._sputc            mc_w.l(printfa.o)
-    0x080063aa   0x080063aa   0x0000002a   Code   RO         6794    i.abs_limit         pid.o
+    0x08005c84   0x08005c84   0x000006b4   Code   RO         7707    i._printf_core      mc_w.l(printfa.o)
+    0x08006338   0x08006338   0x00000024   Code   RO         7708    i._printf_post_padding  mc_w.l(printfa.o)
+    0x0800635c   0x0800635c   0x0000002e   Code   RO         7709    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x0800638a   0x0800638a   0x00000016   Code   RO         7710    i._snputc           mc_w.l(printfa.o)
+    0x080063a0   0x080063a0   0x0000000a   Code   RO         7711    i._sputc            mc_w.l(printfa.o)
+    0x080063aa   0x080063aa   0x0000002a   Code   RO         6806    i.abs_limit         pid.o
     0x080063d4   0x080063d4   0x00000020   Code   RO         5721    i.agencylogHexDump  log.o
     0x080063f4   0x080063f4   0x0000001a   Code   RO         5722    i.agencylogSetLevel  log.o
-    0x0800640e   0x0800640e   0x00000008   Code   RO         6556    i.agencysetkd       test_task.o
-    0x08006416   0x08006416   0x00000008   Code   RO         6557    i.agencysetki       test_task.o
-    0x0800641e   0x0800641e   0x00000008   Code   RO         6558    i.agencysetkp       test_task.o
-    0x08006426   0x08006426   0x00000008   Code   RO         6559    i.agencysett        test_task.o
-    0x0800642e   0x0800642e   0x00000010   Code   RO         7767    i.atan              m_wm.l(atan.o)
+    0x0800640e   0x0800640e   0x00000008   Code   RO         6568    i.agencysetkd       test_task.o
+    0x08006416   0x08006416   0x00000008   Code   RO         6569    i.agencysetki       test_task.o
+    0x0800641e   0x0800641e   0x00000008   Code   RO         6570    i.agencysetkp       test_task.o
+    0x08006426   0x08006426   0x00000008   Code   RO         6571    i.agencysett        test_task.o
+    0x0800642e   0x0800642e   0x00000010   Code   RO         7779    i.atan              m_wm.l(atan.o)
     0x0800643e   0x0800643e   0x00000002   PAD
-    0x08006440   0x08006440   0x000000e8   Code   RO         6895    i.bldc_interface_fault_to_string  bldc_interface.o
-    0x08006528   0x08006528   0x0000000c   Code   RO         6903    i.bldc_interface_init  bldc_interface.o
-    0x08006534   0x08006534   0x00000b24   Code   RO         6904    i.bldc_interface_process_packet  bldc_interface.o
-    0x08007058   0x08007058   0x0000000c   Code   RO         6928    i.bldc_interface_set_rx_value_func  bldc_interface.o
-    0x08007064   0x08007064   0x0000001c   Code   RO         7158    i.bldc_interface_uart_init  bldc_interface_uart.o
-    0x08007080   0x08007080   0x00000004   Code   RO         7159    i.bldc_interface_uart_process_byte  bldc_interface_uart.o
+    0x08006440   0x08006440   0x000000e8   Code   RO         6907    i.bldc_interface_fault_to_string  bldc_interface.o
+    0x08006528   0x08006528   0x0000000c   Code   RO         6915    i.bldc_interface_init  bldc_interface.o
+    0x08006534   0x08006534   0x00000b24   Code   RO         6916    i.bldc_interface_process_packet  bldc_interface.o
+    0x08007058   0x08007058   0x0000000c   Code   RO         6940    i.bldc_interface_set_rx_value_func  bldc_interface.o
+    0x08007064   0x08007064   0x0000001c   Code   RO         7170    i.bldc_interface_uart_init  bldc_interface_uart.o
+    0x08007080   0x08007080   0x00000004   Code   RO         7171    i.bldc_interface_uart_process_byte  bldc_interface_uart.o
     0x08007084   0x08007084   0x00000264   Code   RO         6275    i.bldc_val_received  bsp_vesc.o
-    0x080072e8   0x080072e8   0x0000002a   Code   RO         7221    i.buffer_append_int32  buffer.o
-    0x08007312   0x08007312   0x00000018   Code   RO         7227    i.buffer_get_float16  buffer.o
-    0x0800732a   0x0800732a   0x00000018   Code   RO         7228    i.buffer_get_float32  buffer.o
+    0x080072e8   0x080072e8   0x0000002a   Code   RO         7233    i.buffer_append_int32  buffer.o
+    0x08007312   0x08007312   0x00000018   Code   RO         7239    i.buffer_get_float16  buffer.o
+    0x0800732a   0x0800732a   0x00000018   Code   RO         7240    i.buffer_get_float32  buffer.o
     0x08007342   0x08007342   0x00000002   PAD
-    0x08007344   0x08007344   0x00000070   Code   RO         7229    i.buffer_get_float32_auto  buffer.o
-    0x080073b4   0x080073b4   0x00000010   Code   RO         7230    i.buffer_get_int16  buffer.o
-    0x080073c4   0x080073c4   0x00000020   Code   RO         7231    i.buffer_get_int32  buffer.o
-    0x080073e4   0x080073e4   0x0000000e   Code   RO         7233    i.buffer_get_uint16  buffer.o
-    0x080073f2   0x080073f2   0x00000020   Code   RO         7234    i.buffer_get_uint32  buffer.o
+    0x08007344   0x08007344   0x00000070   Code   RO         7241    i.buffer_get_float32_auto  buffer.o
+    0x080073b4   0x080073b4   0x00000010   Code   RO         7242    i.buffer_get_int16  buffer.o
+    0x080073c4   0x080073c4   0x00000020   Code   RO         7243    i.buffer_get_int32  buffer.o
+    0x080073e4   0x080073e4   0x0000000e   Code   RO         7245    i.buffer_get_uint16  buffer.o
+    0x080073f2   0x080073f2   0x00000020   Code   RO         7246    i.buffer_get_uint32  buffer.o
     0x08007412   0x08007412   0x0000004c   Code   RO         6016    i.can_filter_recv_special  bsp_can.o
     0x0800745e   0x0800745e   0x00000002   PAD
-    0x08007460   0x08007460   0x000000c4   Code   RO         6336    i.chassis_behaviour_control_set  chassis_behaviour.o
-    0x08007524   0x08007524   0x00000058   Code   RO         6337    i.chassis_behaviour_mode_set  chassis_behaviour.o
-    0x0800757c   0x0800757c   0x0000010c   Code   RO         6375    i.chassis_control_loop  chassis_task.o
-    0x08007688   0x08007688   0x000000bc   Code   RO         6376    i.chassis_feedback_update  chassis_task.o
-    0x08007744   0x08007744   0x00000118   Code   RO         6377    i.chassis_init      chassis_task.o
-    0x0800785c   0x0800785c   0x00000354   Code   RO         6378    i.chassis_kinematics_wheel4_speed  chassis_task.o
-    0x08007bb0   0x08007bb0   0x00000118   Code   RO         6379    i.chassis_set_kinematics  chassis_task.o
-    0x08007cc8   0x08007cc8   0x00000070   Code   RO         6380    i.chassis_task      chassis_task.o
-    0x08007d38   0x08007d38   0x0000002c   Code   RO         7198    i.crc16             crc.o
+    0x08007460   0x08007460   0x000000c4   Code   RO         6348    i.chassis_behaviour_control_set  chassis_behaviour.o
+    0x08007524   0x08007524   0x00000058   Code   RO         6349    i.chassis_behaviour_mode_set  chassis_behaviour.o
+    0x0800757c   0x0800757c   0x0000010c   Code   RO         6387    i.chassis_control_loop  chassis_task.o
+    0x08007688   0x08007688   0x000000bc   Code   RO         6388    i.chassis_feedback_update  chassis_task.o
+    0x08007744   0x08007744   0x00000118   Code   RO         6389    i.chassis_init      chassis_task.o
+    0x0800785c   0x0800785c   0x00000354   Code   RO         6390    i.chassis_kinematics_wheel4_speed  chassis_task.o
+    0x08007bb0   0x08007bb0   0x00000118   Code   RO         6391    i.chassis_set_kinematics  chassis_task.o
+    0x08007cc8   0x08007cc8   0x00000070   Code   RO         6392    i.chassis_task      chassis_task.o
+    0x08007d38   0x08007d38   0x0000002c   Code   RO         7210    i.crc16             crc.o
     0x08007d64   0x08007d64   0x00000048   Code   RO         6104    i.dbus_uart_init    bsp_sbus.o
-    0x08007dac   0x08007dac   0x00000018   Code   RO         7795    i.fabs              m_wm.l(fabs.o)
+    0x08007dac   0x08007dac   0x00000018   Code   RO         7807    i.fabs              m_wm.l(fabs.o)
     0x08007dc4   0x08007dc4   0x0000001c   Code   RO           16    i.fputc             main.o
     0x08007de0   0x08007de0   0x00000018   Code   RO         6017    i.get_chassis_motor_measure_point  bsp_can.o
     0x08007df8   0x08007df8   0x0000004c   Code   RO         6018    i.get_motor_measure  bsp_can.o
@@ -4989,10 +4995,10 @@ Memory Map of the image
     0x08007e4e   0x08007e4e   0x00000002   PAD
     0x08007e50   0x08007e50   0x00000008   Code   RO         6106    i.get_remote_control_point  bsp_sbus.o
     0x08007e58   0x08007e58   0x0000003c   Code   RO         6020    i.get_total_angle   bsp_can.o
-    0x08007e94   0x08007e94   0x0000002a   Code   RO         6849    i.kfifo_in          kfifo.o
-    0x08007ebe   0x08007ebe   0x0000000c   Code   RO         6850    i.kfifo_init        kfifo.o
-    0x08007eca   0x08007eca   0x00000026   Code   RO         6851    i.kfifo_out         kfifo.o
-    0x08007ef0   0x08007ef0   0x00000006   Code   RO         6504    i.led_task          led_task.o
+    0x08007e94   0x08007e94   0x0000002a   Code   RO         6861    i.kfifo_in          kfifo.o
+    0x08007ebe   0x08007ebe   0x0000000c   Code   RO         6862    i.kfifo_init        kfifo.o
+    0x08007eca   0x08007eca   0x00000026   Code   RO         6863    i.kfifo_out         kfifo.o
+    0x08007ef0   0x08007ef0   0x00000006   Code   RO         6516    i.led_task          led_task.o
     0x08007ef6   0x08007ef6   0x00000002   PAD
     0x08007ef8   0x08007ef8   0x0000017c   Code   RO         5723    i.logHexDump        log.o
     0x08008074   0x08008074   0x00000038   Code   RO         5724    i.logRegister       log.o
@@ -5008,13 +5014,13 @@ Memory Map of the image
     0x0800832a   0x0800832a   0x00000010   Code   RO         4739    i.osMutexCreate     cmsis_os.o
     0x0800833a   0x0800833a   0x00000054   Code   RO         4758    i.osThreadCreate    cmsis_os.o
     0x0800838e   0x0800838e   0x00000002   PAD
-    0x08008390   0x08008390   0x00000014   Code   RO         7339    i.packet_init       packet.o
-    0x080083a4   0x080083a4   0x000000bc   Code   RO         7340    i.packet_process_byte  packet.o
-    0x08008460   0x08008460   0x0000008c   Code   RO         7341    i.packet_send_packet  packet.o
-    0x080084ec   0x080084ec   0x000001c4   Code   RO         6795    i.pid_calc          pid.o
-    0x080086b0   0x080086b0   0x0000000e   Code   RO         6796    i.pid_param_init    pid.o
-    0x080086be   0x080086be   0x00000006   Code   RO         6797    i.pid_reset         pid.o
-    0x080086c4   0x080086c4   0x00000004   Code   RO         7161    i.process_packet    bldc_interface_uart.o
+    0x08008390   0x08008390   0x00000014   Code   RO         7351    i.packet_init       packet.o
+    0x080083a4   0x080083a4   0x000000bc   Code   RO         7352    i.packet_process_byte  packet.o
+    0x08008460   0x08008460   0x0000008c   Code   RO         7353    i.packet_send_packet  packet.o
+    0x080084ec   0x080084ec   0x000001c4   Code   RO         6807    i.pid_calc          pid.o
+    0x080086b0   0x080086b0   0x0000000e   Code   RO         6808    i.pid_param_init    pid.o
+    0x080086be   0x080086be   0x00000006   Code   RO         6809    i.pid_reset         pid.o
+    0x080086c4   0x080086c4   0x00000004   Code   RO         7173    i.process_packet    bldc_interface_uart.o
     0x080086c8   0x080086c8   0x00000070   Code   RO         4401    i.prvAddCurrentTaskToDelayedList  tasks.o
     0x08008738   0x08008738   0x000000d0   Code   RO         4402    i.prvAddNewTaskToReadyList  tasks.o
     0x08008808   0x08008808   0x0000006c   Code   RO         4078    i.prvCopyDataToQueue  queue.o
@@ -5034,14 +5040,14 @@ Memory Map of the image
     0x08008c20   0x08008c20   0x0000018e   Code   RO         6107    i.rc_callback_handler  bsp_sbus.o
     0x08008dae   0x08008dae   0x00000002   PAD
     0x08008db0   0x08008db0   0x0000004c   Code   RO         6276    i.send_package_0    bsp_vesc.o
-    0x08008dfc   0x08008dfc   0x00000006   Code   RO         7162    i.send_packet_bldc_interface  bldc_interface_uart.o
+    0x08008dfc   0x08008dfc   0x00000006   Code   RO         7174    i.send_packet_bldc_interface  bldc_interface_uart.o
     0x08008e02   0x08008e02   0x0000002c   Code   RO         6022    i.set_motor         bsp_can.o
     0x08008e2e   0x08008e2e   0x00000042   Code   RO         6023    i.set_motor_A       bsp_can.o
     0x08008e70   0x08008e70   0x00000044   Code   RO         6024    i.set_motor_B       bsp_can.o
-    0x08008eb4   0x08008eb4   0x00000030   Code   RO         6560    i.setkd             test_task.o
-    0x08008ee4   0x08008ee4   0x00000030   Code   RO         6561    i.setki             test_task.o
-    0x08008f14   0x08008f14   0x00000030   Code   RO         6562    i.setkp             test_task.o
-    0x08008f44   0x08008f44   0x00000038   Code   RO         6563    i.sett              test_task.o
+    0x08008eb4   0x08008eb4   0x00000030   Code   RO         6572    i.setkd             test_task.o
+    0x08008ee4   0x08008ee4   0x00000030   Code   RO         6573    i.setki             test_task.o
+    0x08008f14   0x08008f14   0x00000030   Code   RO         6574    i.setkp             test_task.o
+    0x08008f44   0x08008f44   0x00000038   Code   RO         6575    i.sett              test_task.o
     0x08008f7c   0x08008f7c   0x00000006   Code   RO         5233    i.shellBackspace    shell.o
     0x08008f82   0x08008f82   0x00000030   Code   RO         5234    i.shellCheckPermission  shell.o
     0x08008fb2   0x08008fb2   0x00000002   PAD
@@ -5104,129 +5110,129 @@ Memory Map of the image
     0x0800a204   0x0800a204   0x0000005c   Code   RO         5286    i.shellWritePrompt  shell.o
     0x0800a260   0x0800a260   0x00000080   Code   RO         5287    i.shellWriteReturnValue  shell.o
     0x0800a2e0   0x0800a2e0   0x00000024   Code   RO         5288    i.shellWriteString  shell.o
-    0x0800a304   0x0800a304   0x000000c8   Code   RO         6678    i.solenoid_task     solenoid_task.o
-    0x0800a3cc   0x0800a3cc   0x0000006e   Code   RO         7423    i.sqrt              m_wm.l(sqrt.o)
-    0x0800a43a   0x0800a43a   0x000000c0   Code   RO         6108    i.sw_judge          bsp_sbus.o
-    0x0800a4fa   0x0800a4fa   0x00000002   PAD
-    0x0800a4fc   0x0800a4fc   0x00000148   Code   RO         6564    i.test_task         test_task.o
-    0x0800a644   0x0800a644   0x00000018   Code   RO         5806    i.uartLogWrite      shell_port.o
-    0x0800a65c   0x0800a65c   0x00000060   Code   RO         6109    i.uart_receive_handler  bsp_sbus.o
-    0x0800a6bc   0x0800a6bc   0x000000cc   Code   RO         5807    i.userShellInit     shell_port.o
-    0x0800a788   0x0800a788   0x00000004   Code   RO         5808    i.userShellLock     shell_port.o
-    0x0800a78c   0x0800a78c   0x00000020   Code   RO         5809    i.userShellRead     shell_port.o
-    0x0800a7ac   0x0800a7ac   0x00000004   Code   RO         5810    i.userShellUnlock   shell_port.o
-    0x0800a7b0   0x0800a7b0   0x0000001c   Code   RO         5811    i.userShellWrite    shell_port.o
-    0x0800a7cc   0x0800a7cc   0x00000026   Code   RO         4037    i.uxListRemove      list.o
-    0x0800a7f2   0x0800a7f2   0x00000002   PAD
-    0x0800a7f4   0x0800a7f4   0x00000014   Code   RO          268    i.vApplicationGetIdleTaskMemory  freertos.o
-    0x0800a808   0x0800a808   0x00000016   Code   RO         4038    i.vListInitialise   list.o
-    0x0800a81e   0x0800a81e   0x00000006   Code   RO         4039    i.vListInitialiseItem  list.o
-    0x0800a824   0x0800a824   0x00000030   Code   RO         4040    i.vListInsert       list.o
-    0x0800a854   0x0800a854   0x00000018   Code   RO         4041    i.vListInsertEnd    list.o
-    0x0800a86c   0x0800a86c   0x00000040   Code   RO         5158    i.vPortEnterCritical  port.o
-    0x0800a8ac   0x0800a8ac   0x00000028   Code   RO         5159    i.vPortExitCritical  port.o
-    0x0800a8d4   0x0800a8d4   0x00000064   Code   RO         5089    i.vPortFree         heap_4.o
-    0x0800a938   0x0800a938   0x00000024   Code   RO         5160    i.vPortSetupTimerInterrupt  port.o
-    0x0800a95c   0x0800a95c   0x0000004c   Code   RO         4415    i.vTaskDelay        tasks.o
-    0x0800a9a8   0x0800a9a8   0x00000010   Code   RO         4418    i.vTaskInternalSetTimeOutState  tasks.o
-    0x0800a9b8   0x0800a9b8   0x0000000c   Code   RO         4419    i.vTaskMissedYield  tasks.o
-    0x0800a9c4   0x0800a9c4   0x00000030   Code   RO         4421    i.vTaskPlaceOnEventList  tasks.o
-    0x0800a9f4   0x0800a9f4   0x0000006c   Code   RO         4428    i.vTaskStartScheduler  tasks.o
-    0x0800aa60   0x0800aa60   0x00000010   Code   RO         4430    i.vTaskSuspendAll   tasks.o
-    0x0800aa70   0x0800aa70   0x0000005c   Code   RO         4431    i.vTaskSwitchContext  tasks.o
-    0x0800aacc   0x0800aacc   0x00000264   Code   RO         5869    i.var               commend.o
-    0x0800ad30   0x0800ad30   0x00000030   Code   RO         6277    i.vesc_init         bsp_vesc.o
-    0x0800ad60   0x0800ad60   0x00000024   Code   RO         6278    i.vesc_set_point    bsp_vesc.o
-    0x0800ad84   0x0800ad84   0x00000030   Code   RO         6279    i.vesc_set_rmp      bsp_vesc.o
-    0x0800adb4   0x0800adb4   0x000000f4   Code   RO         5162    i.xPortStartScheduler  port.o
-    0x0800aea8   0x0800aea8   0x00000016   Code   RO         4089    i.xQueueCreateMutex  queue.o
-    0x0800aebe   0x0800aebe   0x0000001a   Code   RO         4090    i.xQueueCreateMutexStatic  queue.o
-    0x0800aed8   0x0800aed8   0x00000042   Code   RO         4091    i.xQueueGenericCreate  queue.o
-    0x0800af1a   0x0800af1a   0x00000066   Code   RO         4092    i.xQueueGenericCreateStatic  queue.o
-    0x0800af80   0x0800af80   0x00000088   Code   RO         4093    i.xQueueGenericReset  queue.o
-    0x0800b008   0x0800b008   0x00000160   Code   RO         4094    i.xQueueGenericSend  queue.o
-    0x0800b168   0x0800b168   0x00000074   Code   RO         4433    i.xTaskCheckForTimeOut  tasks.o
-    0x0800b1dc   0x0800b1dc   0x0000005a   Code   RO         4434    i.xTaskCreate       tasks.o
-    0x0800b236   0x0800b236   0x00000056   Code   RO         4435    i.xTaskCreateStatic  tasks.o
-    0x0800b28c   0x0800b28c   0x0000001c   Code   RO         4439    i.xTaskGetSchedulerState  tasks.o
-    0x0800b2a8   0x0800b2a8   0x000000cc   Code   RO         4442    i.xTaskIncrementTick  tasks.o
-    0x0800b374   0x0800b374   0x00000098   Code   RO         4445    i.xTaskPriorityDisinherit  tasks.o
-    0x0800b40c   0x0800b40c   0x00000074   Code   RO         4447    i.xTaskRemoveFromEventList  tasks.o
-    0x0800b480   0x0800b480   0x000000c4   Code   RO         4448    i.xTaskResumeAll    tasks.o
-    0x0800b544   0x0800b544   0x00000070   Data   RO          270    .constdata          freertos.o
-    0x0800b5b4   0x0800b5b4   0x00000008   Data   RO         1558    .constdata          stm32f4xx_hal_dma.o
-    0x0800b5bc   0x0800b5bc   0x00000010   Data   RO         3900    .constdata          system_stm32f4xx.o
-    0x0800b5cc   0x0800b5cc   0x00000008   Data   RO         3901    .constdata          system_stm32f4xx.o
-    0x0800b5d4   0x0800b5d4   0x00000007   Data   RO         5290    .constdata          shell.o
-    0x0800b5db   0x0800b5db   0x00000001   Data   RO         5291    .constdata          shell.o
-    0x0800b5dc   0x0800b5dc   0x0000000d   Data   RO         5292    .constdata          shell.o
-    0x0800b5e9   0x0800b5e9   0x00000007   Data   RO         5293    .constdata          shell.o
-    0x0800b5f0   0x0800b5f0   0x00000008   Data   RO         5294    .constdata          shell.o
-    0x0800b5f8   0x0800b5f8   0x00000003   Data   RO         5295    .constdata          shell.o
-    0x0800b5fb   0x0800b5fb   0x00000005   Data   RO         5296    .constdata          shell.o
-    0x0800b600   0x0800b600   0x00000006   Data   RO         5297    .constdata          shell.o
-    0x0800b606   0x0800b606   0x00000005   Data   RO         5298    .constdata          shell.o
-    0x0800b60b   0x0800b60b   0x00000004   Data   RO         5299    .constdata          shell.o
-    0x0800b60f   0x0800b60f   0x0000000a   Data   RO         5300    .constdata          shell.o
-    0x0800b619   0x0800b619   0x0000000a   Data   RO         5301    .constdata          shell.o
-    0x0800b623   0x0800b623   0x00000007   Data   RO         5302    .constdata          shell.o
-    0x0800b62a   0x0800b62a   0x00000006   Data   RO         5303    .constdata          shell.o
-    0x0800b630   0x0800b630   0x00000006   Data   RO         5304    .constdata          shell.o
-    0x0800b636   0x0800b636   0x00000005   Data   RO         5305    .constdata          shell.o
-    0x0800b63b   0x0800b63b   0x0000001e   Data   RO         5306    .constdata          shell.o
-    0x0800b659   0x0800b659   0x00000006   Data   RO         5307    .constdata          shell.o
-    0x0800b65f   0x0800b65f   0x0000000e   Data   RO         5308    .constdata          shell.o
-    0x0800b66d   0x0800b66d   0x00000005   Data   RO         5309    .constdata          shell.o
-    0x0800b672   0x0800b672   0x0000000d   Data   RO         5310    .constdata          shell.o
-    0x0800b67f   0x0800b67f   0x00000005   Data   RO         5311    .constdata          shell.o
-    0x0800b684   0x0800b684   0x0000000d   Data   RO         5312    .constdata          shell.o
-    0x0800b691   0x0800b691   0x00000005   Data   RO         5313    .constdata          shell.o
-    0x0800b696   0x0800b696   0x0000000d   Data   RO         5314    .constdata          shell.o
-    0x0800b6a3   0x0800b6a3   0x00000006   Data   RO         5315    .constdata          shell.o
-    0x0800b6a9   0x0800b6a9   0x0000000e   Data   RO         5316    .constdata          shell.o
-    0x0800b6b7   0x0800b6b7   0x0000000c   Data   RO         5731    .constdata          log.o
-    0x0800b6c3   0x0800b6c3   0x00000024   Data   RO         5732    .constdata          log.o
-    0x0800b6e7   0x0800b6e7   0x00000008   Data   RO         5733    .constdata          log.o
-    0x0800b6ef   0x0800b6ef   0x00000020   Data   RO         5734    .constdata          log.o
-    0x0800b70f   0x0800b70f   0x00000011   Data   RO         5735    .constdata          log.o
-    0x0800b720   0x0800b720   0x0000000c   Data   RO         5736    .constdata          log.o
-    0x0800b72c   0x0800b72c   0x0000000e   Data   RO         5813    .constdata          shell_port.o
-    0x0800b73a   0x0800b73a   0x00000004   Data   RO         5874    .constdata          commend.o
-    0x0800b73e   0x0800b73e   0x00000017   Data   RO         5875    .constdata          commend.o
-    0x0800b755   0x0800b755   0x00000003   Data   RO         6568    .constdata          test_task.o
-    0x0800b758   0x0800b758   0x00000005   Data   RO         6569    .constdata          test_task.o
-    0x0800b75d   0x0800b75d   0x00000003   Data   RO         6570    .constdata          test_task.o
-    0x0800b760   0x0800b760   0x00000005   Data   RO         6571    .constdata          test_task.o
-    0x0800b765   0x0800b765   0x00000003   Data   RO         6572    .constdata          test_task.o
-    0x0800b768   0x0800b768   0x00000005   Data   RO         6573    .constdata          test_task.o
-    0x0800b76d   0x0800b76d   0x00000002   Data   RO         6574    .constdata          test_task.o
-    0x0800b76f   0x0800b76f   0x00000005   Data   RO         6575    .constdata          test_task.o
-    0x0800b774   0x0800b774   0x00000200   Data   RO         7199    .constdata          crc.o
-    0x0800b974   0x0800b974   0x00000004   PAD
-    0x0800b978   0x0800b978   0x00000088   Data   RO         7410    .constdata          m_wm.l(pow.o)
-    0x0800ba00   0x0800ba00   0x00000098   Data   RO         7768    .constdata          m_wm.l(atan.o)
-    0x0800ba98   0x0800ba98   0x00000008   Data   RO         7817    .constdata          m_wm.l(qnan.o)
-    0x0800baa0   0x0800baa0   0x00000081   Data   RO         7896    .constdata          mc_w.l(ctype_o.o)
-    0x0800bb21   0x0800bb21   0x00000003   PAD
-    0x0800bb24   0x0800bb24   0x00000004   Data   RO         7897    .constdata          mc_w.l(ctype_o.o)
-    0x0800bb28   0x0800bb28   0x0000002d   Data   RO          271    .conststring        freertos.o
-    0x0800bb55   0x0800bb55   0x00000003   PAD
-    0x0800bb58   0x0800bb58   0x000002a1   Data   RO         5317    .conststring        shell.o
-    0x0800bdf9   0x0800bdf9   0x00000003   PAD
-    0x0800bdfc   0x0800bdfc   0x00000048   Data   RO         5737    .conststring        log.o
-    0x0800be44   0x0800be44   0x00000020   Data   RO         7934    Region$$Table       anon$$obj.o
-    0x0800be64   0x0800be64   0x00000120   Data   RO         5319    shellCommand        shell.o
-    0x0800bf84   0x0800bf84   0x00000030   Data   RO         5738    shellCommand        log.o
-    0x0800bfb4   0x0800bfb4   0x00000010   Data   RO         5881    shellCommand        commend.o
-    0x0800bfc4   0x0800bfc4   0x00000040   Data   RO         6577    shellCommand        test_task.o
+    0x0800a304   0x0800a304   0x000000d0   Code   RO         6690    i.solenoid_task     solenoid_task.o
+    0x0800a3d4   0x0800a3d4   0x0000006e   Code   RO         7435    i.sqrt              m_wm.l(sqrt.o)
+    0x0800a442   0x0800a442   0x000000c0   Code   RO         6108    i.sw_judge          bsp_sbus.o
+    0x0800a502   0x0800a502   0x00000002   PAD
+    0x0800a504   0x0800a504   0x00000160   Code   RO         6576    i.test_task         test_task.o
+    0x0800a664   0x0800a664   0x00000018   Code   RO         5806    i.uartLogWrite      shell_port.o
+    0x0800a67c   0x0800a67c   0x00000060   Code   RO         6109    i.uart_receive_handler  bsp_sbus.o
+    0x0800a6dc   0x0800a6dc   0x000000cc   Code   RO         5807    i.userShellInit     shell_port.o
+    0x0800a7a8   0x0800a7a8   0x00000004   Code   RO         5808    i.userShellLock     shell_port.o
+    0x0800a7ac   0x0800a7ac   0x00000020   Code   RO         5809    i.userShellRead     shell_port.o
+    0x0800a7cc   0x0800a7cc   0x00000004   Code   RO         5810    i.userShellUnlock   shell_port.o
+    0x0800a7d0   0x0800a7d0   0x0000001c   Code   RO         5811    i.userShellWrite    shell_port.o
+    0x0800a7ec   0x0800a7ec   0x00000026   Code   RO         4037    i.uxListRemove      list.o
+    0x0800a812   0x0800a812   0x00000002   PAD
+    0x0800a814   0x0800a814   0x00000014   Code   RO          268    i.vApplicationGetIdleTaskMemory  freertos.o
+    0x0800a828   0x0800a828   0x00000016   Code   RO         4038    i.vListInitialise   list.o
+    0x0800a83e   0x0800a83e   0x00000006   Code   RO         4039    i.vListInitialiseItem  list.o
+    0x0800a844   0x0800a844   0x00000030   Code   RO         4040    i.vListInsert       list.o
+    0x0800a874   0x0800a874   0x00000018   Code   RO         4041    i.vListInsertEnd    list.o
+    0x0800a88c   0x0800a88c   0x00000040   Code   RO         5158    i.vPortEnterCritical  port.o
+    0x0800a8cc   0x0800a8cc   0x00000028   Code   RO         5159    i.vPortExitCritical  port.o
+    0x0800a8f4   0x0800a8f4   0x00000064   Code   RO         5089    i.vPortFree         heap_4.o
+    0x0800a958   0x0800a958   0x00000024   Code   RO         5160    i.vPortSetupTimerInterrupt  port.o
+    0x0800a97c   0x0800a97c   0x0000004c   Code   RO         4415    i.vTaskDelay        tasks.o
+    0x0800a9c8   0x0800a9c8   0x00000010   Code   RO         4418    i.vTaskInternalSetTimeOutState  tasks.o
+    0x0800a9d8   0x0800a9d8   0x0000000c   Code   RO         4419    i.vTaskMissedYield  tasks.o
+    0x0800a9e4   0x0800a9e4   0x00000030   Code   RO         4421    i.vTaskPlaceOnEventList  tasks.o
+    0x0800aa14   0x0800aa14   0x0000006c   Code   RO         4428    i.vTaskStartScheduler  tasks.o
+    0x0800aa80   0x0800aa80   0x00000010   Code   RO         4430    i.vTaskSuspendAll   tasks.o
+    0x0800aa90   0x0800aa90   0x0000005c   Code   RO         4431    i.vTaskSwitchContext  tasks.o
+    0x0800aaec   0x0800aaec   0x00000264   Code   RO         5869    i.var               commend.o
+    0x0800ad50   0x0800ad50   0x00000030   Code   RO         6277    i.vesc_init         bsp_vesc.o
+    0x0800ad80   0x0800ad80   0x00000024   Code   RO         6278    i.vesc_set_point    bsp_vesc.o
+    0x0800ada4   0x0800ada4   0x00000030   Code   RO         6279    i.vesc_set_rmp      bsp_vesc.o
+    0x0800add4   0x0800add4   0x000000f4   Code   RO         5162    i.xPortStartScheduler  port.o
+    0x0800aec8   0x0800aec8   0x00000016   Code   RO         4089    i.xQueueCreateMutex  queue.o
+    0x0800aede   0x0800aede   0x0000001a   Code   RO         4090    i.xQueueCreateMutexStatic  queue.o
+    0x0800aef8   0x0800aef8   0x00000042   Code   RO         4091    i.xQueueGenericCreate  queue.o
+    0x0800af3a   0x0800af3a   0x00000066   Code   RO         4092    i.xQueueGenericCreateStatic  queue.o
+    0x0800afa0   0x0800afa0   0x00000088   Code   RO         4093    i.xQueueGenericReset  queue.o
+    0x0800b028   0x0800b028   0x00000160   Code   RO         4094    i.xQueueGenericSend  queue.o
+    0x0800b188   0x0800b188   0x00000074   Code   RO         4433    i.xTaskCheckForTimeOut  tasks.o
+    0x0800b1fc   0x0800b1fc   0x0000005a   Code   RO         4434    i.xTaskCreate       tasks.o
+    0x0800b256   0x0800b256   0x00000056   Code   RO         4435    i.xTaskCreateStatic  tasks.o
+    0x0800b2ac   0x0800b2ac   0x0000001c   Code   RO         4439    i.xTaskGetSchedulerState  tasks.o
+    0x0800b2c8   0x0800b2c8   0x000000cc   Code   RO         4442    i.xTaskIncrementTick  tasks.o
+    0x0800b394   0x0800b394   0x00000098   Code   RO         4445    i.xTaskPriorityDisinherit  tasks.o
+    0x0800b42c   0x0800b42c   0x00000074   Code   RO         4447    i.xTaskRemoveFromEventList  tasks.o
+    0x0800b4a0   0x0800b4a0   0x000000c4   Code   RO         4448    i.xTaskResumeAll    tasks.o
+    0x0800b564   0x0800b564   0x00000070   Data   RO          270    .constdata          freertos.o
+    0x0800b5d4   0x0800b5d4   0x00000008   Data   RO         1558    .constdata          stm32f4xx_hal_dma.o
+    0x0800b5dc   0x0800b5dc   0x00000010   Data   RO         3900    .constdata          system_stm32f4xx.o
+    0x0800b5ec   0x0800b5ec   0x00000008   Data   RO         3901    .constdata          system_stm32f4xx.o
+    0x0800b5f4   0x0800b5f4   0x00000007   Data   RO         5290    .constdata          shell.o
+    0x0800b5fb   0x0800b5fb   0x00000001   Data   RO         5291    .constdata          shell.o
+    0x0800b5fc   0x0800b5fc   0x0000000d   Data   RO         5292    .constdata          shell.o
+    0x0800b609   0x0800b609   0x00000007   Data   RO         5293    .constdata          shell.o
+    0x0800b610   0x0800b610   0x00000008   Data   RO         5294    .constdata          shell.o
+    0x0800b618   0x0800b618   0x00000003   Data   RO         5295    .constdata          shell.o
+    0x0800b61b   0x0800b61b   0x00000005   Data   RO         5296    .constdata          shell.o
+    0x0800b620   0x0800b620   0x00000006   Data   RO         5297    .constdata          shell.o
+    0x0800b626   0x0800b626   0x00000005   Data   RO         5298    .constdata          shell.o
+    0x0800b62b   0x0800b62b   0x00000004   Data   RO         5299    .constdata          shell.o
+    0x0800b62f   0x0800b62f   0x0000000a   Data   RO         5300    .constdata          shell.o
+    0x0800b639   0x0800b639   0x0000000a   Data   RO         5301    .constdata          shell.o
+    0x0800b643   0x0800b643   0x00000007   Data   RO         5302    .constdata          shell.o
+    0x0800b64a   0x0800b64a   0x00000006   Data   RO         5303    .constdata          shell.o
+    0x0800b650   0x0800b650   0x00000006   Data   RO         5304    .constdata          shell.o
+    0x0800b656   0x0800b656   0x00000005   Data   RO         5305    .constdata          shell.o
+    0x0800b65b   0x0800b65b   0x0000001e   Data   RO         5306    .constdata          shell.o
+    0x0800b679   0x0800b679   0x00000006   Data   RO         5307    .constdata          shell.o
+    0x0800b67f   0x0800b67f   0x0000000e   Data   RO         5308    .constdata          shell.o
+    0x0800b68d   0x0800b68d   0x00000005   Data   RO         5309    .constdata          shell.o
+    0x0800b692   0x0800b692   0x0000000d   Data   RO         5310    .constdata          shell.o
+    0x0800b69f   0x0800b69f   0x00000005   Data   RO         5311    .constdata          shell.o
+    0x0800b6a4   0x0800b6a4   0x0000000d   Data   RO         5312    .constdata          shell.o
+    0x0800b6b1   0x0800b6b1   0x00000005   Data   RO         5313    .constdata          shell.o
+    0x0800b6b6   0x0800b6b6   0x0000000d   Data   RO         5314    .constdata          shell.o
+    0x0800b6c3   0x0800b6c3   0x00000006   Data   RO         5315    .constdata          shell.o
+    0x0800b6c9   0x0800b6c9   0x0000000e   Data   RO         5316    .constdata          shell.o
+    0x0800b6d7   0x0800b6d7   0x0000000c   Data   RO         5731    .constdata          log.o
+    0x0800b6e3   0x0800b6e3   0x00000024   Data   RO         5732    .constdata          log.o
+    0x0800b707   0x0800b707   0x00000008   Data   RO         5733    .constdata          log.o
+    0x0800b70f   0x0800b70f   0x00000020   Data   RO         5734    .constdata          log.o
+    0x0800b72f   0x0800b72f   0x00000011   Data   RO         5735    .constdata          log.o
+    0x0800b740   0x0800b740   0x0000000c   Data   RO         5736    .constdata          log.o
+    0x0800b74c   0x0800b74c   0x0000000e   Data   RO         5813    .constdata          shell_port.o
+    0x0800b75a   0x0800b75a   0x00000004   Data   RO         5874    .constdata          commend.o
+    0x0800b75e   0x0800b75e   0x00000017   Data   RO         5875    .constdata          commend.o
+    0x0800b775   0x0800b775   0x00000003   Data   RO         6580    .constdata          test_task.o
+    0x0800b778   0x0800b778   0x00000005   Data   RO         6581    .constdata          test_task.o
+    0x0800b77d   0x0800b77d   0x00000003   Data   RO         6582    .constdata          test_task.o
+    0x0800b780   0x0800b780   0x00000005   Data   RO         6583    .constdata          test_task.o
+    0x0800b785   0x0800b785   0x00000003   Data   RO         6584    .constdata          test_task.o
+    0x0800b788   0x0800b788   0x00000005   Data   RO         6585    .constdata          test_task.o
+    0x0800b78d   0x0800b78d   0x00000002   Data   RO         6586    .constdata          test_task.o
+    0x0800b78f   0x0800b78f   0x00000005   Data   RO         6587    .constdata          test_task.o
+    0x0800b794   0x0800b794   0x00000200   Data   RO         7211    .constdata          crc.o
+    0x0800b994   0x0800b994   0x00000004   PAD
+    0x0800b998   0x0800b998   0x00000088   Data   RO         7422    .constdata          m_wm.l(pow.o)
+    0x0800ba20   0x0800ba20   0x00000098   Data   RO         7780    .constdata          m_wm.l(atan.o)
+    0x0800bab8   0x0800bab8   0x00000008   Data   RO         7829    .constdata          m_wm.l(qnan.o)
+    0x0800bac0   0x0800bac0   0x00000081   Data   RO         7908    .constdata          mc_w.l(ctype_o.o)
+    0x0800bb41   0x0800bb41   0x00000003   PAD
+    0x0800bb44   0x0800bb44   0x00000004   Data   RO         7909    .constdata          mc_w.l(ctype_o.o)
+    0x0800bb48   0x0800bb48   0x0000002d   Data   RO          271    .conststring        freertos.o
+    0x0800bb75   0x0800bb75   0x00000003   PAD
+    0x0800bb78   0x0800bb78   0x000002a1   Data   RO         5317    .conststring        shell.o
+    0x0800be19   0x0800be19   0x00000003   PAD
+    0x0800be1c   0x0800be1c   0x00000048   Data   RO         5737    .conststring        log.o
+    0x0800be64   0x0800be64   0x00000020   Data   RO         7946    Region$$Table       anon$$obj.o
+    0x0800be84   0x0800be84   0x00000120   Data   RO         5319    shellCommand        shell.o
+    0x0800bfa4   0x0800bfa4   0x00000030   Data   RO         5738    shellCommand        log.o
+    0x0800bfd4   0x0800bfd4   0x00000010   Data   RO         5881    shellCommand        commend.o
+    0x0800bfe4   0x0800bfe4   0x00000040   Data   RO         6589    shellCommand        test_task.o
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x10000000, Load base: 0x0800c068, Size: 0x00000000, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x10000000, Load base: 0x0800c088, Size: 0x00000000, Max: 0x00010000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800c004, Size: 0x00006430, Max: 0x00030000, ABSOLUTE, COMPRESSED[0x00000064])
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800c024, Size: 0x00006430, Max: 0x00030000, ABSOLUTE, COMPRESSED[0x00000064])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -5241,14 +5247,14 @@ Memory Map of the image
     0x20000094   COMPRESSED   0x00000054   Data   RW         5318    .data               shell.o
     0x200000e8   COMPRESSED   0x00000010   Data   RW         5814    .data               shell_port.o
     0x200000f8   COMPRESSED   0x00000008   Data   RW         5876    .data               commend.o
-    0x20000100   COMPRESSED   0x00000003   Data   RW         6280    .data               bsp_vesc.o
-    0x20000103   COMPRESSED   0x00000001   Data   RW         6338    .data               chassis_behaviour.o
-    0x20000104   COMPRESSED   0x00000004   Data   RW         6576    .data               test_task.o
-    0x20000108   COMPRESSED   0x00000002   Data   RW         6681    .data               solenoid_task.o
+    0x20000100   COMPRESSED   0x00000003   Data   RW         6281    .data               bsp_vesc.o
+    0x20000103   COMPRESSED   0x00000001   Data   RW         6350    .data               chassis_behaviour.o
+    0x20000104   COMPRESSED   0x00000004   Data   RW         6588    .data               test_task.o
+    0x20000108   COMPRESSED   0x00000002   Data   RW         6693    .data               solenoid_task.o
     0x2000010a   COMPRESSED   0x00000002   PAD
-    0x2000010c   COMPRESSED   0x00000074   Data   RW         6936    .data               bldc_interface.o
-    0x20000180   COMPRESSED   0x00000004   Data   RW         7834    .data               mc_w.l(stdout.o)
-    0x20000184   COMPRESSED   0x00000004   Data   RW         7848    .data               mc_w.l(errno.o)
+    0x2000010c   COMPRESSED   0x00000074   Data   RW         6948    .data               bldc_interface.o
+    0x20000180   COMPRESSED   0x00000004   Data   RW         7846    .data               mc_w.l(stdout.o)
+    0x20000184   COMPRESSED   0x00000004   Data   RW         7860    .data               mc_w.l(errno.o)
     0x20000188        -       0x00000254   Zero   RW          269    .bss                freertos.o
     0x200003dc        -       0x00000050   Zero   RW          320    .bss                can.o
     0x2000042c        -       0x00000058   Zero   RW          392    .bss                spi.o
@@ -5264,10 +5270,10 @@ Memory Map of the image
     0x20004940        -       0x00000340   Zero   RW         6025    .bss                bsp_can.o
     0x20004c80        -       0x0000003b   Zero   RW         6110    .bss                bsp_sbus.o
     0x20004cbb   COMPRESSED   0x00000001   PAD
-    0x20004cbc        -       0x00000854   Zero   RW         6381    .bss                chassis_task.o
-    0x20005510        -       0x0000006c   Zero   RW         6566    .bss                test_task.o
-    0x2000557c        -       0x00000694   Zero   RW         6935    .bss                bldc_interface.o
-    0x20005c10        -       0x00000420   Zero   RW         7343    .bss                packet.o
+    0x20004cbc        -       0x00000854   Zero   RW         6393    .bss                chassis_task.o
+    0x20005510        -       0x0000006c   Zero   RW         6578    .bss                test_task.o
+    0x2000557c        -       0x00000694   Zero   RW         6947    .bss                bldc_interface.o
+    0x20005c10        -       0x00000420   Zero   RW         7355    .bss                packet.o
     0x20006030        -       0x00000400   Zero   RW            1    STACK               startup_stm32f427xx.o
 
 
@@ -5282,7 +5288,7 @@ Image component sizes
         42          8          0          0          0       2502   bldc_interface_uart.o
        702         18          0          0        832       9103   bsp_can.o
        766         22          0          0         59       5101   bsp_sbus.o
-       820        392          0          3          0       3882   bsp_vesc.o
+       820        392          0          3          0       4026   bsp_vesc.o
        296         20          0          0          0       5880   buffer.o
        420         40          0          4         80       2554   can.o
        284         24          0          1          0       5378   chassis_behaviour.o
@@ -5308,7 +5314,7 @@ Image component sizes
         66          0          0          0          0       2084   shell_companion.o
        684          8          0          0          0       5506   shell_ext.o
        296        110         14         16        776       7584   shell_port.o
-       284         44          0          2          0       3122   solenoid_task.o
+       292         46          0          2          0       3130   solenoid_task.o
        184         24          0          0         88       1737   spi.o
         36          8        428          0       1024        848   startup_stm32f427xx.o
         80         14          0         12          0       8294   stm32f4xx_hal.o
@@ -5328,12 +5334,12 @@ Image component sizes
          0          0          0          0          0        408   stream_buffer.o
         16          4         24          4          0       1163   system_stm32f4xx.o
       2008        150          0         60        240      25382   tasks.o
-       560        128         95          4        108       7032   test_task.o
+       584        138         95          4        108       7060   test_task.o
        596         54          0          0        144       3357   tim.o
       1200        140          0          4        696      21029   usart.o
 
     ----------------------------------------------------------------------
-     34546       2988       2748        384      25256    1217431   Object Totals
+     34578       3000       2748        384      25256    1217611   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         64          0         10          2          4          0   (incl. Padding)
 
@@ -5426,15 +5432,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     45976       3692       3180        392      25256    1188687   Grand Totals
-     45976       3692       3180        100      25256    1188687   ELF Image Totals (compressed)
-     45976       3692       3180        100          0          0   ROM Totals
+     46008       3704       3180        392      25256    1188867   Grand Totals
+     46008       3704       3180        100      25256    1188867   ELF Image Totals (compressed)
+     46008       3704       3180        100          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                49156 (  48.00kB)
+    Total RO  Size (Code + RO Data)                49188 (  48.04kB)
     Total RW  Size (RW Data + ZI Data)             25648 (  25.05kB)
-    Total ROM Size (Code + RO Data + RW Data)      49256 (  48.10kB)
+    Total ROM Size (Code + RO Data + RW Data)      49288 (  48.13kB)
 
 ==============================================================================
 

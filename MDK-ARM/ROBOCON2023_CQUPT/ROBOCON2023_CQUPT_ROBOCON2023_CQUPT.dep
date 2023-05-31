@@ -1694,8 +1694,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x62F8B05F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x62F8B05F)
 I (../Core/Inc/usart.h)(0x644CC7D4)
 I (../Core/Inc/main.h)(0x641DAF44)
-F (..\Hardware\bsp_vesc.c)(0x644D02E4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Control -I ../Hardware -I ../Task -I ../Middlewares/Third_Party/LetterShell/src -I ../Middlewares/Third_Party/LetterShell/extensions/log -I ../Hardware/vesc_uart -I ../Middlewares/Third_Party -I ../Middlewares/Third_Party/LetterShell-I.\RTE\_ROBOCON2023_CQUPT-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o robocon2023_cqupt\bsp_vesc.o --omf_browse robocon2023_cqupt\bsp_vesc.crf --depend robocon2023_cqupt\bsp_vesc.d)
-I (..\Hardware\bsp_vesc.h)(0x644D0CEC)
+F (..\Hardware\bsp_vesc.c)(0x6476E3EE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Control -I ../Hardware -I ../Task -I ../Middlewares/Third_Party/LetterShell/src -I ../Middlewares/Third_Party/LetterShell/extensions/log -I ../Hardware/vesc_uart -I ../Middlewares/Third_Party -I ../Middlewares/Third_Party/LetterShell-I.\RTE\_ROBOCON2023_CQUPT-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o robocon2023_cqupt\bsp_vesc.o --omf_browse robocon2023_cqupt\bsp_vesc.crf --depend robocon2023_cqupt\bsp_vesc.d)
+I (..\Hardware\bsp_vesc.h)(0x6476E367)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x62F8B01F)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h)(0x62F8B01F)
 I (../Drivers/CMSIS/Include/core_cm4.h)(0x62F8B021)
@@ -1739,6 +1739,20 @@ I (../Core/Inc/usart.h)(0x644CC7D4)
 I (../Core/Inc/main.h)(0x641DAF44)
 I (C:\Keil_v5\ARM\Compiler_5.06u7\include\stdlib.h)(0x5E8E3CC2)
 I (C:\Keil_v5\ARM\Compiler_5.06u7\include\stdio.h)(0x5E8E3CC2)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/freertos.h)(0x62F8B022)
+I (../Core/Inc/FreeRTOSConfig.h)(0x641DAF42)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x62F8B022)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x62F8B022)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x62F8B022)
+I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h)(0x62F8B022)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x62F8B022)
+I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x62F8B022)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x62F8B022)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x62F8B022)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x62F8B022)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x62F8B022)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x62F8B022)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x62F8B022)
 F (..\Task\chassis_behaviour.c)(0x6450B543)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Control -I ../Hardware -I ../Task -I ../Middlewares/Third_Party/LetterShell/src -I ../Middlewares/Third_Party/LetterShell/extensions/log -I ../Hardware/vesc_uart -I ../Middlewares/Third_Party -I ../Middlewares/Third_Party/LetterShell-I.\RTE\_ROBOCON2023_CQUPT-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o robocon2023_cqupt\chassis_behaviour.o --omf_browse robocon2023_cqupt\chassis_behaviour.crf --depend robocon2023_cqupt\chassis_behaviour.d)
 I (..\Task\chassis_behaviour.h)(0x641DB1B0)
 I (..\Task\chassis_task.h)(0x641FF954)
@@ -1890,7 +1904,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x62F8B022)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x62F8B022)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x62F8B022)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x62F8B022)
-F (..\Task\test_task.c)(0x6476A0E4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Control -I ../Hardware -I ../Task -I ../Middlewares/Third_Party/LetterShell/src -I ../Middlewares/Third_Party/LetterShell/extensions/log -I ../Hardware/vesc_uart -I ../Middlewares/Third_Party -I ../Middlewares/Third_Party/LetterShell-I.\RTE\_ROBOCON2023_CQUPT-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o robocon2023_cqupt\test_task.o --omf_browse robocon2023_cqupt\test_task.crf --depend robocon2023_cqupt\test_task.d)
+F (..\Task\test_task.c)(0x6476ED72)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Control -I ../Hardware -I ../Task -I ../Middlewares/Third_Party/LetterShell/src -I ../Middlewares/Third_Party/LetterShell/extensions/log -I ../Hardware/vesc_uart -I ../Middlewares/Third_Party -I ../Middlewares/Third_Party/LetterShell-I.\RTE\_ROBOCON2023_CQUPT-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o robocon2023_cqupt\test_task.o --omf_browse robocon2023_cqupt\test_task.crf --depend robocon2023_cqupt\test_task.d)
 I (..\Task\led_task.h)(0x641DB556)
 I (../Core/Inc/main.h)(0x641DAF44)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x62F8B05F)
@@ -1948,7 +1962,7 @@ I (../Hardware/vesc_uart/datatypes.h)(0x644C7FD8)
 I (C:\Keil_v5\ARM\Compiler_5.06u7\include\stdbool.h)(0x5E8E3CC2)
 I (../Hardware/bsp_sbus.h)(0x643D37F8)
 I (../Core/Inc/usart.h)(0x644CC7D4)
-I (../Hardware/bsp_vesc.h)(0x644D0CEC)
+I (../Hardware/bsp_vesc.h)(0x6476E367)
 I (../Core/Inc/can.h)(0x641DAF42)
 I (../Hardware/bsp_can.h)(0x641DB174)
 I (C:\Keil_v5\ARM\Compiler_5.06u7\include\stdio.h)(0x5E8E3CC2)
@@ -1959,7 +1973,7 @@ I (../Middlewares/Third_Party/LetterShell/src/shell_cfg_user.h)(0x644E229A)
 I (../Middlewares/Third_Party/LetterShell/src/commend.h)(0x644E1E78)
 I (C:\Keil_v5\ARM\Compiler_5.06u7\include\stdarg.h)(0x5E8E3CC2)
 I (C:\Keil_v5\ARM\Compiler_5.06u7\include\stdlib.h)(0x5E8E3CC2)
-F (..\Task\solenoid_task.c)(0x64575179)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Control -I ../Hardware -I ../Task -I ../Middlewares/Third_Party/LetterShell/src -I ../Middlewares/Third_Party/LetterShell/extensions/log -I ../Hardware/vesc_uart -I ../Middlewares/Third_Party -I ../Middlewares/Third_Party/LetterShell-I.\RTE\_ROBOCON2023_CQUPT-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o robocon2023_cqupt\solenoid_task.o --omf_browse robocon2023_cqupt\solenoid_task.crf --depend robocon2023_cqupt\solenoid_task.d)
+F (..\Task\solenoid_task.c)(0x6476E9F3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Control -I ../Hardware -I ../Task -I ../Middlewares/Third_Party/LetterShell/src -I ../Middlewares/Third_Party/LetterShell/extensions/log -I ../Hardware/vesc_uart -I ../Middlewares/Third_Party -I ../Middlewares/Third_Party/LetterShell-I.\RTE\_ROBOCON2023_CQUPT-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o robocon2023_cqupt\solenoid_task.o --omf_browse robocon2023_cqupt\solenoid_task.crf --depend robocon2023_cqupt\solenoid_task.d)
 I (..\Task\solenoid_task.h)(0x64574571)
 I (../Core/Inc/main.h)(0x641DAF44)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x62F8B05F)
