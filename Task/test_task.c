@@ -54,7 +54,7 @@ void test_task(void const * argument)
 		//vesc_set_rmp(5000);
 		if(rc.ch12==1)//通道12为发射机构加速和发射
 		{
-			float data = ((float)rc.ch16+672)*40;
+			float data = ((float)rc.ch16+672)*50;
 			printf("fdata %f\r\n",data);
 			//在2000-4000之间
 //			float data = ((float)rc.ch16+500)/1000*2000+2000;
