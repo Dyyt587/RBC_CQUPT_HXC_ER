@@ -8,6 +8,8 @@
 #include "usart.h"
 #include "stdlib.h"
 #include "stdio.h"
+#include "freertos.h"
+#include "cmsis_os.h"
 
 uint8_t rx_data_0=0;
 uint8_t rx_data_1=0;
@@ -84,16 +86,21 @@ void vesc_set_point(uint8_t num)
 
 void vesc_set_rmp(int rpm)
 {
+
 	int32_t send_index = 0;
 	uint8_t send_buffer[12]={0};
 	send_buffer[send_index++] = COMM_SET_RPM;
 	buffer_append_int32(send_buffer, rpm, &send_index);
-	//HAL_UART_Transmit(&huart7,send_buffer,5,0xffffffff);
 	extern void(*send_func)(unsigned char *data, unsigned int len);
 	send_func(send_buffer,5);
 }
 
-
-
+void vesc_smooth_set_vel(int rpm,int time_cnt)
+{
+	for(int i=0;i<time_cnt;++i){
+		vesc_set_rmp(rpm*i/time_cnt);
+		osDelay(1);
+	}
+}
 
 

@@ -52,13 +52,14 @@ void test_task(void const * argument)
 		//vesc_set_rmp(5000);
 		if(rc.ch12==1)//通道12为发射机构加速和发射
 		{
+			float data = ((float)rc.ch16+500)/1000*2000;
 			//在2000-4000之间
-			float data = ((float)rc.ch16+500)/1000*2000+2000;
-			if(data>4000)data=4000;
-			if(data<2000)data=2000;
-			TIM8 ->CCR3 = data;
-			TIM8 ->CCR4 = data;
-//			vesc_set_rmp(10000);	
+//			float data = ((float)rc.ch16+500)/1000*2000+2000;
+//			if(data>4000)data=4000;
+//			if(data<2000)data=2000;
+//			TIM8 ->CCR3 = data;
+//			TIM8 ->CCR4 = data;
+			vesc_set_rmp(data);	
 //			time_count++;
 //			if(time_count == 100)
 //			{

@@ -12,6 +12,7 @@
 void vesc_init(void);
 void vesc_set_point(uint8_t num);
 void vesc_set_rmp(int rpm);
+void vesc_smooth_set_vel(int rpm,int time_cnt);
 
 
 
