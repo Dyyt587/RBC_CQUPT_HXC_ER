@@ -239,6 +239,6 @@ const struct fal_flash_dev stm32_onchip_flash =
     .len        = 1024*1024,
     .blk_size   = 128*1024,
     .ops        = {NULL, read, write, erase},
-    .write_gran = 32
+    .write_gran = 8
 };
 

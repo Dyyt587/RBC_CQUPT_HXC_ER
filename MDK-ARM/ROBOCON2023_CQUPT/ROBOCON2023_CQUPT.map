@@ -1775,7 +1775,6 @@ Section Cross References
     fdb_kvdb.o(i._fdb_kv_load) refers to fdb_kvdb.o(i.check_and_recovery_kv_cb) for check_and_recovery_kv_cb
     fdb_kvdb.o(i.align_write) refers to memseta.o(.text) for __aeabi_memset
     fdb_kvdb.o(i.align_write) refers to fdb_utils.o(i._fdb_flash_write) for _fdb_flash_write
-    fdb_kvdb.o(i.align_write) refers to memcpya.o(.text) for __aeabi_memcpy
     fdb_kvdb.o(i.alloc_kv) refers to fdb_kvdb.o(i.sector_iterator) for sector_iterator
     fdb_kvdb.o(i.alloc_kv) refers to printfa.o(i.__0printf) for __2printf
     fdb_kvdb.o(i.alloc_kv) refers to fdb.o(i._fdb_db_path) for _fdb_db_path
@@ -3462,14 +3461,14 @@ Removing Unused input sections from the image.
     Removing fdb.o(.conststring), (147 bytes).
     Removing fdb.o(.data), (1 bytes).
     Removing fdb_kvdb.o(i._fdb_kv_load), (268 bytes).
-    Removing fdb_kvdb.o(i.align_write), (84 bytes).
+    Removing fdb_kvdb.o(i.align_write), (42 bytes).
     Removing fdb_kvdb.o(i.alloc_kv), (304 bytes).
     Removing fdb_kvdb.o(i.alloc_kv_cb), (44 bytes).
     Removing fdb_kvdb.o(i.check_and_recovery_gc_cb), (30 bytes).
-    Removing fdb_kvdb.o(i.check_and_recovery_kv_cb), (328 bytes).
+    Removing fdb_kvdb.o(i.check_and_recovery_kv_cb), (324 bytes).
     Removing fdb_kvdb.o(i.check_oldest_addr_cb), (28 bytes).
     Removing fdb_kvdb.o(i.check_sec_hdr_cb), (168 bytes).
-    Removing fdb_kvdb.o(i.create_kv_blob), (772 bytes).
+    Removing fdb_kvdb.o(i.create_kv_blob), (664 bytes).
     Removing fdb_kvdb.o(i.del_kv), (352 bytes).
     Removing fdb_kvdb.o(i.do_gc), (412 bytes).
     Removing fdb_kvdb.o(i.fdb_is_str), (26 bytes).
@@ -3500,16 +3499,16 @@ Removing Unused input sections from the image.
     Removing fdb_kvdb.o(i.get_next_sector_addr), (42 bytes).
     Removing fdb_kvdb.o(i.get_sector_from_cache), (42 bytes).
     Removing fdb_kvdb.o(i.kv_iterator), (114 bytes).
-    Removing fdb_kvdb.o(i.move_kv), (472 bytes).
+    Removing fdb_kvdb.o(i.move_kv), (456 bytes).
     Removing fdb_kvdb.o(i.new_kv), (292 bytes).
-    Removing fdb_kvdb.o(i.print_kv_cb), (208 bytes).
-    Removing fdb_kvdb.o(i.read_kv), (536 bytes).
-    Removing fdb_kvdb.o(i.read_sector_info), (548 bytes).
+    Removing fdb_kvdb.o(i.print_kv_cb), (204 bytes).
+    Removing fdb_kvdb.o(i.read_kv), (520 bytes).
+    Removing fdb_kvdb.o(i.read_sector_info), (552 bytes).
     Removing fdb_kvdb.o(i.sector_iterator), (102 bytes).
     Removing fdb_kvdb.o(i.sector_statistics_cb), (34 bytes).
-    Removing fdb_kvdb.o(i.set_kv), (180 bytes).
+    Removing fdb_kvdb.o(i.set_kv), (160 bytes).
     Removing fdb_kvdb.o(i.update_kv_cache), (170 bytes).
-    Removing fdb_kvdb.o(i.update_sec_status), (118 bytes).
+    Removing fdb_kvdb.o(i.update_sec_status), (114 bytes).
     Removing fdb_kvdb.o(i.update_sector_cache), (102 bytes).
     Removing fdb_kvdb.o(.bss), (129 bytes).
     Removing fdb_kvdb.o(.constdata), (70 bytes).
@@ -3524,31 +3523,31 @@ Removing Unused input sections from the image.
     Removing fdb_tsdb.o(i.fdb_tsl_iter_by_time), (472 bytes).
     Removing fdb_tsdb.o(i.fdb_tsl_iter_reverse), (248 bytes).
     Removing fdb_tsdb.o(i.fdb_tsl_query_count), (140 bytes).
-    Removing fdb_tsdb.o(i.fdb_tsl_set_status), (24 bytes).
+    Removing fdb_tsdb.o(i.fdb_tsl_set_status), (22 bytes).
     Removing fdb_tsdb.o(i.fdb_tsl_to_blob), (16 bytes).
     Removing fdb_tsdb.o(i.format_all_cb), (16 bytes).
-    Removing fdb_tsdb.o(i.format_sector), (208 bytes).
+    Removing fdb_tsdb.o(i.format_sector), (204 bytes).
     Removing fdb_tsdb.o(i.get_last_sector_addr), (30 bytes).
     Removing fdb_tsdb.o(i.get_last_tsl_addr), (30 bytes).
     Removing fdb_tsdb.o(i.get_next_sector_addr), (30 bytes).
     Removing fdb_tsdb.o(i.get_next_tsl_addr), (26 bytes).
     Removing fdb_tsdb.o(i.query_count_cb), (18 bytes).
-    Removing fdb_tsdb.o(i.read_sector_info), (492 bytes).
+    Removing fdb_tsdb.o(i.read_sector_info), (480 bytes).
     Removing fdb_tsdb.o(i.read_tsl), (68 bytes).
     Removing fdb_tsdb.o(i.sector_iterator), (102 bytes).
-    Removing fdb_tsdb.o(i.tsl_append), (276 bytes).
+    Removing fdb_tsdb.o(i.tsl_append), (264 bytes).
     Removing fdb_tsdb.o(i.tsl_format_all), (148 bytes).
-    Removing fdb_tsdb.o(i.update_sec_status), (400 bytes).
-    Removing fdb_tsdb.o(i.write_tsl), (118 bytes).
+    Removing fdb_tsdb.o(i.update_sec_status), (394 bytes).
+    Removing fdb_tsdb.o(i.write_tsl), (114 bytes).
     Removing fdb_tsdb.o(.constdata), (73 bytes).
     Removing fdb_tsdb.o(.conststring), (333 bytes).
-    Removing fdb_utils.o(i._fdb_continue_ff_addr), (102 bytes).
+    Removing fdb_utils.o(i._fdb_continue_ff_addr), (96 bytes).
     Removing fdb_utils.o(i._fdb_flash_erase), (28 bytes).
     Removing fdb_utils.o(i._fdb_flash_read), (28 bytes).
     Removing fdb_utils.o(i._fdb_flash_write), (28 bytes).
     Removing fdb_utils.o(i._fdb_get_status), (30 bytes).
     Removing fdb_utils.o(i._fdb_read_status), (136 bytes).
-    Removing fdb_utils.o(i._fdb_set_status), (42 bytes).
+    Removing fdb_utils.o(i._fdb_set_status), (36 bytes).
     Removing fdb_utils.o(i._fdb_write_status), (204 bytes).
     Removing fdb_utils.o(i.fdb_blob_make), (6 bytes).
     Removing fdb_utils.o(i.fdb_blob_read), (34 bytes).
@@ -3593,9 +3592,13 @@ Removing Unused input sections from the image.
     Removing bsp_as5048.o(i.GET_AS5048A_ANGLE), (56 bytes).
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 945 unused section(s) (total 75761 bytes) removed from the image.
 =======
 807 unused section(s) (total 52783 bytes) removed from the image.
+>>>>>>> Stashed changes
+=======
+945 unused section(s) (total 75499 bytes) removed from the image.
 >>>>>>> Stashed changes
 
 ==============================================================================
