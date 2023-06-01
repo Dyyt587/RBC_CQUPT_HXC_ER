@@ -36,11 +36,11 @@ void var_init(void)
 
   //测试使用
     //注册变量；变量，变量大小
-/*    VAR_CMD_REGISTER(b, _8);
+    VAR_CMD_REGISTER(b, _8);
     VAR_CMD_REGISTER(a1, _32);
     VAR_CMD_REGISTER(c, _lf);//double类型
     VAR_CMD_REGISTER(d, _f);//float类型
-    */
+
 //    var_register(&gps_tau1201.latitude,"curlat",_lf);
 //    var_register(&gps_tau1201.longitude,"curlon",_lf);
 
@@ -54,7 +54,6 @@ void var_init(void)
 	var_register(&target,"t",_f);
        // gps_latitude[i] = gps_control.gps_location.latitude_temp[i];
         //gps_longitude[i] = gps_control.gps_location.longitude_temp[i];
-//将gps的点数组注册添加到该命令中
 //    var_arr_register(gps_control.gps_location.latitude_temp,"gpslat",_lf,max);
 //    var_arr_register(gps_control.gps_location.longitude_temp,"gpslon",_lf,max);
 

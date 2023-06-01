@@ -32,6 +32,7 @@
 #include "bsp_sbus.h"
 #include "stdio.h"
 #include "vofa_lower.h"
+#include "commend.h"
 //÷ÿ–¥printf
 int fputc(int ch,FILE *f)
 {
@@ -127,6 +128,7 @@ int main(void)
   userShellInit();
   my_can_filter_init_recv_all(&hcan1);
   can_filter_recv_special(&hcan2);
+  var_init();
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */

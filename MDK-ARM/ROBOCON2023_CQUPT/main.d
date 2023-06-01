@@ -57,3 +57,4 @@ robocon2023_cqupt\main.o: ../Hardware/bsp_can.h
 robocon2023_cqupt\main.o: ../Hardware/bsp_sbus.h
 robocon2023_cqupt\main.o: C:\keil\ARM\ARMCC\Bin\..\include\stdio.h
 robocon2023_cqupt\main.o: ../Hardware/vofa_lower.h
+robocon2023_cqupt\main.o: ../Middlewares/Third_Party/LetterShell/src/commend.h

@@ -41,7 +41,8 @@ void test_task(void const * argument)
 
 	while(1)
 	{
-//printf("fdata \r\n");
+		extern int a;
+		logError("fdata:%d \r\n",a);
 
 //		Test_AS5048();
 //vofa_send_protocol("a",&data,1);
@@ -56,7 +57,7 @@ void test_task(void const * argument)
 		if(rc.ch12==1)//通道12为发射机构加速和发射
 		{
 			float data = ((float)rc.ch16+672)*50;
-			logError("fdata %f\r\n",data);
+			logError("fdata:%f\r\n",data);
 			//在2000-4000之间
 //			float data = ((float)rc.ch16+500)/1000*2000+2000;
 //			if(data>4000)data=4000;
