@@ -3,7 +3,7 @@
 <title>Static Call Graph - [ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed May 31 20:03:47 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Thu Jun 01 15:58:10 2023
 <BR><P>
 <H3>Maximum Stack Usage =        480 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -549,10 +549,10 @@ Global Symbols
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
+<BR>[Called By]<UL><LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buffer_get_float32_auto
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
-<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buffer_get_float32_auto
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_kinematics_wheel4_speed
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
 <LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan2
@@ -586,8 +586,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
-<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buffer_get_float32_auto
+<BR>[Called By]<UL><LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buffer_get_float32_auto
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_kinematics_wheel4_speed
 <LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_feedback_update
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_value
@@ -2173,8 +2173,8 @@ Global Symbols
 <P><STRONG><a name="[167]"></a>buffer_get_float32_auto</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, buffer.o(i.buffer_get_float32_auto))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = buffer_get_float32_auto &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_ldexpf
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buffer_get_uint32
+<BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buffer_get_uint32
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_ldexpf
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
@@ -2467,8 +2467,8 @@ Global Symbols
 <P><STRONG><a name="[194]"></a>packet_send_packet</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, packet.o(i.packet_send_packet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = packet_send_packet &rArr; crc16
 </UL>
-<BR>[Calls]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16
+<BR>[Calls]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_packet_bldc_interface
 </UL>

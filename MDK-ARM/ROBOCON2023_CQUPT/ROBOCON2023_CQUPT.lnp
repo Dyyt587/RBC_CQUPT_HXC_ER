@@ -65,6 +65,14 @@
 "robocon2023_cqupt\crc.o"
 "robocon2023_cqupt\buffer.o"
 "robocon2023_cqupt\packet.o"
+"robocon2023_cqupt\fdb.o"
+"robocon2023_cqupt\fdb_kvdb.o"
+"robocon2023_cqupt\fdb_tsdb.o"
+"robocon2023_cqupt\fdb_utils.o"
+"robocon2023_cqupt\fal.o"
+"robocon2023_cqupt\fal_flash.o"
+"robocon2023_cqupt\fal_flash_stm32f4.o"
+"robocon2023_cqupt\fal_partition.o"
 --library_type=microlib --strict --scatter "ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

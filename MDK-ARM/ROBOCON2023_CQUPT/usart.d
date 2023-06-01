@@ -8,7 +8,7 @@ robocon2023_cqupt\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def
 robocon2023_cqupt\usart.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 robocon2023_cqupt\usart.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h
 robocon2023_cqupt\usart.o: ../Drivers/CMSIS/Include/core_cm4.h
-robocon2023_cqupt\usart.o: C:\Keil_v5\ARM\Compiler_5.06u7\Bin\..\include\stdint.h
+robocon2023_cqupt\usart.o: C:\keil\ARM\ARMCC\Bin\..\include\stdint.h
 robocon2023_cqupt\usart.o: ../Drivers/CMSIS/Include/cmsis_version.h
 robocon2023_cqupt\usart.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 robocon2023_cqupt\usart.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -16,7 +16,7 @@ robocon2023_cqupt\usart.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 robocon2023_cqupt\usart.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 robocon2023_cqupt\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 robocon2023_cqupt\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-robocon2023_cqupt\usart.o: C:\Keil_v5\ARM\Compiler_5.06u7\Bin\..\include\stddef.h
+robocon2023_cqupt\usart.o: C:\keil\ARM\ARMCC\Bin\..\include\stddef.h
 robocon2023_cqupt\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 robocon2023_cqupt\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 robocon2023_cqupt\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -46,10 +46,10 @@ robocon2023_cqupt\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/R
 robocon2023_cqupt\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
 robocon2023_cqupt\usart.o: ../Middlewares/Third_Party/LetterShell/src/shell_port.h
 robocon2023_cqupt\usart.o: ../Hardware/vesc_uart/datatypes.h
-robocon2023_cqupt\usart.o: C:\Keil_v5\ARM\Compiler_5.06u7\Bin\..\include\stdbool.h
+robocon2023_cqupt\usart.o: C:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
 robocon2023_cqupt\usart.o: ../Hardware/vesc_uart/bldc_interface.h
 robocon2023_cqupt\usart.o: ../Hardware/vesc_uart/bldc_interface_uart.h
 robocon2023_cqupt\usart.o: ../Hardware/vesc_uart/packet.h
 robocon2023_cqupt\usart.o: ../Control/kfifo.h
-robocon2023_cqupt\usart.o: C:\Keil_v5\ARM\Compiler_5.06u7\Bin\..\include\stdlib.h
-robocon2023_cqupt\usart.o: C:\Keil_v5\ARM\Compiler_5.06u7\Bin\..\include\stdio.h
+robocon2023_cqupt\usart.o: C:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+robocon2023_cqupt\usart.o: C:\keil\ARM\ARMCC\Bin\..\include\stdio.h
