@@ -154,6 +154,11 @@ static uint32_t stm32_get_sector(uint32_t addr)
     return sector;
 }
 
+static int init(void)
+{
+	
+}
+
 static int read(long offset, uint8_t *buf, size_t size)
 {
     size_t i;

@@ -32,7 +32,20 @@
 #include "bsp_sbus.h"
 #include "stdio.h"
 #include "vofa_lower.h"
+#include "flashdb.h"
+#include "log.h"
 #include "commend.h"
+#include <string.h>
+
+static uint32_t boot_count = 0;
+static time_t boot_time[10] = {0, 1, 2, 3};
+
+static struct fdb_default_kv_node default_kv_table[] = {
+        {"username", "armink", 0}, /* string KV */
+        {"password", "123456", 0}, /* string KV */
+        {"boot_count", &boot_count, sizeof(boot_count)}, /* int type KV */
+        {"boot_time", &boot_time, sizeof(boot_time)},    /* int array type KV */
+};
 //ÖØÐ´printf
 int fputc(int ch,FILE *f)
 {
@@ -73,6 +86,138 @@ void MX_FREERTOS_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+#define FDB_LOG_TAG "[sample][kvdb][basic]"
+
+void kvdb_basic_sample(fdb_kvdb_t kvdb)
+{
+    struct fdb_blob blob;
+    int boot_count = 0;
+
+    FDB_INFO("==================== kvdb_basic_sample ====================\n");
+
+    { /* GET the KV value */
+        /* get the "boot_count" KV value */
+        fdb_kv_get_blob(kvdb, "boot_count", fdb_blob_make(&blob, &boot_count, sizeof(boot_count)));
+        /* the blob.saved.len is more than 0 when get the value successful */
+        if (blob.saved.len > 0) {
+            FDB_INFO("get the 'boot_count' value is %d\n", boot_count);
+        } else {
+            FDB_INFO("get the 'boot_count' failed\n");
+        }
+    }
+
+    { /* CHANGE the KV value */
+        /* increase the boot count */
+        boot_count ++;
+        /* change the "boot_count" KV's value */
+        fdb_kv_set_blob(kvdb, "boot_count", fdb_blob_make(&blob, &boot_count, sizeof(boot_count)));
+        FDB_INFO("set the 'boot_count' value to %d\n", boot_count);
+    }
+
+    FDB_INFO("===========================================================\n");
+}
+
+#define FDB_LOG_TAG "[sample][kvdb][string]"
+
+void kvdb_type_string_sample(fdb_kvdb_t kvdb)
+{
+    FDB_INFO("==================== kvdb_type_string_sample ====================\n");
+
+    { /* CREATE new Key-Value */
+        char temp_data[10] = "36C";
+
+        /* It will create new KV node when "temp" KV not in database. */
+        fdb_kv_set(kvdb, "temp", temp_data);
+        FDB_INFO("create the 'temp' string KV, value is: %s\n", temp_data);
+    }
+
+    { /* GET the KV value */
+        char *return_value, temp_data[10] = { 0 };
+
+        /* Get the "temp" KV value.
+         * NOTE: The return value saved in fdb_kv_get's buffer. Please copy away as soon as possible.
+         */
+        return_value = fdb_kv_get(kvdb, "temp");
+        /* the return value is NULL when get the value failed */
+        if (return_value != NULL) {
+            strncpy(temp_data, return_value, sizeof(temp_data));
+            FDB_INFO("get the 'temp' value is: %s\n", temp_data);
+        }
+    }
+
+    { /* CHANGE the KV value */
+        char temp_data[10] = "38C";
+
+        /* change the "temp" KV's value to "38.1" */
+        fdb_kv_set(kvdb, "temp", temp_data);
+        FDB_INFO("set 'temp' value to %s\n", temp_data);
+    }
+
+    { /* DELETE the KV by name */
+        fdb_kv_del(kvdb, "temp");
+        FDB_INFO("delete the 'temp' finish\n");
+    }
+
+    FDB_INFO("===========================================================\n");
+}
+
+
+void kvdb_type_blob_sample(fdb_kvdb_t kvdb)
+{
+    struct fdb_blob blob;
+
+    FDB_INFO("==================== kvdb_type_blob_sample ====================\n");
+
+    { /* CREATE new Key-Value */
+        int temp_data = 36;
+
+        /* It will create new KV node when "temp" KV not in database.
+         * fdb_blob_make: It's a blob make function, and it will return the blob when make finish.
+         */
+        fdb_kv_set_blob(kvdb, "temp", fdb_blob_make(&blob, &temp_data, sizeof(temp_data)));
+        FDB_INFO("create the 'temp' blob KV, value is: %d\n", temp_data);
+    }
+
+    { /* GET the KV value */
+        int temp_data = 0;
+
+        /* get the "temp" KV value */
+        fdb_kv_get_blob(kvdb, "temp", fdb_blob_make(&blob, &temp_data, sizeof(temp_data)));
+        /* the blob.saved.len is more than 0 when get the value successful */
+        if (blob.saved.len > 0) {
+            FDB_INFO("get the 'temp' value is: %d\n", temp_data);
+        }
+    }
+
+    { /* CHANGE the KV value */
+        int temp_data = 38;
+
+        /* change the "temp" KV's value to 38 */
+        fdb_kv_set_blob(kvdb, "temp", fdb_blob_make(&blob, &temp_data, sizeof(temp_data)));
+        FDB_INFO("set 'temp' value to %d\n", temp_data);
+    }
+
+    { /* DELETE the KV by name */
+        fdb_kv_del(kvdb, "temp");
+        FDB_INFO("delete the 'temp' finish\n");
+    }
+
+    FDB_INFO("===========================================================\n");
+}
+
+
+static struct fdb_kvdb kvdb = { 0 };
+
+static void lock(fdb_db_t db)
+{
+    //__disable_irq();
+}
+
+static void unlock(fdb_db_t db)
+{
+    //__enable_irq();
+}
 
 /* USER CODE END 0 */
 
@@ -129,6 +274,37 @@ int main(void)
   my_can_filter_init_recv_all(&hcan1);
   can_filter_recv_special(&hcan2);
   var_init();
+  
+fdb_err_t result;
+
+
+        struct fdb_default_kv default_kv;
+
+        default_kv.kvs = default_kv_table;
+        default_kv.num = sizeof(default_kv_table) / sizeof(default_kv_table[0]);
+        /* set the lock and unlock function if you want */
+        fdb_kvdb_control(&kvdb, FDB_KVDB_CTRL_SET_LOCK, (void *)lock);
+        fdb_kvdb_control(&kvdb, FDB_KVDB_CTRL_SET_UNLOCK, (void *)unlock);
+        /* Key-Value database initialization
+         *
+         *       &kvdb: database object
+         *       "env": database name
+         * "fdb_kvdb1": The flash partition name base on FAL. Please make sure it's in FAL partition table.
+         *              Please change to YOUR partition name.
+         * &default_kv: The default KV nodes. It will auto add to KVDB when first initialize successfully.
+         *        NULL: The user data if you need, now is empty.
+         */
+
+
+
+        /* run basic KV samples */
+      //  kvdb_basic_sample(&kvdb);
+        /* run string KV samples */
+      //  kvdb_type_string_sample(&kvdb);
+        /* run blob KV samples */
+       // kvdb_type_blob_sample(&kvdb);
+
+
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
@@ -140,9 +316,19 @@ int main(void)
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+        //result = fdb_kvdb_init(&kvdb, "env", "fdb_kvdb1", &default_kv, NULL);
+
+		
+		   /* run basic KV samples */
+       //kvdb_basic_sample(&kvdb);
+        /* run string KV samples */
+       //kvdb_type_string_sample(&kvdb);
+        /* run blob KV samples */
+       //kvdb_type_blob_sample(&kvdb);
   while (1)
   {
     /* USER CODE END WHILE */
+			printf("flashdb ");
 
     /* USER CODE BEGIN 3 */
   }
