@@ -3,13 +3,13 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ÂµVision V5.38.0.0
+IDE-Version: ¦ÌVision V5.37.0.0
 Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: 312 123, 123, LIC=HN0AE-5B2WB-PCIJ8-37DJ2-5ZIPN-UIWA6
+License Information: dd Administrator, ¶Ô, LIC=D0D7S-LCPXD-QDUKD-8MQBA-0NQ0S-FAAYZ
  
 Tool Versions:
 Toolchain:       MDK-ARM Plus  Version: 5.37.0.0
-Toolchain Path:  C:\keil\ARM\ARMCC\Bin
+Toolchain Path:  C:\Keil_v5\ARM\Compiler_5.06u7\Bin
 C Compiler:      Armcc.exe V5.06 update 7 (build 960)
 Assembler:       Armasm.exe V5.06 update 7 (build 960)
 Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
@@ -21,24 +21,22 @@ Target DLL:      CMSIS_AGDI.dll V1.33.12.0
 Dialog DLL:      TCM.DLL V1.56.1.0
  
 <h2>Project:</h2>
-C:\Users\tengzumin\Desktop\GitHub\RBC_CQUPT_HXC_ER\MDK-ARM\ROBOCON2023_CQUPT.uvprojx
-Project File Date:  06/01/2023
+C:\Users\Administrator\Desktop\RBC_CQUPT_HXC_ER\MDK-ARM\ROBOCON2023_CQUPT.uvprojx
+Project File Date:  06/02/2023
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\keil\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\Compiler_5.06u7\Bin'
 Build target 'ROBOCON2023_CQUPT'
-compiling main.c...
-../Core/Src/main.c(121): warning:  #47-D: incompatible redefinition of macro "FDB_LOG_TAG"  (declared at line 90)
-  #define FDB_LOG_TAG "[sample][kvdb][string]"
-../Core/Src/main.c(278): warning:  #177-D: variable "result"  was declared but never referenced
-  fdb_err_t result;
-../Core/Src/main.c(281): warning:  #550-D: variable "default_kv"  was set but never used
-          struct fdb_default_kv default_kv;
-../Core/Src/main.c: 3 warnings, 0 errors
+compiling fal_flash_stm32f4.c...
+..\Hardware\flashbd\FAL\fal_flash_stm32f4.c(161): warning:  #940-D: missing return statement at end of non-void function "init" 
+  }
+..\Hardware\flashbd\FAL\fal_flash_stm32f4.c(158): warning:  #177-D: function "init"  was declared but never referenced
+  static int init(void)
+..\Hardware\flashbd\FAL\fal_flash_stm32f4.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=46968 RO-data=3328 RW-data=424 ZI-data=26776  
+Program Size: Code=59140 RO-data=5756 RW-data=544 ZI-data=26808  
 FromELF: creating hex file...
-"ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf" - 0 Error(s), 3 Warning(s).
+"ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -49,14 +47,14 @@ Package Vendor: ARM
    * Component: CORE Version: 5.6.0
 
 Package Vendor: Keil
-                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.0.pack
-                Keil.STM32F4xx_DFP.2.17.0
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
                 STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/_ROBOCON2023_CQUPT
-  C:/Users/tengzumin/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
-  C:/Users/tengzumin/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  C:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
 
 <h2>Collection of Component Files used:</h2>
 

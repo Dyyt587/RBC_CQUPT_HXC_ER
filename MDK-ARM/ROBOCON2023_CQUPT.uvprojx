@@ -10,15 +10,15 @@
       <TargetName>ROBOCON2023_CQUPT</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pArmCC>5060960::V5.06 update 7 (build 960)::.\ARMCC</pArmCC>
-      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
+      <pArmCC>5060960::V5.06 update 7 (build 960)::.\Compiler_5.06u7</pArmCC>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\Compiler_5.06u7</pCCUsed>
       <uAC6>8</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F427IIHx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F4xx_DFP.2.17.0</PackID>
-          <PackURL>https://www.keil.com/pack/</PackURL>
+          <PackID>Keil.STM32F4xx_DFP.2.16.0</PackID>
+          <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000-0x2002FFFF) IRAM2(0x10000000-0x1000FFFF) IROM(0x8000000-0x81FFFFF)  CLOCK(25000000) FPU2 CPUTYPE("Cortex-M4") TZ</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -840,6 +840,26 @@
               <FileName>fdb_utils.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Hardware\flashbd\Flashdb\fdb_utils.c</FilePath>
+            </File>
+            <File>
+              <FileName>kvdb_basic_sample.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\flashbd\Flashdb\kvdb_basic_sample.c</FilePath>
+            </File>
+            <File>
+              <FileName>kvdb_type_blob_sample.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\flashbd\Flashdb\kvdb_type_blob_sample.c</FilePath>
+            </File>
+            <File>
+              <FileName>kvdb_type_string_sample.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\flashbd\Flashdb\kvdb_type_string_sample.c</FilePath>
+            </File>
+            <File>
+              <FileName>tsdb_sample.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\flashbd\Flashdb\tsdb_sample.c</FilePath>
             </File>
           </Files>
         </Group>
