@@ -1,5 +1,4 @@
-    $ git status
-    # Untracked files:
-    #       *.o
-    #       *.d
+
+*/*/*.o
+*/*/*.d
 
