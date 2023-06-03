@@ -22,12 +22,18 @@
 		//#define _GET_ANGLE_DEGREE() ((float)get_total_angle(&motor_can2[1])/819200.0f)
 		#define _GET_ANGLE_DEGREE() ((float)get_total_angle(&motor_can2[1]))
 #define GET_SPEED() motor_can2[1].speed_rpm
+	
+#define GET_SiGan_SPEED() motor_can2[2].speed_rpm
 static unsigned int time;
 float __point[3];//测试使用，present，out，target
 float target=30;
 
+float sigan_speed=0;
+		
 pid_t TripodHead_Position_pid;
 pid_t TripodHead_Speed_pid;
+		
+pid_t SiGan_Speed_pid;
 extern	rc_info_t rc;
 void test_task(void const * argument)
 {
@@ -37,6 +43,9 @@ void test_task(void const * argument)
 	vesc_set_point(2);//控制电机1和2
 //	PID_struct_init(&TripodHead_Speed_pid,POSITION_PID,3000,1000,50.0f, 0.001f,0.0f);
 	PID_struct_init(&TripodHead_Position_pid,POSITION_PID,3000,1000,0.5f, 0.0f,0.4);
+	
+	PID_struct_init(&SiGan_Speed_pid,POSITION_PID, 10000, 2000,
+                        5.0f, 0.04f, 0.0f);
 	int time_count = 0;
 
 	while(1)
@@ -94,7 +103,12 @@ void test_task(void const * argument)
 		float __target= pid_calc(&TripodHead_Position_pid, _GET_ANGLE_DEGREE(), target*819200/360.0f);
 //		float out = pid_calc(&TripodHead_Speed_pid, GET_SPEED(), __target);
 //		//printf("out = %f",out);
-			_SET_TRIPOD_HEAD_ICURRENT(__target);
+		
+		sigan_speed=rc.ch4*15.0;
+		float __sigan_speed=pid_calc(&SiGan_Speed_pid,GET_SiGan_SPEED(),sigan_speed);
+		
+		set_motor_A(&hcan2,0,__target,__sigan_speed,0);
+//			_SET_TRIPOD_HEAD_ICURRENT(__target);
 
 		osDelay(5);
 
