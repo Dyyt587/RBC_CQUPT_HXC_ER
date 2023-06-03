@@ -52,6 +52,7 @@
 "robocon2023_cqupt\bsp_sbus.o"
 "robocon2023_cqupt\vofa_lower.o"
 "robocon2023_cqupt\bsp_vesc.o"
+"robocon2023_cqupt\action_usart.o"
 "robocon2023_cqupt\chassis_behaviour.o"
 "robocon2023_cqupt\chassis_task.o"
 "robocon2023_cqupt\task.o"
