@@ -70,6 +70,11 @@ fdb_blob_t fdb_tsl_to_blob     (fdb_tsl_t tsl, fdb_blob_t blob);
 /* fdb_utils.c */
 uint32_t   fdb_calc_crc32(uint32_t crc, const void *buf, size_t size);
 
+
+void kvdb_basic_sample(fdb_kvdb_t kvdb);
+void kvdb_type_blob_sample(fdb_kvdb_t kvdb);
+void kvdb_type_string_sample(fdb_kvdb_t kvdb);
+
 #ifdef __cplusplus
 }
 #endif

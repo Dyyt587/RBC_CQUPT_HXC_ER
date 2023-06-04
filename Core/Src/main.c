@@ -36,6 +36,7 @@
 #include "log.h"
 #include "commend.h"
 #include <string.h>
+#include <flashdb.h>
 
 static uint32_t boot_count = 0;
 static time_t boot_time[10] = {0, 1, 2, 3};
@@ -199,7 +200,8 @@ fdb_err_t result;
 
         result = fdb_kvdb_init(&kvdb, "env", "fdb_kvdb1", &default_kv, NULL);
 		logInfo("fdb init %d\r\n",result);
-		
+			//extern void kvdb_basic_sample(fdb_kvdb_t kvdb);
+		kvdb_basic_sample(&kvdb);
 
         /* run basic KV samples */
       //  kvdb_basic_sample(&kvdb);

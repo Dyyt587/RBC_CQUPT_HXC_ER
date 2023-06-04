@@ -162,15 +162,15 @@ static int init(void)
 
 static int read(long offset, uint8_t *buf, size_t size)
 {
-    size_t i;
+    int i;
     long addr = stm32_onchip_flash.addr + offset;
 
-    for (i = 0; i < size; i++, buf++, addr++)
-    {
-       // *buf = *( ( __IO uint8_t *) addr);
-    }
-	//memcpy(buf,(uint8_t *)addr,size);
-    return -1;
+//    for (i = 0; i < size; i++, buf++, addr++)
+//    {
+//        *buf = *( ( __IO uint8_t *) addr);
+//    }
+	memcpy(buf,(uint8_t *)addr,size);
+    return size;
 }
 
 static int write(long offset, const uint8_t *buf, size_t size)
@@ -178,35 +178,31 @@ static int write(long offset, const uint8_t *buf, size_t size)
     long addr = stm32_onchip_flash.addr + offset;
 
     HAL_FLASH_Unlock();
-//__disable_irq();
+	
     __HAL_FLASH_CLEAR_FLAG(FLASH_FLAG_EOP | FLASH_FLAG_OPERR | FLASH_FLAG_WRPERR | FLASH_FLAG_PGAERR | FLASH_FLAG_PGPERR | FLASH_FLAG_PGSERR);
 
     for (size_t i = 0; i < size; i++, addr++, buf++)
     {
-//        /* write data to flash */
-//        if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_BYTE, addr, (uint64_t)(*buf)) == HAL_OK)
-//        {
-//            if (*(uint8_t *) addr != *buf)
-//            {
-//				//__enable_irq();
-
-//                HAL_FLASH_Lock();
-//                return -1;
-//            }
-//        }
-//        else
-//        {
-//			//__enable_irq();
-
-//            HAL_FLASH_Lock();
-//            return -1;
-//        }
+        /* write data to flash */
+        if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_BYTE, addr, (uint64_t)(*buf)) == HAL_OK)
+        {
+            if (*(uint8_t *) addr != *buf)
+            {
+                HAL_FLASH_Lock();
+                return -1;
+            }
+        }
+        else
+        {
+            HAL_FLASH_Lock();
+            return -1;
+        }
     }
 //__enable_irq();
 
     HAL_FLASH_Lock();
 
-    return -1;
+    return size;
 }
 
 static int erase(long offset, size_t size)
@@ -246,7 +242,8 @@ static int erase(long offset, size_t size)
 const struct fal_flash_dev stm32_onchip_flash =
 {
     .name       = "stm32_onchip",
-    .addr       = 0x081E0000,
+    //.addr       = 0x080E0000,
+    .addr       = ADDR_FLASH_SECTOR_18,
     .len        = 1024*1024,
     .blk_size   = 128*1024,
     .ops        = {NULL, read, write, erase},
