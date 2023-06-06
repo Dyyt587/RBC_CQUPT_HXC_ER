@@ -866,6 +866,11 @@
               <FileType>1</FileType>
               <FilePath>..\Hardware\flashbd\Flashdb\tsdb_sample.c</FilePath>
             </File>
+            <File>
+              <FileName>useflash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hardware\flashbd\Flashdb\useflash.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

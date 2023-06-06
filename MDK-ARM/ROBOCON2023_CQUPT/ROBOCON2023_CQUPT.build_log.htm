@@ -3,7 +3,7 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ÂµVision V5.38.0.0
+IDE-Version: ¦ÌVision V5.38.0.0
 Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
 License Information: 312 123, 123, LIC=HN0AE-5B2WB-PCIJ8-37DJ2-5ZIPN-UIWA6
  
@@ -22,23 +22,21 @@ Dialog DLL:      TCM.DLL V1.56.1.0
  
 <h2>Project:</h2>
 C:\Users\tengzumin\Desktop\GitHub\RBC_CQUPT_HXC_ER\MDK-ARM\ROBOCON2023_CQUPT.uvprojx
-Project File Date:  06/04/2023
+Project File Date:  06/06/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\keil\ARM\ARMCC\Bin'
 Build target 'ROBOCON2023_CQUPT'
-compiling fal_flash_stm32f4.c...
-..\Hardware\flashbd\FAL\fal_flash_stm32f4.c(161): warning:  #940-D: missing return statement at end of non-void function "init" 
-  }
-..\Hardware\flashbd\FAL\fal_flash_stm32f4.c(165): warning:  #177-D: variable "i"  was declared but never referenced
-      int i;
-..\Hardware\flashbd\FAL\fal_flash_stm32f4.c(158): warning:  #177-D: function "init"  was declared but never referenced
-  static int init(void)
-..\Hardware\flashbd\FAL\fal_flash_stm32f4.c: 3 warnings, 0 errors
+compiling main.c...
+../Core/Src/main.c(115): warning:  #177-D: function "lock"  was declared but never referenced
+  static void lock(fdb_db_t db)
+../Core/Src/main.c(120): warning:  #177-D: function "unlock"  was declared but never referenced
+  static void unlock(fdb_db_t db)
+../Core/Src/main.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=62108 RO-data=5756 RW-data=596 ZI-data=27452  
+Program Size: Code=64112 RO-data=6136 RW-data=596 ZI-data=27580  
 FromELF: creating hex file...
-"ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf" - 0 Error(s), 3 Warning(s).
+"ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 

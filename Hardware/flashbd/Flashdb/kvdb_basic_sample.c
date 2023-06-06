@@ -16,7 +16,7 @@
 
 #ifdef FDB_USING_KVDB
 
-#define FDB_LOG_TAG "[sample][kvdb][basic]"
+#define FDB_LOG_TAG "[sample][kvdb][set]"
 
 void kvdb_basic_sample(fdb_kvdb_t kvdb)
 {

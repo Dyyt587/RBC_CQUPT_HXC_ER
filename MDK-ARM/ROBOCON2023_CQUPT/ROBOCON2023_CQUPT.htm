@@ -3,7 +3,7 @@
 <title>Static Call Graph - [ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Jun 04 21:00:53 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Jun 06 15:43:19 2023
 <BR><P>
 <H3>Maximum Stack Usage =        952 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -197,7 +197,7 @@ Global Symbols
 <P><STRONG><a name="[66]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(.text)
 </UL>
-<P><STRONG><a name="[250]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[258]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[a5]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -207,27 +207,27 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[251]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[259]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[252]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[25a]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[253]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[25b]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[254]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
+<P><STRONG><a name="[25c]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
 
-<P><STRONG><a name="[255]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[25d]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
 
-<P><STRONG><a name="[256]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
+<P><STRONG><a name="[25e]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
 
 <P><STRONG><a name="[8]"></a>SVC_Handler</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, port.o(.emb_text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
-<P><STRONG><a name="[249]"></a>__asm___6_port_c_39a90d8d__prvStartFirstTask</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, port.o(.emb_text))
-<BR><BR>[Called By]<UL><LI><a href="#[241]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
+<P><STRONG><a name="[251]"></a>__asm___6_port_c_39a90d8d__prvStartFirstTask</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, port.o(.emb_text))
+<BR><BR>[Called By]<UL><LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
 </UL>
 
-<P><STRONG><a name="[248]"></a>__asm___6_port_c_39a90d8d__prvEnableVFP</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, port.o(.emb_text))
-<BR><BR>[Called By]<UL><LI><a href="#[241]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
+<P><STRONG><a name="[250]"></a>__asm___6_port_c_39a90d8d__prvEnableVFP</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, port.o(.emb_text))
+<BR><BR>[Called By]<UL><LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
 </UL>
 
 <P><STRONG><a name="[a]"></a>PendSV_Handler</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, port.o(.emb_text))
@@ -235,7 +235,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
-<P><STRONG><a name="[257]"></a>vPortGetIPSR</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, port.o(.emb_text), UNUSED)
+<P><STRONG><a name="[25f]"></a>vPortGetIPSR</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, port.o(.emb_text), UNUSED)
 
 <P><STRONG><a name="[2]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f427xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
@@ -482,10 +482,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[178]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
+<BR><BR>[Called By]<UL><LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
 <LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kfifo_out_data
 <LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kfifo_in_data
-<LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;packet_send_packet
+<LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;packet_send_packet
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
 </UL>
 
@@ -493,7 +493,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FREERTOS_Init
 </UL>
 
-<P><STRONG><a name="[258]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<P><STRONG><a name="[260]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
 <P><STRONG><a name="[ac]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;format_sector
@@ -504,9 +504,9 @@ Global Symbols
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_set_status
 </UL>
 
-<P><STRONG><a name="[259]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[261]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[25a]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[262]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[ab]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -516,38 +516,40 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_MspInit
-<LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_can_filter_init_recv_all
+<LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_can_filter_init_recv_all
 <LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM8_Init
 <LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
 <LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
-<LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
-<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
+<LI><a href="#[22c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
+<LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
 <LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_kv
-<LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_kv_from_cache
+<LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_kv_from_cache
 <LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;format_sector
 <LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;del_kv
 </UL>
 
-<P><STRONG><a name="[25b]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[263]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[ad]"></a>memset</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[1ea]"></a>strncpy</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, strncpy.o(.text))
+<P><STRONG><a name="[1e8]"></a>strncpy</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, strncpy.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strncpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_kv
+<BR>[Called By]<UL><LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_type_string_sample
+<LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_kv
 </UL>
 
 <P><STRONG><a name="[1bf]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_register
-<LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
-<LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
+<BR><BR>[Called By]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_register
+<LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
+<LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set_default
-<LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
+<LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set
+<LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_kv_cb
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_kv
 <LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;del_kv
@@ -558,23 +560,23 @@ Global Symbols
 <P><STRONG><a name="[1d1]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistoryAdd
+<BR>[Called By]<UL><LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistoryAdd
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var
-<LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
-<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
+<LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
+<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fal_partition_find
 </UL>
 
-<P><STRONG><a name="[244]"></a>strcpy</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, strcpy.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_register
+<P><STRONG><a name="[24c]"></a>strcpy</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, strcpy.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_register
 </UL>
 
 <P><STRONG><a name="[1cd]"></a>strncmp</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, strncmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strncmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_kv_from_cache
+<BR>[Called By]<UL><LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_kv_from_cache
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_kv_cb
 <LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fal_flash_device_find
 </UL>
@@ -696,7 +698,7 @@ Global Symbols
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_really_real
 </UL>
 
-<P><STRONG><a name="[25c]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<P><STRONG><a name="[264]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
 <P><STRONG><a name="[193]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
@@ -709,7 +711,7 @@ Global Symbols
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
 </UL>
 
-<P><STRONG><a name="[25d]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[265]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[a9]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
@@ -718,13 +720,13 @@ Global Symbols
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
 </UL>
 
-<P><STRONG><a name="[25e]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[266]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[b2]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[25f]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+<P><STRONG><a name="[267]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 
 <P><STRONG><a name="[c1]"></a>_scanf_real</STRONG> (Thumb, 0 bytes, Stack size 104 bytes, scanf_fp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = _scanf_real
@@ -762,19 +764,19 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
 </UL>
 
-<P><STRONG><a name="[260]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[268]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
 
 <P><STRONG><a name="[bb]"></a>_float_round</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fepilogue.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 </UL>
 
-<P><STRONG><a name="[261]"></a>_float_epilogue</STRONG> (Thumb, 92 bytes, Stack size 4 bytes, fepilogue.o(.text), UNUSED)
+<P><STRONG><a name="[269]"></a>_float_epilogue</STRONG> (Thumb, 92 bytes, Stack size 4 bytes, fepilogue.o(.text), UNUSED)
 
 <P><STRONG><a name="[16c]"></a>__ARM_scalbnf</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, fscalb.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_ldexpf
 </UL>
 
-<P><STRONG><a name="[262]"></a>scalbnf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fscalb.o(.text), UNUSED)
+<P><STRONG><a name="[26a]"></a>scalbnf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fscalb.o(.text), UNUSED)
 
 <P><STRONG><a name="[b4]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _double_round
@@ -804,7 +806,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 </UL>
 
-<P><STRONG><a name="[263]"></a>scalbn</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, dscalb.o(.text), UNUSED)
+<P><STRONG><a name="[26b]"></a>scalbn</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, dscalb.o(.text), UNUSED)
 
 <P><STRONG><a name="[c5]"></a>_dsqrt</STRONG> (Thumb, 162 bytes, Stack size 32 bytes, dsqrt.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _dsqrt &rArr; _double_round
@@ -827,7 +829,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
 </UL>
 
-<P><STRONG><a name="[264]"></a>__aeabi_cdcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdcmple.o(.text), UNUSED)
+<P><STRONG><a name="[26c]"></a>__aeabi_cdcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdcmple.o(.text), UNUSED)
 
 <P><STRONG><a name="[174]"></a>__aeabi_cdrcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdrcmple.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
@@ -840,7 +842,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[265]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[26d]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[c3]"></a>__rt_ctype_table</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ctype_o.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isspace
@@ -873,9 +875,9 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_value
 </UL>
 
-<P><STRONG><a name="[266]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+<P><STRONG><a name="[26e]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
-<P><STRONG><a name="[267]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+<P><STRONG><a name="[26f]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
 <P><STRONG><a name="[6]"></a>BusFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.BusFault_Handler))
 <BR><BR>[Calls]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusFault_Handler
@@ -918,8 +920,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_GetTxMailboxesFreeLevel
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_AddTxMessage
 </UL>
-<BR>[Called By]<UL><LI><a href="#[213]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_motor_B
-<LI><a href="#[212]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_motor_A
+<BR>[Called By]<UL><LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_motor_B
+<LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_motor_A
 </UL>
 
 <P><STRONG><a name="[1c]"></a>DMA1_Stream5_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.DMA1_Stream5_IRQHandler))
@@ -947,7 +949,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
 <P><STRONG><a name="[12f]"></a>Error_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, main.o(i.Error_Handler))
-<BR><BR>[Called By]<UL><LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_can_filter_init_recv_all
+<BR><BR>[Called By]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_can_filter_init_recv_all
 <LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_filter_recv_special
 <LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART6_UART_Init
 <LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART3_UART_Init
@@ -988,7 +990,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1ae]"></a>HAL_CAN_ActivateNotification</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, stm32f4xx_hal_can.o(i.HAL_CAN_ActivateNotification))
-<BR><BR>[Called By]<UL><LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_can_filter_init_recv_all
+<BR><BR>[Called By]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_can_filter_init_recv_all
 <LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_filter_recv_special
 </UL>
 
@@ -1001,7 +1003,7 @@ Global Symbols
 <P><STRONG><a name="[1ad]"></a>HAL_CAN_ConfigFilter</STRONG> (Thumb, 262 bytes, Stack size 8 bytes, stm32f4xx_hal_can.o(i.HAL_CAN_ConfigFilter))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_CAN_ConfigFilter
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_can_filter_init_recv_all
+<BR>[Called By]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_can_filter_init_recv_all
 <LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_filter_recv_special
 </UL>
 
@@ -1094,7 +1096,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_can_filter_init_recv_all
+<BR>[Called By]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_can_filter_init_recv_all
 <LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_filter_recv_special
 </UL>
 
@@ -1237,7 +1239,7 @@ Global Symbols
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Init
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
+<LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
 </UL>
 
 <P><STRONG><a name="[122]"></a>HAL_IncTick</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_IncTick))
@@ -1583,9 +1585,9 @@ Global Symbols
 <P><STRONG><a name="[132]"></a>HAL_UART_Receive_IT</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, stm32f4xx_hal_uart.o(i.HAL_UART_Receive_IT))
 <BR><BR>[Calls]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Start_Receive_IT
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
+<BR>[Called By]<UL><LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
-<LI><a href="#[23a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_init
+<LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_init
 </UL>
 
 <P><STRONG><a name="[134]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, usart.o(i.HAL_UART_RxCpltCallback))
@@ -1944,13 +1946,17 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[268]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[270]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
 <P><STRONG><a name="[156]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_basic_sample
-<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
+<BR>[Called By]<UL><LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_type_string_sample
+<LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_type_blob_sample
+<LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_basic_sample
+<LI><a href="#[1e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flashdb_get_set_data
+<LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flashdb_get_data
+<LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
 <LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 <LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sett
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setkp
@@ -1959,14 +1965,16 @@ Global Symbols
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bldc_val_received
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_write_status
 <LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_read_status
-<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set_blob
-<LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
+<LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set_blob
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
+<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get
+<LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_del
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_kv_load
-<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
+<LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
 <LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_kv
 <LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;new_kv
 <LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_kv
-<LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gc_collect_by_free_size
+<LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gc_collect_by_free_size
 <LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;format_sector
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;do_gc
 <LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;del_kv
@@ -1988,57 +1996,57 @@ Global Symbols
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fal_partition_erase
 </UL>
 
-<P><STRONG><a name="[269]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[271]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
-<P><STRONG><a name="[26a]"></a>printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[272]"></a>printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
 <P><STRONG><a name="[15b]"></a>__0snprintf</STRONG> (Thumb, 48 bytes, Stack size 40 bytes, printfa.o(i.__0snprintf), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[26b]"></a>__1snprintf</STRONG> (Thumb, 0 bytes, Stack size 40 bytes, printfa.o(i.__0snprintf), UNUSED)
+<P><STRONG><a name="[273]"></a>__1snprintf</STRONG> (Thumb, 0 bytes, Stack size 40 bytes, printfa.o(i.__0snprintf), UNUSED)
 
-<P><STRONG><a name="[1e0]"></a>__2snprintf</STRONG> (Thumb, 0 bytes, Stack size 40 bytes, printfa.o(i.__0snprintf))
+<P><STRONG><a name="[1e9]"></a>__2snprintf</STRONG> (Thumb, 0 bytes, Stack size 40 bytes, printfa.o(i.__0snprintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = __2snprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logHexDump
 </UL>
 
-<P><STRONG><a name="[26c]"></a>__c89snprintf</STRONG> (Thumb, 0 bytes, Stack size 40 bytes, printfa.o(i.__0snprintf), UNUSED)
+<P><STRONG><a name="[274]"></a>__c89snprintf</STRONG> (Thumb, 0 bytes, Stack size 40 bytes, printfa.o(i.__0snprintf), UNUSED)
 
-<P><STRONG><a name="[26d]"></a>snprintf</STRONG> (Thumb, 0 bytes, Stack size 40 bytes, printfa.o(i.__0snprintf), UNUSED)
+<P><STRONG><a name="[275]"></a>snprintf</STRONG> (Thumb, 0 bytes, Stack size 40 bytes, printfa.o(i.__0snprintf), UNUSED)
 
 <P><STRONG><a name="[15c]"></a>__0sprintf</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
 <LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[26e]"></a>__1sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
+<P><STRONG><a name="[276]"></a>__1sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
 
-<P><STRONG><a name="[1e2]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf))
+<P><STRONG><a name="[1eb]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logHexDump
 </UL>
 
-<P><STRONG><a name="[26f]"></a>__c89sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
+<P><STRONG><a name="[277]"></a>__c89sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
 
-<P><STRONG><a name="[270]"></a>sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
+<P><STRONG><a name="[278]"></a>sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
 
 <P><STRONG><a name="[15d]"></a>__0vsnprintf</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[271]"></a>__1vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
+<P><STRONG><a name="[279]"></a>__1vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
 
-<P><STRONG><a name="[272]"></a>__2vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
+<P><STRONG><a name="[27a]"></a>__2vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
 
-<P><STRONG><a name="[273]"></a>__c89vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
+<P><STRONG><a name="[27b]"></a>__c89vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf), UNUSED)
 
 <P><STRONG><a name="[158]"></a>vsnprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsnprintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = vsnprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
+<BR>[Called By]<UL><LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
 <LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Usart2Printf
 </UL>
 
@@ -2055,7 +2063,7 @@ Global Symbols
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
 </UL>
 
-<P><STRONG><a name="[274]"></a>__rt_errno_addr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, errno.o(i.__aeabi_errno_addr), UNUSED)
+<P><STRONG><a name="[27c]"></a>__rt_errno_addr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, errno.o(i.__aeabi_errno_addr), UNUSED)
 
 <P><STRONG><a name="[15e]"></a>__hardfp_atan</STRONG> (Thumb, 622 bytes, Stack size 48 bytes, atan.o(i.__hardfp_atan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = __hardfp_atan &rArr; __kernel_poly &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
@@ -2216,11 +2224,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atof
 </UL>
 
-<P><STRONG><a name="[275]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[27d]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[276]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[27e]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[277]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[27f]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[168]"></a>__set_errno</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errno.o(i.__set_errno))
 <BR><BR>[Called By]<UL><LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
@@ -2236,19 +2244,21 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_flash_read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
+<BR>[Called By]<UL><LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
 </UL>
 
 <P><STRONG><a name="[186]"></a>_fdb_db_path</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, fdb.o(i._fdb_db_path))
-<BR><BR>[Called By]<UL><LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
-<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set_blob
-<LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
+<BR><BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
+<LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set_blob
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
+<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get
+<LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_del
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_kv_load
-<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
+<LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
 <LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_kv
 <LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;new_kv
 <LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_kv
-<LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gc_collect_by_free_size
+<LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gc_collect_by_free_size
 <LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;format_sector
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;do_gc
 <LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;del_kv
@@ -2274,12 +2284,12 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_read_status
 <LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_continue_ff_addr
-<LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
-<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
+<LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
 <LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_kv
 <LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_kv
-<LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_kv_from_cache
-<LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_next_kv_addr
+<LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_kv_from_cache
+<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_next_kv_addr
 </UL>
 
 <P><STRONG><a name="[17f]"></a>_fdb_flash_write</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, fdb_utils.o(i._fdb_flash_write))
@@ -2298,7 +2308,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _fdb_get_status
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_read_status
-<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
+<LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
 <LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_kv
 </UL>
 
@@ -2310,7 +2320,7 @@ Global Symbols
 <LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fal_flash_device_find
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
+<BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
 </UL>
 
 <P><STRONG><a name="[185]"></a>_fdb_init_finish</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, fdb.o(i._fdb_init_finish))
@@ -2319,7 +2329,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_db_path
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
+<BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
 </UL>
 
 <P><STRONG><a name="[187]"></a>_fdb_kv_load</STRONG> (Thumb, 174 bytes, Stack size 152 bytes, fdb_kvdb.o(i._fdb_kv_load))
@@ -2332,7 +2342,7 @@ Global Symbols
 <LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_db_path
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
+<BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
 </UL>
 
 <P><STRONG><a name="[18c]"></a>_fdb_read_status</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, fdb_utils.o(i._fdb_read_status))
@@ -2374,7 +2384,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_really_real
 </UL>
 
-<P><STRONG><a name="[1f4]"></a>abs_limit</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, pid.o(i.abs_limit))
+<P><STRONG><a name="[1fc]"></a>abs_limit</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, pid.o(i.abs_limit))
 <BR><BR>[Called By]<UL><LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pid_calc
 </UL>
 
@@ -2453,8 +2463,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_packet
 </UL>
 
-<P><STRONG><a name="[245]"></a>bldc_interface_set_rx_value_func</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bldc_interface.o(i.bldc_interface_set_rx_value_func))
-<BR><BR>[Called By]<UL><LI><a href="#[23a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_init
+<P><STRONG><a name="[24d]"></a>bldc_interface_set_rx_value_func</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bldc_interface.o(i.bldc_interface_set_rx_value_func))
+<BR><BR>[Called By]<UL><LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_init
 </UL>
 
 <P><STRONG><a name="[1a5]"></a>bldc_interface_uart_init</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, bldc_interface_uart.o(i.bldc_interface_uart_init))
@@ -2463,7 +2473,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;packet_init
 <LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bldc_interface_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[23a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_init
+<BR>[Called By]<UL><LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_init
 </UL>
 
 <P><STRONG><a name="[136]"></a>bldc_interface_uart_process_byte</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, bldc_interface_uart.o(i.bldc_interface_uart_process_byte))
@@ -2483,10 +2493,10 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bsp_vesc.o(i.vesc_init)
 </UL>
-<P><STRONG><a name="[246]"></a>buffer_append_int32</STRONG> (Thumb, 42 bytes, Stack size 12 bytes, buffer.o(i.buffer_append_int32))
+<P><STRONG><a name="[24e]"></a>buffer_append_int32</STRONG> (Thumb, 42 bytes, Stack size 12 bytes, buffer.o(i.buffer_append_int32))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = buffer_append_int32
 </UL>
-<BR>[Called By]<UL><LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_set_rmp
+<BR>[Called By]<UL><LI><a href="#[244]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_set_rmp
 </UL>
 
 <P><STRONG><a name="[19f]"></a>buffer_get_float16</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, buffer.o(i.buffer_get_float16))
@@ -2575,10 +2585,10 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.constdata)
 </UL>
-<P><STRONG><a name="[1f2]"></a>crc16</STRONG> (Thumb, 38 bytes, Stack size 12 bytes, crc.o(i.crc16))
+<P><STRONG><a name="[1fa]"></a>crc16</STRONG> (Thumb, 38 bytes, Stack size 12 bytes, crc.o(i.crc16))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = crc16
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;packet_send_packet
+<BR>[Called By]<UL><LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;packet_send_packet
 <LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;packet_process_byte
 </UL>
 
@@ -2680,8 +2690,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fal_partition_init
 </UL>
 
-<P><STRONG><a name="[1df]"></a>fdb_blob_make</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, fdb_utils.o(i.fdb_blob_make))
-<BR><BR>[Called By]<UL><LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_basic_sample
+<P><STRONG><a name="[1d5]"></a>fdb_blob_make</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, fdb_utils.o(i.fdb_blob_make))
+<BR><BR>[Called By]<UL><LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_type_blob_sample
+<LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_basic_sample
+<LI><a href="#[1e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flashdb_get_set_data
+<LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flashdb_get_data
+<LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set
+<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get
 </UL>
 
 <P><STRONG><a name="[1c2]"></a>fdb_calc_crc32</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, fdb_utils.o(i.fdb_calc_crc32))
@@ -2689,11 +2704,34 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_kv_cache
 <LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_kv
-<LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_kv_from_cache
+<LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_kv_from_cache
 <LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;create_kv_blob
 </UL>
 
-<P><STRONG><a name="[1d3]"></a>fdb_kv_get_blob</STRONG> (Thumb, 140 bytes, Stack size 112 bytes, fdb_kvdb.o(i.fdb_kv_get_blob))
+<P><STRONG><a name="[1d3]"></a>fdb_kv_del</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, fdb_kvdb.o(i.fdb_kv_del))
+<BR><BR>[Stack]<UL><LI>Max Depth = 592<LI>Call Chain = fdb_kv_del &rArr; del_kv &rArr; find_kv &rArr; find_kv_no_cache &rArr; kv_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;del_kv
+<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_db_path
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_type_string_sample
+<LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_type_blob_sample
+</UL>
+
+<P><STRONG><a name="[1d4]"></a>fdb_kv_get</STRONG> (Thumb, 124 bytes, Stack size 32 bytes, fdb_kvdb.o(i.fdb_kv_get))
+<BR><BR>[Stack]<UL><LI>Max Depth = 584<LI>Call Chain = fdb_kv_get &rArr; fdb_kv_get_blob &rArr; find_kv &rArr; find_kv_no_cache &rArr; kv_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_blob_make
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
+<LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_is_str
+<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_db_path
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_type_string_sample
+</UL>
+
+<P><STRONG><a name="[1d6]"></a>fdb_kv_get_blob</STRONG> (Thumb, 140 bytes, Stack size 112 bytes, fdb_kvdb.o(i.fdb_kv_get_blob))
 <BR><BR>[Stack]<UL><LI>Max Depth = 552<LI>Call Chain = fdb_kv_get_blob &rArr; find_kv &rArr; find_kv_no_cache &rArr; kv_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_flash_read
@@ -2701,17 +2739,34 @@ Global Symbols
 <LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_db_path
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_basic_sample
+<BR>[Called By]<UL><LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_type_blob_sample
+<LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_basic_sample
+<LI><a href="#[1e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flashdb_get_set_data
+<LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flashdb_get_data
+<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get
 </UL>
 
-<P><STRONG><a name="[1d4]"></a>fdb_kv_set_blob</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, fdb_kvdb.o(i.fdb_kv_set_blob))
+<P><STRONG><a name="[1d8]"></a>fdb_kv_set</STRONG> (Thumb, 40 bytes, Stack size 40 bytes, fdb_kvdb.o(i.fdb_kv_set))
+<BR><BR>[Stack]<UL><LI>Max Depth = 680<LI>Call Chain = fdb_kv_set &rArr; fdb_kv_set_blob &rArr; set_kv &rArr; create_kv_blob &rArr; new_kv &rArr; gc_collect_by_free_size &rArr; sector_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_blob_make
+<LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set_blob
+<LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_type_string_sample
+</UL>
+
+<P><STRONG><a name="[1d9]"></a>fdb_kv_set_blob</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, fdb_kvdb.o(i.fdb_kv_set_blob))
 <BR><BR>[Stack]<UL><LI>Max Depth = 640<LI>Call Chain = fdb_kv_set_blob &rArr; set_kv &rArr; create_kv_blob &rArr; new_kv &rArr; gc_collect_by_free_size &rArr; sector_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
+<BR>[Calls]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
 <LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_db_path
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_basic_sample
+<BR>[Called By]<UL><LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_type_blob_sample
+<LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_basic_sample
+<LI><a href="#[1e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flashdb_get_set_data
+<LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set
 </UL>
 
 <P><STRONG><a name="[189]"></a>fdb_kv_set_default</STRONG> (Thumb, 138 bytes, Stack size 64 bytes, fdb_kvdb.o(i.fdb_kv_set_default))
@@ -2724,7 +2779,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_kv_load
 </UL>
 
-<P><STRONG><a name="[1d6]"></a>fdb_kvdb_init</STRONG> (Thumb, 270 bytes, Stack size 64 bytes, fdb_kvdb.o(i.fdb_kvdb_init))
+<P><STRONG><a name="[1db]"></a>fdb_kvdb_init</STRONG> (Thumb, 270 bytes, Stack size 64 bytes, fdb_kvdb.o(i.fdb_kvdb_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 864<LI>Call Chain = fdb_kvdb_init &rArr; _fdb_kv_load &rArr; fdb_kv_set_default &rArr; create_kv_blob &rArr; new_kv &rArr; gc_collect_by_free_size &rArr; sector_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_kv_load
@@ -2732,6 +2787,27 @@ Global Symbols
 <LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_init_finish
 <LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_init_ex
 <LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_db_path
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1e0]"></a>flashdb_get_data</STRONG> (Thumb, 120 bytes, Stack size 40 bytes, useflash.o(i.flashdb_get_data))
+<BR><BR>[Stack]<UL><LI>Max Depth = 592<LI>Call Chain = flashdb_get_data &rArr; fdb_kv_get_blob &rArr; find_kv &rArr; find_kv_no_cache &rArr; kv_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_blob_make
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1e1]"></a>flashdb_get_set_data</STRONG> (Thumb, 166 bytes, Stack size 40 bytes, useflash.o(i.flashdb_get_set_data))
+<BR><BR>[Stack]<UL><LI>Max Depth = 680<LI>Call Chain = flashdb_get_set_data &rArr; fdb_kv_set_blob &rArr; set_kv &rArr; create_kv_blob &rArr; new_kv &rArr; gc_collect_by_free_size &rArr; sector_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_blob_make
+<LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set_blob
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -2763,7 +2839,7 @@ Global Symbols
 <LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_init
 </UL>
 
-<P><STRONG><a name="[23d]"></a>get_total_angle</STRONG> (Thumb, 60 bytes, Stack size 12 bytes, bsp_can.o(i.get_total_angle))
+<P><STRONG><a name="[245]"></a>get_total_angle</STRONG> (Thumb, 60 bytes, Stack size 12 bytes, bsp_can.o(i.get_total_angle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = get_total_angle
 </UL>
 <BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test_task
@@ -2777,11 +2853,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>
 
-<P><STRONG><a name="[23e]"></a>kfifo_init</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, kfifo.o(i.kfifo_init))
-<BR><BR>[Called By]<UL><LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
+<P><STRONG><a name="[246]"></a>kfifo_init</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, kfifo.o(i.kfifo_init))
+<BR><BR>[Called By]<UL><LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
 </UL>
 
-<P><STRONG><a name="[1dc]"></a>kfifo_out</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, kfifo.o(i.kfifo_out))
+<P><STRONG><a name="[1e3]"></a>kfifo_out</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, kfifo.o(i.kfifo_out))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = kfifo_out &rArr; __kfifo_out_data
 </UL>
 <BR>[Calls]<UL><LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kfifo_out_data
@@ -2789,12 +2865,36 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellRead
 </UL>
 
-<P><STRONG><a name="[1de]"></a>kvdb_basic_sample</STRONG> (Thumb, 160 bytes, Stack size 32 bytes, kvdb_basic_sample.o(i.kvdb_basic_sample))
+<P><STRONG><a name="[1e5]"></a>kvdb_basic_sample</STRONG> (Thumb, 160 bytes, Stack size 32 bytes, kvdb_basic_sample.o(i.kvdb_basic_sample))
 <BR><BR>[Stack]<UL><LI>Max Depth = 672<LI>Call Chain = kvdb_basic_sample &rArr; fdb_kv_set_blob &rArr; set_kv &rArr; create_kv_blob &rArr; new_kv &rArr; gc_collect_by_free_size &rArr; sector_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_blob_make
-<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set_blob
-<LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
+<BR>[Calls]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_blob_make
+<LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set_blob
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1e6]"></a>kvdb_type_blob_sample</STRONG> (Thumb, 208 bytes, Stack size 32 bytes, kvdb_type_blob_sample.o(i.kvdb_type_blob_sample))
+<BR><BR>[Stack]<UL><LI>Max Depth = 672<LI>Call Chain = kvdb_type_blob_sample &rArr; fdb_kv_set_blob &rArr; set_kv &rArr; create_kv_blob &rArr; new_kv &rArr; gc_collect_by_free_size &rArr; sector_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_blob_make
+<LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set_blob
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
+<LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_del
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1e7]"></a>kvdb_type_string_sample</STRONG> (Thumb, 198 bytes, Stack size 24 bytes, kvdb_type_string_sample.o(i.kvdb_type_string_sample))
+<BR><BR>[Stack]<UL><LI>Max Depth = 704<LI>Call Chain = kvdb_type_string_sample &rArr; fdb_kv_set &rArr; fdb_kv_set_blob &rArr; set_kv &rArr; create_kv_blob &rArr; new_kv &rArr; gc_collect_by_free_size &rArr; sector_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set
+<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get
+<LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_del
+<LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -2812,25 +2912,25 @@ Global Symbols
 <P><STRONG><a name="[196]"></a>logHexDump</STRONG> (Thumb, 306 bytes, Stack size 64 bytes, log.o(i.logHexDump))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = logHexDump &rArr; __2snprintf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWriteBuffer
-<LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2snprintf
+<BR>[Calls]<UL><LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWriteBuffer
+<LI><a href="#[1eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2snprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;agencylogHexDump
 </UL>
 
-<P><STRONG><a name="[1e3]"></a>logRegister</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, log.o(i.logRegister))
+<P><STRONG><a name="[1ec]"></a>logRegister</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, log.o(i.logRegister))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = logRegister &rArr; shellCompanionAdd &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCompanionAdd
+<BR>[Calls]<UL><LI><a href="#[1ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCompanionAdd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
+<BR>[Called By]<UL><LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
 </UL>
 
 <P><STRONG><a name="[197]"></a>logSetLevel</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, log.o(i.logSetLevel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = logSetLevel &rArr; logWrite &rArr; logWriteBuffer
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
+<BR>[Calls]<UL><LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;agencylogSetLevel
 </UL>
@@ -2838,34 +2938,38 @@ Global Symbols
 <P><STRONG><a name="[9f]"></a>logSwitchLevel</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, log.o(i.logSwitchLevel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = logSwitchLevel &rArr; logWrite &rArr; logWriteBuffer
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
+<BR>[Calls]<UL><LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
 <LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCompanionGet
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> log.o(shellCommand)
 </UL>
-<P><STRONG><a name="[1e5]"></a>logWrite</STRONG> (Thumb, 38 bytes, Stack size 32 bytes, log.o(i.logWrite))
+<P><STRONG><a name="[1ee]"></a>logWrite</STRONG> (Thumb, 38 bytes, Stack size 32 bytes, log.o(i.logWrite))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = logWrite &rArr; logWriteBuffer
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWriteBuffer
+<BR>[Calls]<UL><LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWriteBuffer
 <LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vsnprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
+<BR>[Called By]<UL><LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logSwitchLevel
 <LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logSetLevel
 </UL>
 
-<P><STRONG><a name="[64]"></a>main</STRONG> (Thumb, 184 bytes, Stack size 24 bytes, main.o(i.main))
+<P><STRONG><a name="[64]"></a>main</STRONG> (Thumb, 216 bytes, Stack size 24 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 888<LI>Call Chain = main &rArr; fdb_kvdb_init &rArr; _fdb_kv_load &rArr; fdb_kv_set_default &rArr; create_kv_blob &rArr; new_kv &rArr; gc_collect_by_free_size &rArr; sector_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_init
-<LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
-<LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osKernelStart
-<LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_can_filter_init_recv_all
-<LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
-<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_basic_sample
-<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
+<BR>[Calls]<UL><LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_init
+<LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
+<LI><a href="#[1f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osKernelStart
+<LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_can_filter_init_recv_all
+<LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
+<LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_type_string_sample
+<LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_type_blob_sample
+<LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kvdb_basic_sample
+<LI><a href="#[1e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flashdb_get_set_data
+<LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flashdb_get_data
+<LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
 <LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dbus_uart_init
 <LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_filter_recv_special
 <LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART6_UART_Init
@@ -2888,13 +2992,13 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[243]"></a>malloc</STRONG> (Thumb, 92 bytes, Stack size 20 bytes, malloc.o(i.malloc))
+<P><STRONG><a name="[24b]"></a>malloc</STRONG> (Thumb, 92 bytes, Stack size 20 bytes, malloc.o(i.malloc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = malloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_register
+<BR>[Called By]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_register
 </UL>
 
-<P><STRONG><a name="[1e7]"></a>my_can_filter_init_recv_all</STRONG> (Thumb, 86 bytes, Stack size 48 bytes, bsp_can.o(i.my_can_filter_init_recv_all))
+<P><STRONG><a name="[1f0]"></a>my_can_filter_init_recv_all</STRONG> (Thumb, 86 bytes, Stack size 48 bytes, bsp_can.o(i.my_can_filter_init_recv_all))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = my_can_filter_init_recv_all &rArr; HAL_CAN_Start
 </UL>
 <BR>[Calls]<UL><LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
@@ -2909,7 +3013,7 @@ Global Symbols
 <P><STRONG><a name="[14f]"></a>osDelay</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, cmsis_os.o(i.osDelay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = osDelay &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+<BR>[Calls]<UL><LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;solenoid_task
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_task
@@ -2919,10 +3023,10 @@ Global Symbols
 <LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RUN_LED
 </UL>
 
-<P><STRONG><a name="[1e9]"></a>osKernelStart</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, cmsis_os.o(i.osKernelStart))
+<P><STRONG><a name="[1f2]"></a>osKernelStart</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, cmsis_os.o(i.osKernelStart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = osKernelStart &rArr; vTaskStartScheduler &rArr; xTaskCreateStatic &rArr; prvInitialiseNewTask &rArr; pxPortInitialiseStack
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+<BR>[Calls]<UL><LI><a href="#[1f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -2930,8 +3034,8 @@ Global Symbols
 <P><STRONG><a name="[13e]"></a>osMutexCreate</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, cmsis_os.o(i.osMutexCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = osMutexCreate &rArr; xQueueCreateMutexStatic &rArr; prvInitialiseMutex &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutexStatic
-<LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
+<BR>[Calls]<UL><LI><a href="#[1f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutexStatic
+<LI><a href="#[1f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
 </UL>
 <BR>[Called By]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FREERTOS_Init
 </UL>
@@ -2939,9 +3043,9 @@ Global Symbols
 <P><STRONG><a name="[140]"></a>osThreadCreate</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, cmsis_os.o(i.osThreadCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = osThreadCreate &rArr; xTaskCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;makeFreeRtosPriority
-<LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
-<LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
+<BR>[Calls]<UL><LI><a href="#[1f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;makeFreeRtosPriority
+<LI><a href="#[1f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
+<LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FREERTOS_Init
 </UL>
@@ -2953,15 +3057,15 @@ Global Symbols
 <P><STRONG><a name="[1a8]"></a>packet_process_byte</STRONG> (Thumb, 182 bytes, Stack size 24 bytes, packet.o(i.packet_process_byte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = packet_process_byte &rArr; crc16
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16
+<BR>[Calls]<UL><LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16
 </UL>
 <BR>[Called By]<UL><LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bldc_interface_uart_process_byte
 </UL>
 
-<P><STRONG><a name="[1f3]"></a>packet_send_packet</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, packet.o(i.packet_send_packet))
+<P><STRONG><a name="[1fb]"></a>packet_send_packet</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, packet.o(i.packet_send_packet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = packet_send_packet &rArr; crc16
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16
+<BR>[Calls]<UL><LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16
 <LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_packet_bldc_interface
@@ -2970,35 +3074,35 @@ Global Symbols
 <P><STRONG><a name="[1b1]"></a>pid_calc</STRONG> (Thumb, 448 bytes, Stack size 4 bytes, pid.o(i.pid_calc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = pid_calc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abs_limit
+<BR>[Calls]<UL><LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abs_limit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test_task
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_control_loop
 </UL>
 
-<P><STRONG><a name="[20b]"></a>pvPortMalloc</STRONG> (Thumb, 216 bytes, Stack size 24 bytes, heap_4.o(i.pvPortMalloc))
+<P><STRONG><a name="[213]"></a>pvPortMalloc</STRONG> (Thumb, 216 bytes, Stack size 24 bytes, heap_4.o(i.pvPortMalloc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
-<LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvHeapInit
-<LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<BR>[Calls]<UL><LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
+<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvHeapInit
+<LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
-<LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
-<LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCompanionAdd
+<BR>[Called By]<UL><LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
+<LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+<LI><a href="#[1ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCompanionAdd
 </UL>
 
-<P><STRONG><a name="[207]"></a>pxPortInitialiseStack</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, port.o(i.pxPortInitialiseStack))
+<P><STRONG><a name="[20f]"></a>pxPortInitialiseStack</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, port.o(i.pxPortInitialiseStack))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = pxPortInitialiseStack
 </UL>
-<BR>[Called By]<UL><LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
+<BR>[Called By]<UL><LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
 </UL>
 
-<P><STRONG><a name="[210]"></a>rc_callback_handler</STRONG> (Thumb, 398 bytes, Stack size 20 bytes, bsp_sbus.o(i.rc_callback_handler))
+<P><STRONG><a name="[218]"></a>rc_callback_handler</STRONG> (Thumb, 398 bytes, Stack size 20 bytes, bsp_sbus.o(i.rc_callback_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = rc_callback_handler &rArr; sw_judge
 </UL>
-<BR>[Calls]<UL><LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_judge
+<BR>[Calls]<UL><LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_judge
 </UL>
 <BR>[Called By]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_receive_handler
 </UL>
@@ -3006,13 +3110,13 @@ Global Symbols
 <P><STRONG><a name="[1b2]"></a>set_motor</STRONG> (Thumb, 44 bytes, Stack size 32 bytes, bsp_can.o(i.set_motor))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = set_motor &rArr; set_motor_B &rArr; Can_TxMessage &rArr; HAL_CAN_AddTxMessage
 </UL>
-<BR>[Calls]<UL><LI><a href="#[213]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_motor_B
-<LI><a href="#[212]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_motor_A
+<BR>[Calls]<UL><LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_motor_B
+<LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_motor_A
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_control_loop
 </UL>
 
-<P><STRONG><a name="[212]"></a>set_motor_A</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, bsp_can.o(i.set_motor_A))
+<P><STRONG><a name="[21a]"></a>set_motor_A</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, bsp_can.o(i.set_motor_A))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = set_motor_A &rArr; Can_TxMessage &rArr; HAL_CAN_AddTxMessage
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Can_TxMessage
@@ -3021,7 +3125,7 @@ Global Symbols
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test_task
 </UL>
 
-<P><STRONG><a name="[213]"></a>set_motor_B</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, bsp_can.o(i.set_motor_B))
+<P><STRONG><a name="[21b]"></a>set_motor_B</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, bsp_can.o(i.set_motor_B))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = set_motor_B &rArr; Can_TxMessage &rArr; HAL_CAN_AddTxMessage
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Can_TxMessage
@@ -3068,51 +3172,51 @@ Global Symbols
 <P><STRONG><a name="[94]"></a>shellBackspace</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, shell.o(i.shellBackspace))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = shellBackspace &rArr; shellDeleteByte &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
+<BR>[Calls]<UL><LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[228]"></a>shellCheckPermission</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, shell.o(i.shellCheckPermission))
+<P><STRONG><a name="[230]"></a>shellCheckPermission</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, shell.o(i.shellCheckPermission))
 <BR><BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
-<LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
-<LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
-<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
-<LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
+<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[23b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
+<LI><a href="#[23a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
+<LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
+<LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
 </UL>
 
 <P><STRONG><a name="[9c]"></a>shellClear</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, shell.o(i.shellClear))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = shellClear &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[216]"></a>shellClearCommandLine</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, shell.o(i.shellClearCommandLine))
+<P><STRONG><a name="[21e]"></a>shellClearCommandLine</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, shell.o(i.shellClearCommandLine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = shellClearCommandLine &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteCommandLine
+<BR>[Calls]<UL><LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteCommandLine
 </UL>
-<BR>[Called By]<UL><LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
+<BR>[Called By]<UL><LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
 </UL>
 
 <P><STRONG><a name="[99]"></a>shellCmds</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, shell.o(i.shellCmds))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = shellCmds &rArr; shellListCommand &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
+<BR>[Calls]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[1e4]"></a>shellCompanionAdd</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, shell_companion.o(i.shellCompanionAdd))
+<P><STRONG><a name="[1ed]"></a>shellCompanionAdd</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, shell_companion.o(i.shellCompanionAdd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = shellCompanionAdd &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Calls]<UL><LI><a href="#[213]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logRegister
+<BR>[Called By]<UL><LI><a href="#[1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logRegister
 </UL>
 
 <P><STRONG><a name="[195]"></a>shellCompanionGet</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, shell_companion.o(i.shellCompanionGet))
@@ -3124,74 +3228,74 @@ Global Symbols
 <P><STRONG><a name="[95]"></a>shellDelete</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, shell.o(i.shellDelete))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = shellDelete &rArr; shellDeleteByte &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
+<BR>[Calls]<UL><LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[214]"></a>shellDeleteByte</STRONG> (Thumb, 214 bytes, Stack size 24 bytes, shell.o(i.shellDeleteByte))
+<P><STRONG><a name="[21c]"></a>shellDeleteByte</STRONG> (Thumb, 214 bytes, Stack size 24 bytes, shell.o(i.shellDeleteByte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = shellDeleteByte &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteCommandLine
+<BR>[Calls]<UL><LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteCommandLine
 </UL>
 <BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDelete
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellBackspace
 </UL>
 
-<P><STRONG><a name="[217]"></a>shellDeleteCommandLine</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, shell.o(i.shellDeleteCommandLine))
+<P><STRONG><a name="[21f]"></a>shellDeleteCommandLine</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, shell.o(i.shellDeleteCommandLine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 </UL>
-<BR>[Called By]<UL><LI><a href="#[214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
-<LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
+<BR>[Called By]<UL><LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
+<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
 </UL>
 
 <P><STRONG><a name="[90]"></a>shellDown</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, shell.o(i.shellDown))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = shellDown &rArr; shellHistory &rArr; shellClearCommandLine &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
+<BR>[Calls]<UL><LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
 <P><STRONG><a name="[96]"></a>shellEnter</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, shell.o(i.shellEnter))
 <BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = shellEnter &rArr; shellExec &rArr; shellRunCommand &rArr; shellExtRun &rArr; shellExtParsePara &rArr; shellSeekCommand &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
-<LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
+<BR>[Calls]<UL><LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
+<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[21a]"></a>shellExec</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, shell.o(i.shellExec))
+<P><STRONG><a name="[222]"></a>shellExec</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, shell.o(i.shellExec))
 <BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = shellExec &rArr; shellRunCommand &rArr; shellExtRun &rArr; shellExtParsePara &rArr; shellSeekCommand &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellParserParam
-<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistoryAdd
-<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
+<BR>[Calls]<UL><LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellParserParam
+<LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistoryAdd
+<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
 <LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellEnter
 </UL>
 
-<P><STRONG><a name="[220]"></a>shellExtParsePara</STRONG> (Thumb, 160 bytes, Stack size 24 bytes, shell_ext.o(i.shellExtParsePara))
+<P><STRONG><a name="[228]"></a>shellExtParsePara</STRONG> (Thumb, 160 bytes, Stack size 24 bytes, shell_ext.o(i.shellExtParsePara))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = shellExtParsePara &rArr; shellSeekCommand &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
-<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseChar
-<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetVarValue
+<BR>[Calls]<UL><LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
+<LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseChar
+<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[22b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetVarValue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
+<BR>[Called By]<UL><LI><a href="#[22c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
 </UL>
 
-<P><STRONG><a name="[224]"></a>shellExtRun</STRONG> (Thumb, 198 bytes, Stack size 80 bytes, shell_ext.o(i.shellExtRun))
+<P><STRONG><a name="[22c]"></a>shellExtRun</STRONG> (Thumb, 198 bytes, Stack size 80 bytes, shell_ext.o(i.shellExtRun))
 <BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = shellExtRun &rArr; shellExtParsePara &rArr; shellSeekCommand &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
+<BR>[Calls]<UL><LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
+<BR>[Called By]<UL><LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
 </UL>
 
 <P><STRONG><a name="[194]"></a>shellGetCurrent</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, shell.o(i.shellGetCurrent))
@@ -3206,17 +3310,17 @@ Global Symbols
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClear
 </UL>
 
-<P><STRONG><a name="[223]"></a>shellGetVarValue</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, shell.o(i.shellGetVarValue))
-<BR><BR>[Called By]<UL><LI><a href="#[234]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
-<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
+<P><STRONG><a name="[22b]"></a>shellGetVarValue</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, shell.o(i.shellGetVarValue))
+<BR><BR>[Called By]<UL><LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
+<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
 </UL>
 
-<P><STRONG><a name="[227]"></a>shellHandler</STRONG> (Thumb, 226 bytes, Stack size 40 bytes, shell.o(i.shellHandler))
+<P><STRONG><a name="[22f]"></a>shellHandler</STRONG> (Thumb, 226 bytes, Stack size 40 bytes, shell.o(i.shellHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = shellHandler &rArr; shellNormalInput &rArr; shellInsertByte &rArr; shellWritePrompt &rArr; shellWriteString
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellNormalInput
-<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<LI><a href="#[231]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellNormalInput
+<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
 </UL>
 <BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTask
 </UL>
@@ -3224,35 +3328,35 @@ Global Symbols
 <P><STRONG><a name="[97]"></a>shellHelp</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, shell.o(i.shellHelp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = shellHelp &rArr; shellWriteCommandHelp &rArr; shellSeekCommand &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
-<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
+<BR>[Calls]<UL><LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[22c]"></a>shellInit</STRONG> (Thumb, 140 bytes, Stack size 8 bytes, shell.o(i.shellInit))
+<P><STRONG><a name="[234]"></a>shellInit</STRONG> (Thumb, 140 bytes, Stack size 8 bytes, shell.o(i.shellInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = shellInit &rArr; shellSeekCommand &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
-<LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
-<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<BR>[Calls]<UL><LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
+<LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
+<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
+<BR>[Called By]<UL><LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
 </UL>
 
-<P><STRONG><a name="[22e]"></a>shellInsertByte</STRONG> (Thumb, 214 bytes, Stack size 24 bytes, shell.o(i.shellInsertByte))
+<P><STRONG><a name="[236]"></a>shellInsertByte</STRONG> (Thumb, 214 bytes, Stack size 24 bytes, shell.o(i.shellInsertByte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = shellInsertByte &rArr; shellWritePrompt &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
-<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<BR>[Calls]<UL><LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
+<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 </UL>
-<BR>[Called By]<UL><LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellNormalInput
+<BR>[Called By]<UL><LI><a href="#[231]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellNormalInput
 </UL>
 
 <P><STRONG><a name="[9b]"></a>shellKeys</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, shell.o(i.shellKeys))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = shellKeys &rArr; shellListKey &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
+<BR>[Calls]<UL><LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
@@ -3262,68 +3366,68 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[218]"></a>shellListCommand</STRONG> (Thumb, 72 bytes, Stack size 24 bytes, shell.o(i.shellListCommand))
+<P><STRONG><a name="[220]"></a>shellListCommand</STRONG> (Thumb, 72 bytes, Stack size 24 bytes, shell.o(i.shellListCommand))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = shellListCommand &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHelp
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCmds
 </UL>
 
-<P><STRONG><a name="[230]"></a>shellListItem</STRONG> (Thumb, 228 bytes, Stack size 24 bytes, shell.o(i.shellListItem))
+<P><STRONG><a name="[238]"></a>shellListItem</STRONG> (Thumb, 228 bytes, Stack size 24 bytes, shell.o(i.shellListItem))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
-<LI><a href="#[231]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandDesc
-<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<BR>[Calls]<UL><LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
+<LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandDesc
+<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
-<LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
-<LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
-<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
+<LI><a href="#[23b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
+<LI><a href="#[23a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
+<LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
 </UL>
 
-<P><STRONG><a name="[22f]"></a>shellListKey</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, shell.o(i.shellListKey))
+<P><STRONG><a name="[237]"></a>shellListKey</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, shell.o(i.shellListKey))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = shellListKey &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellKeys
 </UL>
 
-<P><STRONG><a name="[232]"></a>shellListUser</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, shell.o(i.shellListUser))
+<P><STRONG><a name="[23a]"></a>shellListUser</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, shell.o(i.shellListUser))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = shellListUser &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
 </UL>
 <BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellUsers
 </UL>
 
-<P><STRONG><a name="[233]"></a>shellListVar</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, shell.o(i.shellListVar))
+<P><STRONG><a name="[23b]"></a>shellListVar</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, shell.o(i.shellListVar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = shellListVar &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellVars
 </UL>
 
-<P><STRONG><a name="[229]"></a>shellNormalInput</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, shell.o(i.shellNormalInput))
+<P><STRONG><a name="[231]"></a>shellNormalInput</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, shell.o(i.shellNormalInput))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = shellNormalInput &rArr; shellInsertByte &rArr; shellWritePrompt &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[22e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
+<BR>[Calls]<UL><LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
+<BR>[Called By]<UL><LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
 </UL>
 
 <P><STRONG><a name="[91]"></a>shellRight</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, shell.o(i.shellRight))
@@ -3331,60 +3435,60 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[21f]"></a>shellRunCommand</STRONG> (Thumb, 184 bytes, Stack size 32 bytes, shell.o(i.shellRunCommand))
+<P><STRONG><a name="[227]"></a>shellRunCommand</STRONG> (Thumb, 184 bytes, Stack size 32 bytes, shell.o(i.shellRunCommand))
 <BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = shellRunCommand &rArr; shellExtRun &rArr; shellExtParsePara &rArr; shellSeekCommand &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
-<LI><a href="#[234]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
-<LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
-<LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
+<BR>[Calls]<UL><LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
+<LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
+<LI><a href="#[22c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
+<LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
 <LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
+<BR>[Called By]<UL><LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
 </UL>
 
-<P><STRONG><a name="[21e]"></a>shellSeekCommand</STRONG> (Thumb, 110 bytes, Stack size 32 bytes, shell.o(i.shellSeekCommand))
+<P><STRONG><a name="[226]"></a>shellSeekCommand</STRONG> (Thumb, 110 bytes, Stack size 32 bytes, shell.o(i.shellSeekCommand))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = shellSeekCommand &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
-<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<BR>[Calls]<UL><LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
+<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
 <LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
-<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
+<BR>[Called By]<UL><LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
+<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVar
-<LI><a href="#[22c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
-<LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
+<LI><a href="#[234]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
+<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
 </UL>
 
-<P><STRONG><a name="[22d]"></a>shellSetUser</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, shell.o(i.shellSetUser))
+<P><STRONG><a name="[235]"></a>shellSetUser</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, shell.o(i.shellSetUser))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = shellSetUser &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 <LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
-<LI><a href="#[22c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
+<BR>[Called By]<UL><LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
+<LI><a href="#[234]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
 </UL>
 
 <P><STRONG><a name="[8e]"></a>shellSetVar</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, shell.o(i.shellSetVar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = shellSetVar &rArr; shellSetVarValue &rArr; shellShowVar &rArr; shellToDec
 </UL>
-<BR>[Calls]<UL><LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
-<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
+<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[236]"></a>shellSetVarValue</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, shell.o(i.shellSetVarValue))
+<P><STRONG><a name="[23e]"></a>shellSetVarValue</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, shell.o(i.shellSetVarValue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = shellSetVarValue &rArr; shellShowVar &rArr; shellToDec
 </UL>
-<BR>[Calls]<UL><LI><a href="#[22b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
-<LI><a href="#[234]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
-<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<BR>[Calls]<UL><LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
+<LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
+<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVar
 </UL>
@@ -3392,51 +3496,51 @@ Global Symbols
 <P><STRONG><a name="[93]"></a>shellTab</STRONG> (Thumb, 332 bytes, Stack size 40 bytes, shell.o(i.shellTab))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = shellTab &rArr; shellWriteCommandHelp &rArr; shellSeekCommand &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
-<LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
-<LI><a href="#[22b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
-<LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCompare
-<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
+<BR>[Calls]<UL><LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
+<LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
+<LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
+<LI><a href="#[240]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCompare
+<LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
-<LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
-<LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
+<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
+<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
 <P><STRONG><a name="[83]"></a>shellTask</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, shell.o(i.shellTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = shellTask &rArr; shellHandler &rArr; shellNormalInput &rArr; shellInsertByte &rArr; shellWritePrompt &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
+<BR>[Calls]<UL><LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell_port.o(i.userShellInit)
 </UL>
-<P><STRONG><a name="[237]"></a>shellToDec</STRONG> (Thumb, 76 bytes, Stack size 12 bytes, shell.o(i.shellToDec))
+<P><STRONG><a name="[23f]"></a>shellToDec</STRONG> (Thumb, 76 bytes, Stack size 12 bytes, shell.o(i.shellToDec))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = shellToDec
 </UL>
-<BR>[Called By]<UL><LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
-<LI><a href="#[234]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
+<BR>[Called By]<UL><LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
+<LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
 </UL>
 
-<P><STRONG><a name="[226]"></a>shellToHex</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, shell.o(i.shellToHex))
-<BR><BR>[Called By]<UL><LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
-<LI><a href="#[234]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
-<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
+<P><STRONG><a name="[22e]"></a>shellToHex</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, shell.o(i.shellToHex))
+<BR><BR>[Called By]<UL><LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
+<LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
+<LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
 </UL>
 
 <P><STRONG><a name="[8f]"></a>shellUp</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, shell.o(i.shellUp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = shellUp &rArr; shellHistory &rArr; shellClearCommandLine &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
+<BR>[Calls]<UL><LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
 <P><STRONG><a name="[98]"></a>shellUsers</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, shell.o(i.shellUsers))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = shellUsers &rArr; shellListUser &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
+<BR>[Calls]<UL><LI><a href="#[23a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
@@ -3444,41 +3548,41 @@ Global Symbols
 <P><STRONG><a name="[9a]"></a>shellVars</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, shell.o(i.shellVars))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = shellVars &rArr; shellListVar &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
+<BR>[Calls]<UL><LI><a href="#[23b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[239]"></a>shellWriteEndLine</STRONG> (Thumb, 110 bytes, Stack size 24 bytes, shell.o(i.shellWriteEndLine))
+<P><STRONG><a name="[241]"></a>shellWriteEndLine</STRONG> (Thumb, 110 bytes, Stack size 24 bytes, shell.o(i.shellWriteEndLine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = shellWriteEndLine &rArr; shellWritePrompt &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
-<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<BR>[Calls]<UL><LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
+<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartLogWrite
 </UL>
 
-<P><STRONG><a name="[215]"></a>shellWriteString</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, shell.o(i.shellWriteString))
+<P><STRONG><a name="[21d]"></a>shellWriteString</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, shell.o(i.shellWriteString))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = shellWriteString
 </UL>
-<BR>[Called By]<UL><LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
-<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
-<LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
-<LI><a href="#[234]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
-<LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
-<LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteEndLine
+<BR>[Called By]<UL><LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
+<LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
+<LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
+<LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
+<LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
+<LI><a href="#[241]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteEndLine
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
+<LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVar
-<LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
-<LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
-<LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
-<LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
-<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
-<LI><a href="#[22e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
-<LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
-<LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteCommandLine
+<LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
+<LI><a href="#[23b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
+<LI><a href="#[23a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
+<LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
+<LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
+<LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
+<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
+<LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteCommandLine
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClear
 </UL>
 
@@ -3501,10 +3605,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 </UL>
 
-<P><STRONG><a name="[211]"></a>sw_judge</STRONG> (Thumb, 192 bytes, Stack size 16 bytes, bsp_sbus.o(i.sw_judge))
+<P><STRONG><a name="[219]"></a>sw_judge</STRONG> (Thumb, 192 bytes, Stack size 16 bytes, bsp_sbus.o(i.sw_judge))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = sw_judge
 </UL>
-<BR>[Called By]<UL><LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rc_callback_handler
+<BR>[Called By]<UL><LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rc_callback_handler
 </UL>
 
 <P><STRONG><a name="[87]"></a>test_task</STRONG> (Thumb, 364 bytes, Stack size 40 bytes, test_task.o(i.test_task))
@@ -3512,43 +3616,43 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 <LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_remote_control_point
-<LI><a href="#[212]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_motor_A
-<LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_total_angle
+<LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_motor_A
+<LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_total_angle
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 <LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pid_calc
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_struct_init
-<LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_set_rmp
-<LI><a href="#[23b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_set_point
-<LI><a href="#[23a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_init
+<LI><a href="#[244]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_set_rmp
+<LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_set_point
+<LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vesc_init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.constdata)
 </UL>
 <P><STRONG><a name="[1]"></a>uartLogWrite</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, shell_port.o(i.uartLogWrite))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = uartLogWrite &rArr; shellWriteEndLine &rArr; shellWritePrompt &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteEndLine
+<BR>[Calls]<UL><LI><a href="#[241]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteEndLine
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell_port.o(.data)
 </UL>
 <P><STRONG><a name="[155]"></a>uart_receive_handler</STRONG> (Thumb, 86 bytes, Stack size 12 bytes, bsp_sbus.o(i.uart_receive_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = uart_receive_handler &rArr; rc_callback_handler &rArr; sw_judge
 </UL>
-<BR>[Calls]<UL><LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rc_callback_handler
+<BR>[Calls]<UL><LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rc_callback_handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[1e6]"></a>userShellInit</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, shell_port.o(i.userShellInit))
+<P><STRONG><a name="[1ef]"></a>userShellInit</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, shell_port.o(i.userShellInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = userShellInit &rArr; xTaskCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
-<LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
+<BR>[Calls]<UL><LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
+<LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
-<LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_init
-<LI><a href="#[1e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logRegister
-<LI><a href="#[22c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
+<LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_init
+<LI><a href="#[1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logRegister
+<LI><a href="#[234]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -3560,7 +3664,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = userShellRead &rArr; osDelay &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
-<LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_out
+<LI><a href="#[1e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_out
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell_port.o(i.userShellInit)
 </UL>
@@ -3574,122 +3678,122 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell_port.o(i.userShellInit)
 </UL>
-<P><STRONG><a name="[1f6]"></a>uxListRemove</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, list.o(i.uxListRemove))
+<P><STRONG><a name="[1fe]"></a>uxListRemove</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, list.o(i.uxListRemove))
 <BR><BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
-<LI><a href="#[1f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
-<LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
-<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
-<LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[206]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 </UL>
 
-<P><STRONG><a name="[240]"></a>vApplicationGetIdleTaskMemory</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, freertos.o(i.vApplicationGetIdleTaskMemory))
-<BR><BR>[Called By]<UL><LI><a href="#[1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+<P><STRONG><a name="[248]"></a>vApplicationGetIdleTaskMemory</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, freertos.o(i.vApplicationGetIdleTaskMemory))
+<BR><BR>[Called By]<UL><LI><a href="#[1f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
 </UL>
 
-<P><STRONG><a name="[1fb]"></a>vListInitialise</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, list.o(i.vListInitialise))
-<BR><BR>[Called By]<UL><LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
-<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<P><STRONG><a name="[203]"></a>vListInitialise</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, list.o(i.vListInitialise))
+<BR><BR>[Called By]<UL><LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
 </UL>
 
-<P><STRONG><a name="[206]"></a>vListInitialiseItem</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, list.o(i.vListInitialiseItem))
-<BR><BR>[Called By]<UL><LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
+<P><STRONG><a name="[20e]"></a>vListInitialiseItem</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, list.o(i.vListInitialiseItem))
+<BR><BR>[Called By]<UL><LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
 </UL>
 
-<P><STRONG><a name="[1f8]"></a>vListInsert</STRONG> (Thumb, 48 bytes, Stack size 12 bytes, list.o(i.vListInsert))
+<P><STRONG><a name="[200]"></a>vListInsert</STRONG> (Thumb, 48 bytes, Stack size 12 bytes, list.o(i.vListInsert))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = vListInsert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
-<LI><a href="#[23f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<BR>[Called By]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
 </UL>
 
-<P><STRONG><a name="[1f7]"></a>vListInsertEnd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, list.o(i.vListInsertEnd))
+<P><STRONG><a name="[1ff]"></a>vListInsertEnd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, list.o(i.vListInsertEnd))
 <BR><BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
-<LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
-<LI><a href="#[1f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
-<LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
-<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
-<LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[206]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 </UL>
 
-<P><STRONG><a name="[1fa]"></a>vPortEnterCritical</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, port.o(i.vPortEnterCritical))
+<P><STRONG><a name="[202]"></a>vPortEnterCritical</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, port.o(i.vPortEnterCritical))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
-<LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
-<LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
-<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
-<LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
-<LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 </UL>
 
-<P><STRONG><a name="[1fc]"></a>vPortExitCritical</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, port.o(i.vPortExitCritical))
+<P><STRONG><a name="[204]"></a>vPortExitCritical</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, port.o(i.vPortExitCritical))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
-<LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
-<LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
-<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
-<LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
-<LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 </UL>
 
-<P><STRONG><a name="[200]"></a>vPortFree</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, heap_4.o(i.vPortFree))
+<P><STRONG><a name="[208]"></a>vPortFree</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, heap_4.o(i.vPortFree))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
-<LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<BR>[Calls]<UL><LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
+<LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
-<LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
-</UL>
-
-<P><STRONG><a name="[247]"></a>vPortSetupTimerInterrupt</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, port.o(i.vPortSetupTimerInterrupt))
-<BR><BR>[Called By]<UL><LI><a href="#[241]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
+<BR>[Called By]<UL><LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
+<LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
 </UL>
 
-<P><STRONG><a name="[1eb]"></a>vTaskDelay</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, tasks.o(i.vTaskDelay))
+<P><STRONG><a name="[24f]"></a>vPortSetupTimerInterrupt</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, port.o(i.vPortSetupTimerInterrupt))
+<BR><BR>[Called By]<UL><LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
+</UL>
+
+<P><STRONG><a name="[1f3]"></a>vTaskDelay</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, tasks.o(i.vTaskDelay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
-<LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<BR>[Calls]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 </UL>
 <BR>[Called By]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 </UL>
 
-<P><STRONG><a name="[24d]"></a>vTaskInternalSetTimeOutState</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, tasks.o(i.vTaskInternalSetTimeOutState))
-<BR><BR>[Called By]<UL><LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
-<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<P><STRONG><a name="[255]"></a>vTaskInternalSetTimeOutState</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, tasks.o(i.vTaskInternalSetTimeOutState))
+<BR><BR>[Called By]<UL><LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
-<P><STRONG><a name="[20a]"></a>vTaskMissedYield</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, tasks.o(i.vTaskMissedYield))
-<BR><BR>[Called By]<UL><LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<P><STRONG><a name="[212]"></a>vTaskMissedYield</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, tasks.o(i.vTaskMissedYield))
+<BR><BR>[Called By]<UL><LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
 </UL>
 
-<P><STRONG><a name="[23f]"></a>vTaskPlaceOnEventList</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, tasks.o(i.vTaskPlaceOnEventList))
+<P><STRONG><a name="[247]"></a>vTaskPlaceOnEventList</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, tasks.o(i.vTaskPlaceOnEventList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
-<LI><a href="#[1f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
+<BR>[Calls]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<BR>[Called By]<UL><LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
-<P><STRONG><a name="[1ec]"></a>vTaskStartScheduler</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, tasks.o(i.vTaskStartScheduler))
+<P><STRONG><a name="[1f4]"></a>vTaskStartScheduler</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, tasks.o(i.vTaskStartScheduler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = vTaskStartScheduler &rArr; xTaskCreateStatic &rArr; prvInitialiseNewTask &rArr; pxPortInitialiseStack
 </UL>
-<BR>[Calls]<UL><LI><a href="#[240]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationGetIdleTaskMemory
-<LI><a href="#[241]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
-<LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
+<BR>[Calls]<UL><LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationGetIdleTaskMemory
+<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
+<LI><a href="#[1f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osKernelStart
+<BR>[Called By]<UL><LI><a href="#[1f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osKernelStart
 </UL>
 
-<P><STRONG><a name="[20c]"></a>vTaskSuspendAll</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, tasks.o(i.vTaskSuspendAll))
-<BR><BR>[Called By]<UL><LI><a href="#[1eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
-<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
-<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<P><STRONG><a name="[214]"></a>vTaskSuspendAll</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, tasks.o(i.vTaskSuspendAll))
+<BR><BR>[Called By]<UL><LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+<LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[213]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
 
 <P><STRONG><a name="[a7]"></a>vTaskSwitchContext</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, tasks.o(i.vTaskSwitchContext))
@@ -3699,7 +3803,7 @@ Global Symbols
 <P><STRONG><a name="[a0]"></a>var</STRONG> (Thumb, 546 bytes, Stack size 56 bytes, commend.o(i.var))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = var &rArr; __hardfp_atof &rArr; __strtod_int &rArr; _local_sscanf &rArr; _scanf_real
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
+<BR>[Calls]<UL><LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
 <LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 <LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
@@ -3708,201 +3812,201 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> commend.o(shellCommand)
 </UL>
-<P><STRONG><a name="[1e8]"></a>var_init</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, commend.o(i.var_init))
+<P><STRONG><a name="[1f1]"></a>var_init</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, commend.o(i.var_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = var_init &rArr; var_register &rArr; malloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_register
+<BR>[Calls]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_register
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[242]"></a>var_register</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, commend.o(i.var_register))
+<P><STRONG><a name="[24a]"></a>var_register</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, commend.o(i.var_register))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = var_register &rArr; malloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[244]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
+<BR>[Calls]<UL><LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 <LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_init
+<BR>[Called By]<UL><LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_init
 </UL>
 
-<P><STRONG><a name="[23a]"></a>vesc_init</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, bsp_vesc.o(i.vesc_init))
+<P><STRONG><a name="[242]"></a>vesc_init</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, bsp_vesc.o(i.vesc_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = vesc_init &rArr; bldc_interface_uart_init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
 <LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bldc_interface_uart_init
-<LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bldc_interface_set_rx_value_func
+<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bldc_interface_set_rx_value_func
 </UL>
 <BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test_task
 </UL>
 
-<P><STRONG><a name="[23b]"></a>vesc_set_point</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, bsp_vesc.o(i.vesc_set_point))
+<P><STRONG><a name="[243]"></a>vesc_set_point</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, bsp_vesc.o(i.vesc_set_point))
 <BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test_task
 </UL>
 
-<P><STRONG><a name="[23c]"></a>vesc_set_rmp</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, bsp_vesc.o(i.vesc_set_rmp))
+<P><STRONG><a name="[244]"></a>vesc_set_rmp</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, bsp_vesc.o(i.vesc_set_rmp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = vesc_set_rmp &rArr; buffer_append_int32
 </UL>
-<BR>[Calls]<UL><LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buffer_append_int32
+<BR>[Calls]<UL><LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buffer_append_int32
 </UL>
 <BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test_task
 </UL>
 
-<P><STRONG><a name="[241]"></a>xPortStartScheduler</STRONG> (Thumb, 222 bytes, Stack size 16 bytes, port.o(i.xPortStartScheduler))
+<P><STRONG><a name="[249]"></a>xPortStartScheduler</STRONG> (Thumb, 222 bytes, Stack size 16 bytes, port.o(i.xPortStartScheduler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = xPortStartScheduler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortSetupTimerInterrupt
-<LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__asm___6_port_c_39a90d8d__prvEnableVFP
-<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__asm___6_port_c_39a90d8d__prvStartFirstTask
+<BR>[Calls]<UL><LI><a href="#[24f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortSetupTimerInterrupt
+<LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__asm___6_port_c_39a90d8d__prvEnableVFP
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__asm___6_port_c_39a90d8d__prvStartFirstTask
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+<BR>[Called By]<UL><LI><a href="#[1f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
 </UL>
 
-<P><STRONG><a name="[1ee]"></a>xQueueCreateMutex</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, queue.o(i.xQueueCreateMutex))
+<P><STRONG><a name="[1f6]"></a>xQueueCreateMutex</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, queue.o(i.xQueueCreateMutex))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = xQueueCreateMutex &rArr; prvInitialiseMutex &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
-<LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
+<BR>[Calls]<UL><LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+<LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
 </UL>
 <BR>[Called By]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMutexCreate
 </UL>
 
-<P><STRONG><a name="[1ed]"></a>xQueueCreateMutexStatic</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, queue.o(i.xQueueCreateMutexStatic))
+<P><STRONG><a name="[1f5]"></a>xQueueCreateMutexStatic</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, queue.o(i.xQueueCreateMutexStatic))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = xQueueCreateMutexStatic &rArr; prvInitialiseMutex &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
-<LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
+<BR>[Calls]<UL><LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
+<LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
 </UL>
 <BR>[Called By]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMutexCreate
 </UL>
 
-<P><STRONG><a name="[24a]"></a>xQueueGenericCreate</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, queue.o(i.xQueueGenericCreate))
+<P><STRONG><a name="[252]"></a>xQueueGenericCreate</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, queue.o(i.xQueueGenericCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = xQueueGenericCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
-<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Calls]<UL><LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+<LI><a href="#[213]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
+<BR>[Called By]<UL><LI><a href="#[1f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
 </UL>
 
-<P><STRONG><a name="[24b]"></a>xQueueGenericCreateStatic</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, queue.o(i.xQueueGenericCreateStatic))
+<P><STRONG><a name="[253]"></a>xQueueGenericCreateStatic</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, queue.o(i.xQueueGenericCreateStatic))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = xQueueGenericCreateStatic &rArr; prvInitialiseNewQueue &rArr; xQueueGenericReset &rArr; xTaskRemoveFromEventList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+<BR>[Calls]<UL><LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutexStatic
+<BR>[Called By]<UL><LI><a href="#[1f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutexStatic
 </UL>
 
-<P><STRONG><a name="[204]"></a>xQueueGenericReset</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, queue.o(i.xQueueGenericReset))
+<P><STRONG><a name="[20c]"></a>xQueueGenericReset</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, queue.o(i.xQueueGenericReset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = xQueueGenericReset &rArr; xTaskRemoveFromEventList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
-<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
-<LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
+<BR>[Calls]<UL><LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
 </UL>
-<BR>[Called By]<UL><LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+<BR>[Called By]<UL><LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
 </UL>
 
-<P><STRONG><a name="[202]"></a>xQueueGenericSend</STRONG> (Thumb, 346 bytes, Stack size 56 bytes, queue.o(i.xQueueGenericSend))
+<P><STRONG><a name="[20a]"></a>xQueueGenericSend</STRONG> (Thumb, 346 bytes, Stack size 56 bytes, queue.o(i.xQueueGenericSend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
-<LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
-<LI><a href="#[23f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
-<LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
-<LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
-<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
-<LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetSchedulerState
-<LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
-<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<BR>[Calls]<UL><LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
+<LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
+<LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetSchedulerState
+<LI><a href="#[214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
-<BR>[Called By]<UL><LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
+<BR>[Called By]<UL><LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
 </UL>
 
-<P><STRONG><a name="[24e]"></a>xTaskCheckForTimeOut</STRONG> (Thumb, 112 bytes, Stack size 24 bytes, tasks.o(i.xTaskCheckForTimeOut))
+<P><STRONG><a name="[256]"></a>xTaskCheckForTimeOut</STRONG> (Thumb, 112 bytes, Stack size 24 bytes, tasks.o(i.xTaskCheckForTimeOut))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = xTaskCheckForTimeOut
 </UL>
-<BR>[Calls]<UL><LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
-<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<BR>[Calls]<UL><LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
+<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
-<BR>[Called By]<UL><LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<BR>[Called By]<UL><LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
-<P><STRONG><a name="[1f1]"></a>xTaskCreate</STRONG> (Thumb, 90 bytes, Stack size 56 bytes, tasks.o(i.xTaskCreate))
+<P><STRONG><a name="[1f9]"></a>xTaskCreate</STRONG> (Thumb, 90 bytes, Stack size 56 bytes, tasks.o(i.xTaskCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = xTaskCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
-<LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
-<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
-<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Calls]<UL><LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
+<LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[213]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
-<LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
+<LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
 </UL>
 
-<P><STRONG><a name="[1f0]"></a>xTaskCreateStatic</STRONG> (Thumb, 86 bytes, Stack size 40 bytes, tasks.o(i.xTaskCreateStatic))
+<P><STRONG><a name="[1f8]"></a>xTaskCreateStatic</STRONG> (Thumb, 86 bytes, Stack size 40 bytes, tasks.o(i.xTaskCreateStatic))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = xTaskCreateStatic &rArr; prvInitialiseNewTask &rArr; pxPortInitialiseStack
 </UL>
-<BR>[Calls]<UL><LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
-<LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<BR>[Calls]<UL><LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
+<LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
 </UL>
 <BR>[Called By]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
-<LI><a href="#[1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+<LI><a href="#[1f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
 </UL>
 
-<P><STRONG><a name="[24c]"></a>xTaskGetSchedulerState</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, tasks.o(i.xTaskGetSchedulerState))
-<BR><BR>[Called By]<UL><LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<P><STRONG><a name="[254]"></a>xTaskGetSchedulerState</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, tasks.o(i.xTaskGetSchedulerState))
+<BR><BR>[Called By]<UL><LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
 <P><STRONG><a name="[151]"></a>xTaskIncrementTick</STRONG> (Thumb, 194 bytes, Stack size 24 bytes, tasks.o(i.xTaskIncrementTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[24f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
-<LI><a href="#[1f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
-<LI><a href="#[1f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<BR>[Calls]<UL><LI><a href="#[257]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
+<LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
-<LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 </UL>
 
-<P><STRONG><a name="[1fe]"></a>xTaskPriorityDisinherit</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, tasks.o(i.xTaskPriorityDisinherit))
+<P><STRONG><a name="[206]"></a>xTaskPriorityDisinherit</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, tasks.o(i.xTaskPriorityDisinherit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = xTaskPriorityDisinherit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
-<LI><a href="#[1f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<BR>[Calls]<UL><LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
+<BR>[Called By]<UL><LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
 </UL>
 
-<P><STRONG><a name="[209]"></a>xTaskRemoveFromEventList</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, tasks.o(i.xTaskRemoveFromEventList))
+<P><STRONG><a name="[211]"></a>xTaskRemoveFromEventList</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, tasks.o(i.xTaskRemoveFromEventList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = xTaskRemoveFromEventList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
-<LI><a href="#[1f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<BR>[Calls]<UL><LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
-<LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<BR>[Called By]<UL><LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
 </UL>
 
-<P><STRONG><a name="[20f]"></a>xTaskResumeAll</STRONG> (Thumb, 182 bytes, Stack size 32 bytes, tasks.o(i.xTaskResumeAll))
+<P><STRONG><a name="[217]"></a>xTaskResumeAll</STRONG> (Thumb, 182 bytes, Stack size 32 bytes, tasks.o(i.xTaskResumeAll))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
-<LI><a href="#[24f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
-<LI><a href="#[1f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
-<LI><a href="#[1f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
-<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[257]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
+<LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
-<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
-<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Called By]<UL><LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+<LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[213]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
 <P>
 <H3>
@@ -4065,71 +4169,71 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 </UL>
 
-<P><STRONG><a name="[1fd]"></a>prvCopyDataToQueue</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, queue.o(i.prvCopyDataToQueue))
+<P><STRONG><a name="[205]"></a>prvCopyDataToQueue</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, queue.o(i.prvCopyDataToQueue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = prvCopyDataToQueue &rArr; xTaskPriorityDisinherit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<BR>[Calls]<UL><LI><a href="#[206]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
 <LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<BR>[Called By]<UL><LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
-<P><STRONG><a name="[201]"></a>prvInitialiseMutex</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, queue.o(i.prvInitialiseMutex))
+<P><STRONG><a name="[209]"></a>prvInitialiseMutex</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, queue.o(i.prvInitialiseMutex))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = prvInitialiseMutex &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<BR>[Calls]<UL><LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutexStatic
-<LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
+<BR>[Called By]<UL><LI><a href="#[1f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutexStatic
+<LI><a href="#[1f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
 </UL>
 
-<P><STRONG><a name="[203]"></a>prvInitialiseNewQueue</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, queue.o(i.prvInitialiseNewQueue))
+<P><STRONG><a name="[20b]"></a>prvInitialiseNewQueue</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, queue.o(i.prvInitialiseNewQueue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = prvInitialiseNewQueue &rArr; xQueueGenericReset &rArr; xTaskRemoveFromEventList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<BR>[Calls]<UL><LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
-<LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+<BR>[Called By]<UL><LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
+<LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
 </UL>
 
-<P><STRONG><a name="[208]"></a>prvUnlockQueue</STRONG> (Thumb, 106 bytes, Stack size 24 bytes, queue.o(i.prvUnlockQueue))
+<P><STRONG><a name="[210]"></a>prvUnlockQueue</STRONG> (Thumb, 106 bytes, Stack size 24 bytes, queue.o(i.prvUnlockQueue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = prvUnlockQueue &rArr; xTaskRemoveFromEventList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
-<LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskMissedYield
-<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<BR>[Calls]<UL><LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[212]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskMissedYield
+<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
-<BR>[Called By]<UL><LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<BR>[Called By]<UL><LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
-<P><STRONG><a name="[1f5]"></a>prvAddCurrentTaskToDelayedList</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, tasks.o(i.prvAddCurrentTaskToDelayedList))
+<P><STRONG><a name="[1fd]"></a>prvAddCurrentTaskToDelayedList</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, tasks.o(i.prvAddCurrentTaskToDelayedList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
-<LI><a href="#[1f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
-<LI><a href="#[1f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<BR>[Calls]<UL><LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
+<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
-<LI><a href="#[23f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<BR>[Called By]<UL><LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+<LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
 </UL>
 
-<P><STRONG><a name="[1f9]"></a>prvAddNewTaskToReadyList</STRONG> (Thumb, 194 bytes, Stack size 24 bytes, tasks.o(i.prvAddNewTaskToReadyList))
+<P><STRONG><a name="[201]"></a>prvAddNewTaskToReadyList</STRONG> (Thumb, 194 bytes, Stack size 24 bytes, tasks.o(i.prvAddNewTaskToReadyList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = prvAddNewTaskToReadyList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
-<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
-<LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
+<BR>[Calls]<UL><LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
+<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
-<LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
+<BR>[Called By]<UL><LI><a href="#[1f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
+<LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
 </UL>
 
-<P><STRONG><a name="[1ff]"></a>prvDeleteTCB</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, tasks.o(i.prvDeleteTCB))
+<P><STRONG><a name="[207]"></a>prvDeleteTCB</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, tasks.o(i.prvDeleteTCB))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = prvDeleteTCB &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<BR>[Calls]<UL><LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
 </UL>
@@ -4137,161 +4241,161 @@ Local Symbols
 <P><STRONG><a name="[84]"></a>prvIdleTask</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, tasks.o(i.prvIdleTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = prvIdleTask &rArr; prvDeleteTCB &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
-<LI><a href="#[1f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
-<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<BR>[Calls]<UL><LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
+<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> tasks.o(i.vTaskStartScheduler)
 </UL>
-<P><STRONG><a name="[205]"></a>prvInitialiseNewTask</STRONG> (Thumb, 152 bytes, Stack size 32 bytes, tasks.o(i.prvInitialiseNewTask))
+<P><STRONG><a name="[20d]"></a>prvInitialiseNewTask</STRONG> (Thumb, 152 bytes, Stack size 32 bytes, tasks.o(i.prvInitialiseNewTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = prvInitialiseNewTask &rArr; pxPortInitialiseStack
 </UL>
-<BR>[Calls]<UL><LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pxPortInitialiseStack
-<LI><a href="#[206]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialiseItem
+<BR>[Calls]<UL><LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pxPortInitialiseStack
+<LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialiseItem
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
-<LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
+<BR>[Called By]<UL><LI><a href="#[1f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
+<LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
 </UL>
 
-<P><STRONG><a name="[24f]"></a>prvResetNextTaskUnblockTime</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, tasks.o(i.prvResetNextTaskUnblockTime))
+<P><STRONG><a name="[257]"></a>prvResetNextTaskUnblockTime</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, tasks.o(i.prvResetNextTaskUnblockTime))
 <BR><BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
-<LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 </UL>
 
-<P><STRONG><a name="[1ef]"></a>makeFreeRtosPriority</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cmsis_os.o(i.makeFreeRtosPriority))
+<P><STRONG><a name="[1f7]"></a>makeFreeRtosPriority</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cmsis_os.o(i.makeFreeRtosPriority))
 <BR><BR>[Called By]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
 </UL>
 
-<P><STRONG><a name="[20d]"></a>prvHeapInit</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, heap_4.o(i.prvHeapInit))
-<BR><BR>[Called By]<UL><LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<P><STRONG><a name="[215]"></a>prvHeapInit</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, heap_4.o(i.prvHeapInit))
+<BR><BR>[Called By]<UL><LI><a href="#[213]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
 
-<P><STRONG><a name="[20e]"></a>prvInsertBlockIntoFreeList</STRONG> (Thumb, 72 bytes, Stack size 12 bytes, heap_4.o(i.prvInsertBlockIntoFreeList))
+<P><STRONG><a name="[216]"></a>prvInsertBlockIntoFreeList</STRONG> (Thumb, 72 bytes, Stack size 12 bytes, heap_4.o(i.prvInsertBlockIntoFreeList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = prvInsertBlockIntoFreeList
 </UL>
-<BR>[Called By]<UL><LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
-<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Called By]<UL><LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[213]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
 
 <P><STRONG><a name="[7e]"></a>prvTaskExitError</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, port.o(i.prvTaskExitError))
 <BR>[Address Reference Count : 1]<UL><LI> port.o(i.pxPortInitialiseStack)
 </UL>
-<P><STRONG><a name="[231]"></a>shellGetCommandDesc</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, shell.o(i.shellGetCommandDesc))
-<BR><BR>[Called By]<UL><LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
-<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<P><STRONG><a name="[239]"></a>shellGetCommandDesc</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, shell.o(i.shellGetCommandDesc))
+<BR><BR>[Called By]<UL><LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
+<LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
 </UL>
 
-<P><STRONG><a name="[225]"></a>shellGetCommandName</STRONG> (Thumb, 52 bytes, Stack size 4 bytes, shell.o(i.shellGetCommandName))
+<P><STRONG><a name="[22d]"></a>shellGetCommandName</STRONG> (Thumb, 52 bytes, Stack size 4 bytes, shell.o(i.shellGetCommandName))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = shellGetCommandName
 </UL>
-<BR>[Calls]<UL><LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToHex
+<BR>[Calls]<UL><LI><a href="#[22e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToHex
 </UL>
-<BR>[Called By]<UL><LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
+<BR>[Called By]<UL><LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
 </UL>
 
-<P><STRONG><a name="[219]"></a>shellHistory</STRONG> (Thumb, 152 bytes, Stack size 16 bytes, shell.o(i.shellHistory))
+<P><STRONG><a name="[221]"></a>shellHistory</STRONG> (Thumb, 152 bytes, Stack size 16 bytes, shell.o(i.shellHistory))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = shellHistory &rArr; shellClearCommandLine &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[22b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
-<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
+<BR>[Calls]<UL><LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
+<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellUp
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDown
 </UL>
 
-<P><STRONG><a name="[21c]"></a>shellHistoryAdd</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, shell.o(i.shellHistoryAdd))
+<P><STRONG><a name="[224]"></a>shellHistoryAdd</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, shell.o(i.shellHistoryAdd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = shellHistoryAdd &rArr; strcmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[22b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
+<BR>[Calls]<UL><LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
 <LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
+<BR>[Called By]<UL><LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
 </UL>
 
-<P><STRONG><a name="[21d]"></a>shellParserParam</STRONG> (Thumb, 120 bytes, Stack size 16 bytes, shell.o(i.shellParserParam))
+<P><STRONG><a name="[225]"></a>shellParserParam</STRONG> (Thumb, 120 bytes, Stack size 16 bytes, shell.o(i.shellParserParam))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = shellParserParam
 </UL>
-<BR>[Called By]<UL><LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
+<BR>[Called By]<UL><LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
 </UL>
 
-<P><STRONG><a name="[234]"></a>shellShowVar</STRONG> (Thumb, 142 bytes, Stack size 32 bytes, shell.o(i.shellShowVar))
+<P><STRONG><a name="[23c]"></a>shellShowVar</STRONG> (Thumb, 142 bytes, Stack size 32 bytes, shell.o(i.shellShowVar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = shellShowVar &rArr; shellToDec
 </UL>
-<BR>[Calls]<UL><LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToHex
-<LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToDec
-<LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetVarValue
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[22e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToHex
+<LI><a href="#[23f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToDec
+<LI><a href="#[22b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetVarValue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
-<LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
+<BR>[Called By]<UL><LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
+<LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
 </UL>
 
-<P><STRONG><a name="[238]"></a>shellStringCompare</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, shell.o(i.shellStringCompare))
+<P><STRONG><a name="[240]"></a>shellStringCompare</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, shell.o(i.shellStringCompare))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = shellStringCompare
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
 </UL>
 
-<P><STRONG><a name="[22b]"></a>shellStringCopy</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, shell.o(i.shellStringCopy))
-<BR><BR>[Called By]<UL><LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistoryAdd
-<LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
+<P><STRONG><a name="[233]"></a>shellStringCopy</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, shell.o(i.shellStringCopy))
+<BR><BR>[Called By]<UL><LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistoryAdd
+<LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
+<LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
 </UL>
 
-<P><STRONG><a name="[22a]"></a>shellWriteCommandHelp</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, shell.o(i.shellWriteCommandHelp))
+<P><STRONG><a name="[232]"></a>shellWriteCommandHelp</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, shell.o(i.shellWriteCommandHelp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = shellWriteCommandHelp &rArr; shellSeekCommand &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
-<LI><a href="#[231]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandDesc
-<LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<BR>[Calls]<UL><LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
+<LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandDesc
+<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHelp
 </UL>
 
-<P><STRONG><a name="[21b]"></a>shellWritePrompt</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, shell.o(i.shellWritePrompt))
+<P><STRONG><a name="[223]"></a>shellWritePrompt</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, shell.o(i.shellWritePrompt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = shellWritePrompt &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 </UL>
-<BR>[Called By]<UL><LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteEndLine
+<BR>[Called By]<UL><LI><a href="#[241]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteEndLine
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[22e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
-<LI><a href="#[22c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
+<LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
+<LI><a href="#[234]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellEnter
 </UL>
 
-<P><STRONG><a name="[235]"></a>shellWriteReturnValue</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, shell.o(i.shellWriteReturnValue))
+<P><STRONG><a name="[23d]"></a>shellWriteReturnValue</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, shell.o(i.shellWriteReturnValue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = shellWriteReturnValue &rArr; shellToDec
 </UL>
-<BR>[Calls]<UL><LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToHex
-<LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToDec
+<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[22e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToHex
+<LI><a href="#[23f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToDec
 </UL>
-<BR>[Called By]<UL><LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
-</UL>
-
-<P><STRONG><a name="[222]"></a>shellExtParseChar</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, shell_ext.o(i.shellExtParseChar))
-<BR><BR>[Called By]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
+<BR>[Called By]<UL><LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
 </UL>
 
-<P><STRONG><a name="[221]"></a>shellExtParseNumber</STRONG> (Thumb, 266 bytes, Stack size 20 bytes, shell_ext.o(i.shellExtParseNumber))
+<P><STRONG><a name="[22a]"></a>shellExtParseChar</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, shell_ext.o(i.shellExtParseChar))
+<BR><BR>[Called By]<UL><LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
+</UL>
+
+<P><STRONG><a name="[229]"></a>shellExtParseNumber</STRONG> (Thumb, 266 bytes, Stack size 20 bytes, shell_ext.o(i.shellExtParseNumber))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = shellExtParseNumber
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
+<BR>[Called By]<UL><LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
 </UL>
 
-<P><STRONG><a name="[1e1]"></a>logWriteBuffer</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, log.o(i.logWriteBuffer))
+<P><STRONG><a name="[1ea]"></a>logWriteBuffer</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, log.o(i.logWriteBuffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = logWriteBuffer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
+<BR>[Called By]<UL><LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logWrite
 <LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;logHexDump
 </UL>
 
@@ -4379,7 +4483,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_out
+<BR>[Called By]<UL><LI><a href="#[1e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_out
 </UL>
 
 <P><STRONG><a name="[78]"></a>process_packet</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, bldc_interface_uart.o(i.process_packet))
@@ -4392,7 +4496,7 @@ Local Symbols
 <P><STRONG><a name="[79]"></a>send_packet_bldc_interface</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bldc_interface_uart.o(i.send_packet_bldc_interface))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = send_packet_bldc_interface &rArr; packet_send_packet &rArr; crc16
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;packet_send_packet
+<BR>[Calls]<UL><LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;packet_send_packet
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> bldc_interface_uart.o(i.bldc_interface_uart_init)
 </UL>
@@ -4466,7 +4570,7 @@ Local Symbols
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set_default
-<LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
+<LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
 </UL>
 
 <P><STRONG><a name="[1c5]"></a>del_kv</STRONG> (Thumb, 248 bytes, Stack size 136 bytes, fdb_kvdb.o(i.del_kv))
@@ -4481,7 +4585,8 @@ Local Symbols
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
+<BR>[Called By]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_del
+<LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
 <LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_kv
 </UL>
 
@@ -4499,17 +4604,21 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> fdb_kvdb.o(i.gc_collect_by_free_size)
 </UL>
+<P><STRONG><a name="[1d7]"></a>fdb_is_str</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, fdb_kvdb.o(i.fdb_is_str))
+<BR><BR>[Called By]<UL><LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get
+</UL>
+
 <P><STRONG><a name="[1c6]"></a>find_kv</STRONG> (Thumb, 78 bytes, Stack size 24 bytes, fdb_kvdb.o(i.find_kv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 440<LI>Call Chain = find_kv &rArr; find_kv_no_cache &rArr; kv_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_kv_cache
 <LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_kv
-<LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_kv_from_cache
-<LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_kv_no_cache
+<LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_kv_from_cache
+<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_kv_no_cache
 <LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
-<LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
+<BR>[Called By]<UL><LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_get_blob
+<LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
 <LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;del_kv
 </UL>
 
@@ -4521,7 +4630,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> fdb_kvdb.o(i.find_kv_no_cache)
 </UL>
-<P><STRONG><a name="[1d8]"></a>find_kv_no_cache</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, fdb_kvdb.o(i.find_kv_no_cache))
+<P><STRONG><a name="[1dd]"></a>find_kv_no_cache</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, fdb_kvdb.o(i.find_kv_no_cache))
 <BR><BR>[Stack]<UL><LI>Max Depth = 416<LI>Call Chain = find_kv_no_cache &rArr; kv_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kv_iterator
@@ -4530,11 +4639,11 @@ Local Symbols
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_kv
 </UL>
 
-<P><STRONG><a name="[1d9]"></a>find_next_kv_addr</STRONG> (Thumb, 148 bytes, Stack size 72 bytes, fdb_kvdb.o(i.find_next_kv_addr))
+<P><STRONG><a name="[1de]"></a>find_next_kv_addr</STRONG> (Thumb, 148 bytes, Stack size 72 bytes, fdb_kvdb.o(i.find_next_kv_addr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = find_next_kv_addr &rArr; _fdb_flash_read &rArr; fal_partition_read &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_flash_read
-<LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_sector_from_cache
+<LI><a href="#[1df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_sector_from_cache
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_next_kv_addr
 </UL>
@@ -4564,18 +4673,18 @@ Local Symbols
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_and_recovery_gc_cb
 </UL>
 
-<P><STRONG><a name="[1db]"></a>gc_collect_by_free_size</STRONG> (Thumb, 116 bytes, Stack size 72 bytes, fdb_kvdb.o(i.gc_collect_by_free_size))
+<P><STRONG><a name="[1e2]"></a>gc_collect_by_free_size</STRONG> (Thumb, 116 bytes, Stack size 72 bytes, fdb_kvdb.o(i.gc_collect_by_free_size))
 <BR><BR>[Stack]<UL><LI>Max Depth = 456<LI>Call Chain = gc_collect_by_free_size &rArr; sector_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sector_iterator
 <LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_db_path
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
+<BR>[Called By]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
 <LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;new_kv
 </UL>
 
-<P><STRONG><a name="[1d7]"></a>get_kv_from_cache</STRONG> (Thumb, 134 bytes, Stack size 96 bytes, fdb_kvdb.o(i.get_kv_from_cache))
+<P><STRONG><a name="[1dc]"></a>get_kv_from_cache</STRONG> (Thumb, 134 bytes, Stack size 96 bytes, fdb_kvdb.o(i.get_kv_from_cache))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = get_kv_from_cache &rArr; _fdb_flash_read &rArr; fal_partition_read &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_calc_crc32
@@ -4589,9 +4698,9 @@ Local Symbols
 <P><STRONG><a name="[1c8]"></a>get_next_kv_addr</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, fdb_kvdb.o(i.get_next_kv_addr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = get_next_kv_addr &rArr; find_next_kv_addr &rArr; _fdb_flash_read &rArr; fal_partition_read &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_next_kv_addr
+<BR>[Calls]<UL><LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_next_kv_addr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
+<BR>[Called By]<UL><LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
 <LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kv_iterator
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;do_gc
 </UL>
@@ -4604,23 +4713,23 @@ Local Symbols
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;do_gc
 </UL>
 
-<P><STRONG><a name="[1da]"></a>get_sector_from_cache</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, fdb_kvdb.o(i.get_sector_from_cache))
+<P><STRONG><a name="[1df]"></a>get_sector_from_cache</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, fdb_kvdb.o(i.get_sector_from_cache))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = get_sector_from_cache
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
-<LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_next_kv_addr
+<BR>[Called By]<UL><LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
+<LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_next_kv_addr
 </UL>
 
 <P><STRONG><a name="[18a]"></a>kv_iterator</STRONG> (Thumb, 114 bytes, Stack size 56 bytes, fdb_kvdb.o(i.kv_iterator))
 <BR><BR>[Stack]<UL><LI>Max Depth = 400<LI>Call Chain = kv_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
+<BR>[Calls]<UL><LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
 <LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_kv
 <LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_next_sector_addr
 <LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_next_kv_addr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_kv_load
-<LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_kv_no_cache
+<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_kv_no_cache
 </UL>
 
 <P><STRONG><a name="[1ba]"></a>move_kv</STRONG> (Thumb, 332 bytes, Stack size 256 bytes, fdb_kvdb.o(i.move_kv))
@@ -4632,11 +4741,11 @@ Local Symbols
 <LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_sector_cache
 <LI><a href="#[1c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_sec_status
 <LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_kv_cache
-<LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_kv_no_cache
+<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_kv_no_cache
 <LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;del_kv
 <LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;alloc_kv
 <LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_db_path
-<LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
+<LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
@@ -4647,12 +4756,12 @@ Local Symbols
 <P><STRONG><a name="[1c0]"></a>new_kv</STRONG> (Thumb, 152 bytes, Stack size 32 bytes, fdb_kvdb.o(i.new_kv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 488<LI>Call Chain = new_kv &rArr; gc_collect_by_free_size &rArr; sector_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gc_collect_by_free_size
+<BR>[Calls]<UL><LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gc_collect_by_free_size
 <LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;alloc_kv
 <LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_db_path
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
+<BR>[Called By]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_kv
 <LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;create_kv_blob
 </UL>
 
@@ -4666,13 +4775,13 @@ Local Symbols
 <LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_db_path
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
+<BR>[Called By]<UL><LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
 <LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kv_iterator
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_kv
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;do_gc
 </UL>
 
-<P><STRONG><a name="[1dd]"></a>read_sector_info</STRONG> (Thumb, 398 bytes, Stack size 136 bytes, fdb_kvdb.o(i.read_sector_info))
+<P><STRONG><a name="[1e4]"></a>read_sector_info</STRONG> (Thumb, 398 bytes, Stack size 136 bytes, fdb_kvdb.o(i.read_sector_info))
 <BR><BR>[Stack]<UL><LI>Max Depth = 344<LI>Call Chain = read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_get_status
@@ -4680,7 +4789,7 @@ Local Symbols
 <LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_continue_ff_addr
 <LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_sector_cache
 <LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_kv
-<LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_sector_from_cache
+<LI><a href="#[1df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_sector_from_cache
 <LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_next_kv_addr
 <LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_db_path
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
@@ -4693,29 +4802,29 @@ Local Symbols
 <P><STRONG><a name="[188]"></a>sector_iterator</STRONG> (Thumb, 102 bytes, Stack size 40 bytes, fdb_kvdb.o(i.sector_iterator))
 <BR><BR>[Stack]<UL><LI>Max Depth = 384<LI>Call Chain = sector_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
+<BR>[Calls]<UL><LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
 <LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_next_sector_addr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
+<BR>[Called By]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kvdb_init
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdb_kv_load
-<LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gc_collect_by_free_size
+<LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gc_collect_by_free_size
 <LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;alloc_kv
 </UL>
 
 <P><STRONG><a name="[76]"></a>sector_statistics_cb</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, fdb_kvdb.o(i.sector_statistics_cb))
 <BR>[Address Reference Count : 1]<UL><LI> fdb_kvdb.o(i.alloc_kv)
 </UL>
-<P><STRONG><a name="[1d5]"></a>set_kv</STRONG> (Thumb, 160 bytes, Stack size 40 bytes, fdb_kvdb.o(i.set_kv))
+<P><STRONG><a name="[1da]"></a>set_kv</STRONG> (Thumb, 160 bytes, Stack size 40 bytes, fdb_kvdb.o(i.set_kv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 624<LI>Call Chain = set_kv &rArr; create_kv_blob &rArr; new_kv &rArr; gc_collect_by_free_size &rArr; sector_iterator &rArr; read_sector_info &rArr; read_kv &rArr; _fdb_write_status &rArr; _fdb_flash_write &rArr; fal_partition_write &rArr; flash_device_find_by_part &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;new_kv
-<LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gc_collect_by_free_size
+<LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gc_collect_by_free_size
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_kv
 <LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;del_kv
 <LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;create_kv_blob
 <LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set_blob
+<BR>[Called By]<UL><LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdb_kv_set_blob
 </UL>
 
 <P><STRONG><a name="[1bb]"></a>update_kv_cache</STRONG> (Thumb, 170 bytes, Stack size 24 bytes, fdb_kvdb.o(i.update_kv_cache))
@@ -4744,7 +4853,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = update_sector_cache
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_sec_status
-<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
+<LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_sector_info
 <LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_kv
 <LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;format_sector
 <LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;create_kv_blob
@@ -4834,8 +4943,8 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[71]"></a>_snputc</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, printfa.o(i._snputc))
-<BR>[Address Reference Count : 2]<UL><LI> printfa.o(i.__0snprintf)
-<LI> printfa.o(i.__0vsnprintf)
+<BR>[Address Reference Count : 2]<UL><LI> printfa.o(i.__0vsnprintf)
+<LI> printfa.o(i.__0snprintf)
 </UL>
 <P><STRONG><a name="[72]"></a>_sputc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, printfa.o(i._sputc))
 <BR><BR>[Called By]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf
