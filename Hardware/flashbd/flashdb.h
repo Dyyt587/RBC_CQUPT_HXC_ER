@@ -74,9 +74,10 @@ uint32_t   fdb_calc_crc32(uint32_t crc, const void *buf, size_t size);
 void kvdb_basic_sample(fdb_kvdb_t kvdb);
 void kvdb_type_blob_sample(fdb_kvdb_t kvdb);
 void kvdb_type_string_sample(fdb_kvdb_t kvdb);
-void flashdb_get_set_data(fdb_kvdb_t kvdb,const char *key,int kvdb_data);
-void flashdb_creat_data(fdb_kvdb_t kvdb,const char *key);
+void flashdb_get_set_data(fdb_kvdb_t kvdb,const char *key,int data);
+void flashdb_creat_data(fdb_kvdb_t kvdb,const char *key,int data);
 void flashdb_get_data(fdb_kvdb_t kvdb,const char *key);
+void flash_delete_data(fdb_kvdb_t kvdb,const char *key);
 
 #ifdef __cplusplus
 }

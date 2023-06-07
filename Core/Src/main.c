@@ -202,11 +202,10 @@ fdb_err_t result;
 		logInfo("fdb init %d\r\n",result);
 			//extern void kvdb_basic_sample(fdb_kvdb_t kvdb);
 		kvdb_basic_sample(&kvdb);
-		kvdb_type_blob_sample(&kvdb);
-		kvdb_type_string_sample(&kvdb);
 		char *kvdb_data1 = "kvdb_data0";
-		flashdb_get_set_data(&kvdb,kvdb_data1,789654);
-		flashdb_get_data(&kvdb,kvdb_data1);
+		flash_delete_data(&kvdb,kvdb_data1);
+		flashdb_get_set_data(&kvdb,kvdb_data1,1234);
+
         /* run basic KV samples */
       //  kvdb_basic_sample(&kvdb);
         /* run string KV samples */

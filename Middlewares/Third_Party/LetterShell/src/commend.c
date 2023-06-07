@@ -59,6 +59,12 @@ void var_init(void)
 
 }
 
+void data(int argc,char** argv)
+{
+	
+}
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), data, data, creat or change data);
+
 
 //参数一命令
 //参数2 变量名
@@ -209,6 +215,7 @@ void var(int argc, char** argv)
     }
 }
 SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), var, var, see or change variable);
+
 void var_arr_register(void *var,const char* name, var_type_e type,int size)
 {
     char name1[20]={0};
