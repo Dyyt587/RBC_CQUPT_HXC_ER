@@ -171,6 +171,7 @@ int main(void)
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
   HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_3);
   HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4);
+    __HAL_UART_ENABLE_IT(&huart6, UART_IT_IDLE);//使能串口6 IDLE中断
   TIM4->CCR4 = 800;
 	extern void userShellInit(void);//由于该rtos不支持宏自动初始化,故手动初始化
   userShellInit();

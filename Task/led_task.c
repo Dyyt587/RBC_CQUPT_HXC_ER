@@ -188,11 +188,20 @@ void led_task(void const * argument)
 //        Usart2Printf("n14.val=%d\xff\xff\xff",motor_can1[4].speed_rpm);
 //        Usart2Printf("n15.val=%d\xff\xff\xff",motor_can1[5].speed_rpm);
 
-        Usart2Printf("n16.val=%d\xff\xff\xff",(int)pos_y*2);
-        Usart2Printf("n17.val=%d\xff\xff\xff",(int)pos_x*3);
-        Usart2Printf("n18.val=%d\xff\xff\xff",(int)zangle);
-        Usart2Printf("n19.val=%d\xff\xff\xff",(int)w_z*10*4);
+//        Usart2Printf("n16.val=%d\xff\xff\xff",(int)pos_y*2);
+//        Usart2Printf("n17.val=%d\xff\xff\xff",(int)pos_x*3);
+//        Usart2Printf("n18.val=%d\xff\xff\xff",(int)zangle);
+//        Usart2Printf("n19.val=%d\xff\xff\xff",(int)w_z*10*4);
 
+//		
+						
+				Usart2Printf("n0.val=%d\r\n\n",(int)pos_y);
+        Usart2Printf("n1.val=%d\r\n\n",(int)pos_x);
+        Usart2Printf("n2.val=%d\r\n\n",(int)zangle);
+        Usart2Printf("n3.val=%d\r\n\n",(int)w_z*10); 
+
+		
+				Usart2Printf("\r\n\n");
 		
 		
 		
