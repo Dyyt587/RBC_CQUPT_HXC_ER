@@ -195,13 +195,18 @@ void led_task(void const * argument)
 
 //		
 						
-				Usart2Printf("n0.val=%d\r\n\n",(int)pos_y);
-        Usart2Printf("n1.val=%d\r\n\n",(int)pos_x);
-        Usart2Printf("n2.val=%d\r\n\n",(int)zangle);
-        Usart2Printf("n3.val=%d\r\n\n",(int)w_z*10); 
+//				Usart2Printf("n0.val=%d\r\n\n",(int)pos_y);
+//        Usart2Printf("n1.val=%d\r\n\n",(int)pos_x);
+//        Usart2Printf("n2.val=%d\r\n\n",(int)zangle);
+//        Usart2Printf("n3.val=%d\r\n\n",(int)w_z*10); 
+
+				printf("n0.val=%d\r\n\n",(int)pos_y);
+        printf("n1.val=%d\r\n\n",(int)pos_x);
+        printf("n2.val=%d\r\n\n",(int)zangle);
+        printf("n3.val=%d\r\n\n",(int)w_z*10); 
 
 		
-				Usart2Printf("\r\n\n");
+	//			Usart2Printf("\r\n\n");
 		
 		
 		

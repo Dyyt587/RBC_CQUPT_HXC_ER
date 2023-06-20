@@ -2,7 +2,7 @@
 #include "usart.h"
 #include "stdarg.h"
 #include "stdio.h"
-////高效率发送Usart1
+////高效率发送Usart2
 //unsigned char UartTxBuf_1[128];
 void Usart2Printf(const char *format,...)
 {
