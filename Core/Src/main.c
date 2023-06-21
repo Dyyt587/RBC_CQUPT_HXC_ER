@@ -78,7 +78,8 @@ int move_flag;
 uint8_t Rx_len_Huart2;//串口2接收长度
 uint8_t ReceiveBuff_Huart2[BUFFERSIZE]; //串口2接收缓冲区
 
-int Read_init_AS5048A[4];
+float Read_init_AS5048A[4];//定位初始化的值
+
 
 
 

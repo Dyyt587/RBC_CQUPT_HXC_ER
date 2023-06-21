@@ -31,4 +31,7 @@ typedef double fp64;
 
 extern void chassis_task(void const * argument);
 
+/*底盘初始化自校正*/
+//void chassis_location_init(chassis_move_t *Chassis_Move_Control_Loop);
+
 #endif

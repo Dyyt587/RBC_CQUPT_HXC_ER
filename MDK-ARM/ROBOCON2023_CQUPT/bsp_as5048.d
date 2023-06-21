@@ -36,3 +36,11 @@ robocon2023_cqupt\bsp_as5048.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ha
 robocon2023_cqupt\bsp_as5048.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 robocon2023_cqupt\bsp_as5048.o: ../Core/Inc/spi.h
 robocon2023_cqupt\bsp_as5048.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+robocon2023_cqupt\bsp_as5048.o: ../Task/chassis_task.h
+robocon2023_cqupt\bsp_as5048.o: ../Task/chassis_behaviour.h
+robocon2023_cqupt\bsp_as5048.o: ../Task/chassis_task.h
+robocon2023_cqupt\bsp_as5048.o: ../Control/pid.h
+robocon2023_cqupt\bsp_as5048.o: ../Hardware/bsp_sbus.h
+robocon2023_cqupt\bsp_as5048.o: ../Core/Inc/usart.h
+robocon2023_cqupt\bsp_as5048.o: ../Hardware/bsp_can.h
+robocon2023_cqupt\bsp_as5048.o: ../Core/Inc/can.h

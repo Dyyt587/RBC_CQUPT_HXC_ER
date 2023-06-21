@@ -21,6 +21,10 @@ static void chassis_control_loop(chassis_move_t *Chassis_Move_Control_Loop);
 
 static void chassis_info_print(chassis_move_t *Chassis_Info);
 
+void chassis_location_init(chassis_move_t *Chassis_Move_Control_Loop);
+
+extern float Read_init_AS5048A[4];
+
 //底盘运动数据
 chassis_move_t Chassis_Move;
 /**
@@ -40,7 +44,7 @@ void chassis_task(void const * argument)
 //	static int count=0;
     Chassis_Move.Chassis_Kinematics_Mode = Wheel4_Car;
 	  Init_test_AS5048();
-	
+		chassis_location_init(&Chassis_Move);
 	
 
     while(1)
@@ -497,7 +501,7 @@ static void chassis_control_loop(chassis_move_t *Chassis_Move_Control_Loop)
 
         pid_calc(&Chassis_Move_Control_Loop->Wheel_Dir[i].pid_pos,
                  Chassis_Move_Control_Loop->Wheel_Dir[i].angle,//total_angle赋值的
-                 Chassis_Move_Control_Loop->Wheel_Dir[i].angle_set);//
+                 (Chassis_Move_Control_Loop->Wheel_Dir[i].angle_set));//初始化纠正-Read_init_AS5048A[i]//-Init_test_AS5048_test(i)
 
         pid_calc(&Chassis_Move_Control_Loop->Wheel_Dir[i].pid_speed,
                  Chassis_Move_Control_Loop->Wheel_Dir[i].speed,
@@ -537,8 +541,31 @@ static void chassis_control_loop(chassis_move_t *Chassis_Move_Control_Loop)
     }
 }
 
+#define ABS(x)    ( (x>0) ? (x) : (-x) )
+void chassis_location_init(chassis_move_t *Chassis_Move_Control_Loop)
+{
+	uint8_t i = 0;
+	while(ABS(Chassis_Move_Control_Loop->Wheel_Dir[i].angle-Init_test_AS5048_test(i))>5)
+	{
+	 for ( i = 0; i < 4; i++)
+    {
 
+        pid_calc(&Chassis_Move_Control_Loop->Wheel_Dir[i].pid_pos,
+                 Chassis_Move_Control_Loop->Wheel_Dir[i].angle,//total_angle赋值的
+                 (Init_test_AS5048_test(i)));//
 
+        pid_calc(&Chassis_Move_Control_Loop->Wheel_Dir[i].pid_speed,
+                 Chassis_Move_Control_Loop->Wheel_Dir[i].speed,
+                 Chassis_Move_Control_Loop->Wheel_Dir[i].pid_pos.pos_out);
+    }
+	
+	}
+	
+	
+	
+	
+	
+}
 
 
 

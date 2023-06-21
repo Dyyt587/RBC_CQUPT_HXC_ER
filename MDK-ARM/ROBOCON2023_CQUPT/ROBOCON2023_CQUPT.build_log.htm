@@ -27,7 +27,18 @@ Project File Date:  06/13/2023
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'ROBOCON2023_CQUPT'
-"ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf" - 0 Error(s), 0 Warning(s).
+compiling bsp_as5048.c...
+..\Hardware\bsp_as5048.c(154): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint8_t i = 0;
+..\Hardware\bsp_as5048.c(205): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      Read_init_AS5048A[1]=GET_AS5048A_ANGLE(SPI_AS5048A_2_ReadData())-22.395996-206.976563 ;//-246.0
+..\Hardware\bsp_as5048.c(207): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      Read_init_AS5048A[3]=GET_AS5048A_ANGLE(SPI_AS5048A_4_ReadData())+207.680176-247.912109;//-248.0
+..\Hardware\bsp_as5048.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=64692 RO-data=5948 RW-data=576 ZI-data=27232  
+FromELF: creating hex file...
+"ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -51,7 +62,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.5.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

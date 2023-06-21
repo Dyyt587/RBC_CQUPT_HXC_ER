@@ -101,12 +101,7 @@ void test_task(void const * argument)
 //		printf("tar=%f\r\n",target);
 		float __target= pid_calc(&TripodHead_Position_pid, _GET_ANGLE_DEGREE(), target*819200/360.0f);//对读取到的角度进行偏移计算//在这里对地盘进行了读取并进行了pid计算，其中目标值为遥控器所给的输入//
 		
-		
-		
-		
-		
-		
-		
+
 		
 		
 //		float out = pid_calc(&TripodHead_Speed_pid, GET_SPEED(), __target);//位置环只算了一半

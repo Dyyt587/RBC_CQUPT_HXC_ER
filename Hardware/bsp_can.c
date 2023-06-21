@@ -245,16 +245,6 @@ int32_t get_total_angle(motor_measure_t *p) {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 }
 /**
 2006 C610   1:36

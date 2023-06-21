@@ -11,5 +11,7 @@ uint16_t SPI_AS5048A_4_ReadData(void);
 float GET_AS5048A_ANGLE(uint16_t data);
 void Test_AS5048(void);
 void Init_test_AS5048(void);
+float Init_test_AS5048_test(int index);
+
 #endif
 

@@ -216,7 +216,7 @@ void led_task(void const * argument)
 		
 	//			Usart2Printf("\r\n\n");
 		
-		
+		printf("");
 		
 		
 		
