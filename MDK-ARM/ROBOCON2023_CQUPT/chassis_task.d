@@ -57,3 +57,4 @@ robocon2023_cqupt\chassis_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/inc
 robocon2023_cqupt\chassis_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 robocon2023_cqupt\chassis_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 robocon2023_cqupt\chassis_task.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+robocon2023_cqupt\chassis_task.o: ../Hardware/bsp_as5048.h

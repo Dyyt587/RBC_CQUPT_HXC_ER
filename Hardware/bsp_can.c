@@ -208,7 +208,11 @@ void get_motor_offset(motor_measure_t *ptr, uint8_t Rx_Data[]) {
 #define ABS(x)    ( (x>0) ? (x) : (-x) )
 
 /**
-*@bref 电机上电角度=0， 之后用这个函数更新电机的相对开机后（为0）的相对角度。
+  * @Func			get_total_angle(motor_measure_t *p)
+  * @Brief    电机上电角度=0， 之后用这个函数  更新电机的相对开机后（为0）的相对角度。
+  * @Param		
+  * @Retval		None
+  * @Date     2023/6/20
 */
 int32_t get_total_angle(motor_measure_t *p) {
     int res1, res2, delta;
@@ -219,6 +223,14 @@ int32_t get_total_angle(motor_measure_t *p) {
         res1 = p->angle - 8192 - p->last_angle;//反转	delta -
         res2 = p->angle - p->last_angle;                //正转	delta +
     }
+		
+	//	=DECE_RATIO_ER_TR*8191*36*Read_init_AS5048A[2]/360.0f;
+		
+		
+		
+		
+		
+		
     //不管正反转，肯定是转的角度小的那个是真的
     if (ABS(res1) < ABS(res2))
         delta = res1;
@@ -227,7 +239,22 @@ int32_t get_total_angle(motor_measure_t *p) {
 
     p->total_angle += delta;
     p->last_angle = p->angle;
+		
     return p->total_angle;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 }
 /**
 2006 C610   1:36
@@ -287,7 +314,8 @@ void set_motor_B(CAN_HandleTypeDef *_hcan, int16_t iq1, int16_t iq2, int16_t iq3
 }
 
 void set_motor(CAN_HandleTypeDef *_hcan, int16_t iq1, int16_t iq2, int16_t iq3, int16_t iq4,
-               int16_t iq5, int16_t iq6, int16_t iq7, int16_t iq8) {
+               int16_t iq5, int16_t iq6, int16_t iq7, int16_t iq8) 
+{
     set_motor_A(_hcan, iq1, iq2, iq3, iq4);
     set_motor_B(_hcan, iq5, iq6, iq7, iq8);
 }
@@ -321,3 +349,7 @@ const motor_measure_t *get_chassis_motor_measure_point(uint8_t i)
     return &motor_can1[(i & 0x07)];
 }
 
+const motor_measure_t *get_chassis_motor2_measure_point(uint8_t i)
+{
+    return &motor_can2[(i & 0x07)];
+}

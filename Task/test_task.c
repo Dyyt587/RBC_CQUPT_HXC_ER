@@ -1,4 +1,3 @@
-
 #include "led_task.h"
 #include "cmsis_os.h"
 #include "test_task.h"
@@ -25,7 +24,7 @@
 	
 #define GET_SiGan_SPEED() motor_can2[2].speed_rpm
 static unsigned int time;
-float __point[3];//测试使用，present，out，target
+float __point[3];//测试使用，present，out，target。。
 float target=30;
 
 float sigan_speed=0;
@@ -47,13 +46,12 @@ void test_task(void const * argument)
 	PID_struct_init(&SiGan_Speed_pid,POSITION_PID, 10000, 2000,
                         5.0f, 0.04f, 0.0f);
 	int time_count = 0;
-
+	Init_test_AS5048();
 	while(1)
 	{
 		extern int a;
 		//logError("fdata:%d \r\n",a);
-
-//		Test_AS5048();
+		Test_AS5048();
 //vofa_send_protocol("a",&data,1);
 //		target= ((float)rc->ch15)*90.0f/673.f;
 //		printf("target=%f\r\n",target);
@@ -92,7 +90,8 @@ void test_task(void const * argument)
 		if(rc.ch10 == 3)//初始化通道10处于1，舵机的PWM为1000
 		{
 			TIM4->CCR4 = 1000;
-		}else if(rc.ch10 == 1)
+		}
+		else if(rc.ch10 == 1)
 		{
 			TIM4->CCR4 = 2140;//将舵机提上来，以便接环
 		}
@@ -100,14 +99,23 @@ void test_task(void const * argument)
 //		float present=_GET_ANGLE_DEGREE();
 		target= (((float)_rc->ch15)*90.0f/673.f);
 //		printf("tar=%f\r\n",target);
-		float __target= pid_calc(&TripodHead_Position_pid, _GET_ANGLE_DEGREE(), target*819200/360.0f);
-//		float out = pid_calc(&TripodHead_Speed_pid, GET_SPEED(), __target);
+		float __target= pid_calc(&TripodHead_Position_pid, _GET_ANGLE_DEGREE(), target*819200/360.0f);//对读取到的角度进行偏移计算//在这里对地盘进行了读取并进行了pid计算，其中目标值为遥控器所给的输入//
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		float out = pid_calc(&TripodHead_Speed_pid, GET_SPEED(), __target);//位置环只算了一半
 //		//printf("out = %f",out);
 		
 		sigan_speed=rc.ch4*15.0;
-		float __sigan_speed=pid_calc(&SiGan_Speed_pid,GET_SiGan_SPEED(),sigan_speed);
+		float __sigan_speed=pid_calc(&SiGan_Speed_pid,GET_SiGan_SPEED(),sigan_speed);//
 		
-		set_motor_A(&hcan2,0,__target,__sigan_speed,0);
+		set_motor_A(&hcan2,0,__target,__sigan_speed,0);//
 //			_SET_TRIPOD_HEAD_ICURRENT(__target);
 
 		osDelay(5);

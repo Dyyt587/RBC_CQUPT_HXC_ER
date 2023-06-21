@@ -16,8 +16,8 @@
 
 
 
-robot_behaviour_e  Robot_Behaviours = ROBOT_INIT;      //当前循环结束的(状态机的)状态
-robot_behaviour_e  Robot_nowBehaviours = ROBOT_INIT;   //当前状态
+robot_behaviour_e  Robot_Behaviours     = ROBOT_INIT;      //当前循环结束的(状态机的)状态
+robot_behaviour_e  Robot_nowBehaviours  = ROBOT_INIT;   //当前状态
 robot_behaviour_e  Robot_lastBehaviours = ROBOT_INIT;  //上次状态(用于记录前一状态以区分状态的来源)
 
 int  g_WorkLoopCnt=0;

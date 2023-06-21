@@ -5,9 +5,10 @@
 #include "bsp_sbus.h"
 #include "cmsis_os.h"
 #include "stdio.h"
+#include "bsp_as5048.h"
 
 #define CHASSIS_CAN hcan1
-
+#define DECE_RATIO_ER_TR  12
 
 static void chassis_init(chassis_move_t *Chassis_Move_Init);
 
@@ -32,12 +33,16 @@ void chassis_task(void const * argument)
 	
     chassis_init(&Chassis_Move);
 
-//	   Omni3_Car,
+//	  Omni3_Car,
 //    Omni4_Car,
 //    Wheel3_Car,
 //    Wheel4_Car
 //	static int count=0;
     Chassis_Move.Chassis_Kinematics_Mode = Wheel4_Car;
+	  Init_test_AS5048();
+	
+	
+
     while(1)
     {
         //设置底盘控制模式
@@ -50,6 +55,7 @@ void chassis_task(void const * argument)
 
         //底盘控制量设置
         chassis_set_contorl(&Chassis_Move);
+			
         //底盘控制PID计算
         chassis_control_loop(&Chassis_Move);
 
@@ -176,8 +182,8 @@ static void chassis_init(chassis_move_t *Chassis_Move_Init)
     Chassis_Move_Init->Chassis_Mode = CHASSIS_ZERO_FORCE;
     //获取遥控器指针
     Chassis_Move_Init->Chassis_RC = get_remote_control_point();
-    //获取定位指针
-
+    //获取定位指针//?
+		
     //获取底盘电机指针
     for(uint8_t i=0; i<8; i++)
     {
@@ -245,7 +251,7 @@ static void chassis_init(chassis_move_t *Chassis_Move_Init)
 
     //更新一下数据
     chassis_feedback_update(Chassis_Move_Init);
-
+		
 
 }
 
@@ -490,8 +496,8 @@ static void chassis_control_loop(chassis_move_t *Chassis_Move_Control_Loop)
     {
 
         pid_calc(&Chassis_Move_Control_Loop->Wheel_Dir[i].pid_pos,
-                 Chassis_Move_Control_Loop->Wheel_Dir[i].angle,
-                 Chassis_Move_Control_Loop->Wheel_Dir[i].angle_set);
+                 Chassis_Move_Control_Loop->Wheel_Dir[i].angle,//total_angle赋值的
+                 Chassis_Move_Control_Loop->Wheel_Dir[i].angle_set);//
 
         pid_calc(&Chassis_Move_Control_Loop->Wheel_Dir[i].pid_speed,
                  Chassis_Move_Control_Loop->Wheel_Dir[i].speed,
@@ -506,6 +512,7 @@ static void chassis_control_loop(chassis_move_t *Chassis_Move_Control_Loop)
             (int16_t)Chassis_Move_Control_Loop->Wheel_Speed[i].pid_speed.pos_out;
         Chassis_Move_Control_Loop->Wheel_Dir[i].give_current =
             (int16_t)Chassis_Move_Control_Loop->Wheel_Dir[i].pid_speed.pos_out;
+			
     }
 
     //发送控制电流
@@ -513,7 +520,8 @@ static void chassis_control_loop(chassis_move_t *Chassis_Move_Control_Loop)
     {
         set_motor(&CHASSIS_CAN,0,0,0,0,0,0,0,0);
     }
-    else {
+    else 
+		{
         set_motor(&CHASSIS_CAN,
                   //驱动轮
                   Chassis_Move_Control_Loop->Wheel_Speed[0].give_current,

@@ -7,22 +7,22 @@
 #define __Read_NOP 0xc000
 #define __Read_Clear_Error_Flag 0x4001
 #define __Read_Angle     0xFFFF //¶ÁÈ¡½Ç¶ÈÃüÁî
-////±àÂëÆ÷1
+////±àÂëÆ÷1//
 //#define __AS5048A1_CS_ENABLE()        HAL_GPIO_WritePin(GPIOE, GPIO_PIN_4, GPIO_PIN_RESET)
 //#define __AS5048A1_CS_DISABLE()       HAL_GPIO_WritePin(GPIOE, GPIO_PIN_4, GPIO_PIN_SET)//Æ¬Ñ¡1ºÅSPIÊ¹¿É¶Á
 
-//±àÂëÆ÷1
-#define __AS5048A_CS_GPIO_Port_1			  GPIOI
-#define __AS5048A_CS__Pin_1              GPIO_PIN_0
+//±àÂëÆ÷1//
+#define __AS5048A_CS_GPIO_Port_1			  GPIOF
+#define __AS5048A_CS__Pin_1              GPIO_PIN_1
 //±àÂëÆ÷2
-#define __AS5048A_CS_GPIO_Port_2			  GPIOH
-#define __AS5048A_CS__Pin_2              GPIO_PIN_12
+#define __AS5048A_CS_GPIO_Port_2			  GPIOE
+#define __AS5048A_CS__Pin_2              GPIO_PIN_4
 //±àÂëÆ÷3
-#define __AS5048A_CS_GPIO_Port_3			  GPIOH
-#define __AS5048A_CS__Pin_3              GPIO_PIN_11
+#define __AS5048A_CS_GPIO_Port_3			  GPIOF
+#define __AS5048A_CS__Pin_3              GPIO_PIN_0
 //±àÂëÆ÷4
-#define __AS5048A_CS_GPIO_Port_4			  GPIOH
-#define __AS5048A_CS__Pin_4              GPIO_PIN_10
+#define __AS5048A_CS_GPIO_Port_4			  GPIOC
+#define __AS5048A_CS__Pin_4              GPIO_PIN_2
 
 
 //±àÂëÆ÷1
@@ -58,6 +58,9 @@
 
 uint16_t command;
 uint16_t angleValue;
+
+extern int Read_init_AS5048A[4];
+
 uint16_t SPI_AS5048A_ReadData(void)
 {
     uint16_t angle_value;
@@ -139,10 +142,25 @@ uint16_t SPI_AS5048A_4_ReadData(void)
 
 void Test_AS5048(void)
 {
+//	Read_init_AS5048A[0]=GET_AS5048A_ANGLE(SPI_AS5048A_1_ReadData());
+//	Read_init_AS5048A[1]=GET_AS5048A_ANGLE(SPI_AS5048A_2_ReadData());
+//	Read_init_AS5048A[2]=GET_AS5048A_ANGLE(SPI_AS5048A_3_ReadData());
+//	Read_init_AS5048A[3]=GET_AS5048A_ANGLE(SPI_AS5048A_4_ReadData());
+	
+	
+	
     printf("1:%7.3f  2:%7.3f 3:%7.3f  4:%7.3f\r\n",
            GET_AS5048A_ANGLE(SPI_AS5048A_1_ReadData()),
            GET_AS5048A_ANGLE(SPI_AS5048A_2_ReadData()),
            GET_AS5048A_ANGLE(SPI_AS5048A_3_ReadData()),
            GET_AS5048A_ANGLE(SPI_AS5048A_4_ReadData())
           );
+}
+
+void Init_test_AS5048(void)
+{
+		Read_init_AS5048A[0]=GET_AS5048A_ANGLE(SPI_AS5048A_1_ReadData());
+    Read_init_AS5048A[1]=GET_AS5048A_ANGLE(SPI_AS5048A_2_ReadData());
+    Read_init_AS5048A[2]=GET_AS5048A_ANGLE(SPI_AS5048A_3_ReadData());
+    Read_init_AS5048A[3]=GET_AS5048A_ANGLE(SPI_AS5048A_4_ReadData());
 }
