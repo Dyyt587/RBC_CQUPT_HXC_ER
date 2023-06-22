@@ -3,71 +3,50 @@
 <pre>
 <h1>礦ision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: μVision V5.37.0.0
-Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: dd Administrator, 对, LIC=D0D7S-LCPXD-QDUKD-8MQBA-0NQ0S-FAAYZ
+IDE-Version: μVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a a, a, LIC=QF82M-XBPRY-2ZTW4-FJYIU-EMB3M-7599R
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.37.0.0
-Toolchain Path:  C:\Keil_v5\ARM\Compiler_5.06u7\Bin
+Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
 C Compiler:      Armcc.exe V5.06 update 7 (build 960)
 Assembler:       Armasm.exe V5.06 update 7 (build 960)
 Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
 Library Manager: ArmAr.exe V5.06 update 7 (build 960)
 Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
-CPU DLL:         SARMCM3.DLL V5.37.0.0
-Dialog DLL:      DCM.DLL V1.17.5.0
-Target DLL:      CMSIS_AGDI.dll V1.33.12.0
-Dialog DLL:      TCM.DLL V1.56.1.0
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      CMSIS_AGDI.dll V1.33.0.0
+Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
-C:\Users\Administrator\Desktop\RBC_CQUPT_HXC_ER\MDK-ARM\ROBOCON2023_CQUPT.uvprojx
-Project File Date:  06/22/2023
+C:\Users\dell\Documents\GitHub\RBC_CQUPT_HXC_ER\MDK-ARM\ROBOCON2023_CQUPT.uvprojx
+Project File Date:  06/13/2023
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\Compiler_5.06u7\Bin'
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'ROBOCON2023_CQUPT'
-compiling test_task.c...
-..\Task\test_task.c(87): error:  #20: identifier "time_count" is undefined
-  			time_count =0;
-..\Task\test_task.c(102): error:  #20: identifier "TripodHead_Position_pid" is undefined
-  		float __target= pid_calc(&TripodHead_Position_pid, _GET_ANGLE_DEGREE(), target*819200/360.0f);//对读取到的角度进行偏移计算//在这里对地盘进行了读取并进行了pid计算，其中目标值为遥控器所给的输入//
-..\Task\test_task.c(111): error:  #20: identifier "SiGan_Speed_pid" is undefined
-  		float __sigan_speed=pid_calc(&SiGan_Speed_pid,GET_SiGan_SPEED(),sigan_speed);//
-..\Task\test_task.c(119): error:  #169: expected a declaration
-  }
-..\Task\test_task.c(126): warning:  #12-D: parsing restarts here after previous syntax error
-  SHELL_EXPORT_CMD_AGENCY(SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC),
-..\Task\test_task.c(126): error:  #20: identifier "shellCmdkp" is undefined
-  SHELL_EXPORT_CMD_AGENCY(SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC),
-..\Task\test_task.c(126): error:  #20: identifier "agencysetkp" is undefined
-  SHELL_EXPORT_CMD_AGENCY(SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC),
-..\Task\test_task.c(126): error:  #44: expression must have pointer type
-  SHELL_EXPORT_CMD_AGENCY(SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC),
-..\Task\test_task.c(131): error:  #20: identifier "TripodHead_Position_pid" is undefined
-  	TripodHead_Position_pid.i=data;
-..\Task\test_task.c(139): error:  #20: identifier "TripodHead_Position_pid" is undefined
-  	TripodHead_Position_pid.d=data;
-..\Task\test_task.c(26): warning:  #177-D: variable "time"  was declared but never referenced
-  static unsigned int time;
-..\Task\test_task.c: 2 warnings, 9 errors
-compiling yuntai.c...
-..\Task\yuntai.h(9): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Task\yuntai.c(44): warning:  #550-D: variable "time_count"  was set but never used
-  	int time_count = 0;
-..\Task\yuntai.c(82): warning:  #1-D: last line of file ends without a newline
-  	
-..\Task\yuntai.c: 3 warnings, 0 errors
-"ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf" - 9 Error(s), 5 Warning(s).
+compiling bsp_as5048.c...
+..\Hardware\bsp_as5048.c(154): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint8_t i = 0;
+..\Hardware\bsp_as5048.c(205): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      Read_init_AS5048A[1]=GET_AS5048A_ANGLE(SPI_AS5048A_2_ReadData())-22.395996-206.976563 ;//-246.0
+..\Hardware\bsp_as5048.c(207): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      Read_init_AS5048A[3]=GET_AS5048A_ANGLE(SPI_AS5048A_4_ReadData())+207.680176-247.912109;//-248.0
+..\Hardware\bsp_as5048.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=64692 RO-data=5948 RW-data=576 ZI-data=27232  
+FromELF: creating hex file...
+"ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
-                ARM.CMSIS.5.9.0
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
                 CMSIS (Common Microcontroller Software Interface Standard)
-   * Component: CORE Version: 5.6.0
+   * Component: CORE Version: 5.5.0
 
 Package Vendor: Keil
                 http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
@@ -75,15 +54,14 @@ Package Vendor: Keil
                 STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
 
 <h2>Collection of Component include folders:</h2>
-  ./RTE/_ROBOCON2023_CQUPT
-  C:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
-  C:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  .\RTE\_ROBOCON2023_CQUPT
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:5.6.0
-      Include file:  CMSIS/Core/Include/tz_context.h
-Target not created.
+   * Component: ARM::CMSIS:CORE:5.5.0
+      Include file:  CMSIS\Core\Include\tz_context.h
 Build Time Elapsed:  00:00:02
 </pre>
 </body>
