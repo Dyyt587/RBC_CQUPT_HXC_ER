@@ -29,10 +29,10 @@ float target=30;
 
 float sigan_speed=0;
 		
-pid_t TripodHead_Position_pid;
-pid_t TripodHead_Speed_pid;
-		
-pid_t SiGan_Speed_pid;
+//pid_t TripodHead_Position_pid;
+//pid_t TripodHead_Speed_pid;
+//		
+//pid_t SiGan_Speed_pid;
 extern	rc_info_t rc;
 void test_task(void const * argument)
 {
@@ -41,14 +41,14 @@ void test_task(void const * argument)
 	vesc_init();
 	vesc_set_point(2);//控制电机1和2
 //	PID_struct_init(&TripodHead_Speed_pid,POSITION_PID,3000,1000,50.0f, 0.001f,0.0f);
-	PID_struct_init(&TripodHead_Position_pid,POSITION_PID,3000,1000,0.5f, 0.0f,0.4);
-	
-	PID_struct_init(&SiGan_Speed_pid,POSITION_PID, 10000, 2000,
-                        5.0f, 0.04f, 0.0f);
-	int time_count = 0;
+//	PID_struct_init(&TripodHead_Position_pid,POSITION_PID,3000,1000,0.5f, 0.0f,0.4);
+//	
+//	PID_struct_init(&SiGan_Speed_pid,POSITION_PID, 10000, 2000,
+//                        5.0f, 0.04f, 0.0f);
+//	int time_count = 0;
 	Init_test_AS5048();
-	while(1)
-	{
+//	while(0)
+//	{
 		extern int a;
 		//logError("fdata:%d \r\n",a);
 		Test_AS5048();

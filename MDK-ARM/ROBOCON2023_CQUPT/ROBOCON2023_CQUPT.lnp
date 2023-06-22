@@ -59,6 +59,7 @@
 "robocon2023_cqupt\led_task.o"
 "robocon2023_cqupt\test_task.o"
 "robocon2023_cqupt\solenoid_task.o"
+"robocon2023_cqupt\yuntai.o"
 "robocon2023_cqupt\pid.o"
 "robocon2023_cqupt\kfifo.o"
 "robocon2023_cqupt\bldc_interface.o"
