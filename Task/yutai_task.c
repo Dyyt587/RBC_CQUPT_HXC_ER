@@ -41,22 +41,24 @@ pid_t SiGan_Position_pid;
 extern	rc_info_t rc;
 	
 	
-//extern pid_t TripodHead_Position_pid;
-//extern pid_t TripodHead_Speed_pid;//		
-//extern pid_t SiGan_Speed_pid;
+
 void motors_init(void)
 {
 
 	vesc_init();
 	vesc_set_point(2);//控制电机1和2
-//	PID_struct_init(&TripodHead_Speed_pid,POSITION_PID,3000,1000,50.0f, 0.001f,0.0f);
 	PID_struct_init(&TripodHead_Position_pid,POSITION_PID,
 					3000,1000,0.5f, 0.0f,0.4);
 	
-	PID_struct_init(&SiGan_Speed_pid,POSITION_PID,
-					10000, 2000, 5.0f, 0.04f, 0.0f);
-	PID_struct_init(&SiGan_Position_pid,POSITION_PID,
-					10000, 2000, 5.0f, 0.04f, 0.0f);
+//	PID_struct_init(&SiGan_Speed_pid,POSITION_PID,
+//					10000, 2000, 5.0f, 0.04f, 0.0f);
+//	PID_struct_init(&SiGan_Position_pid,POSITION_PID,
+//					10000, 2000, 5.0f, 0.04f, 0.0f);
+//	
+        PID_struct_init(&SiGan_Speed_pid,POSITION_PID, 10000, 2000,
+                        400.0f, 0.00f, 10.0);
+        PID_struct_init(&SiGan_Position_pid,POSITION_PID, 8000, 2000,
+                        4.5f, 0.08f, 1.5f);
 }
 void pid_shoe(pid_t*pid)
 {
@@ -71,7 +73,9 @@ void motor_handler(const rc_info_t* _rc)
 	float __target= pid_calc(&TripodHead_Position_pid, _GET_ANGLE_DEGREE(), target*819200/360.0f);//对读取到的角度进行偏移计算//在这里对地盘进行了读取并进行了pid计算，其中目标值为遥控器所给的输入//
 
     float sigantarget=0;//单位mm
-	sigan_speed= pid_calc(&SiGan_Position_pid, _GET_ANGLE_DEGREE(), sigantarget*8192/19/4);
+	//sigan_speed= pid_calc(&SiGan_Position_pid, _GET_ANGLE_DEGREE(), sigantarget*8192/19/4);
+	sigan_speed= pid_calc(&SiGan_Position_pid, _GET_ANGLE_DEGREE(), sigantarget*4/360);
+	
 	sigan_speed=rc.ch4*15.0;
 	float __sigan_speed=pid_calc(&SiGan_Speed_pid,GET_SiGan_SPEED(),sigan_speed);//
 	set_motor_A(&hcan2,0,__target,__sigan_speed,0);//
