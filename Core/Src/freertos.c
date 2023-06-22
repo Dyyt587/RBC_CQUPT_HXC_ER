@@ -51,6 +51,7 @@ osThreadId testTaskHandle;
 osThreadId chassisTaskHandle;
 osThreadId ledTaskHandle;
 osThreadId solenoidTaskHandle;
+osThreadId YuntaiTaskHandle;
 osMutexId shellMutexHandle;
 
 /* Private function prototypes -----------------------------------------------*/
@@ -62,6 +63,7 @@ void test_task(void const * argument);
 extern void chassis_task(void const * argument);
 extern void led_task(void const * argument);
 extern void solenoid_task(void const * argument);
+void yuntaiTask(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -128,6 +130,10 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(solenoidTask, solenoid_task, osPriorityNormal, 0, 128);
   solenoidTaskHandle = osThreadCreate(osThread(solenoidTask), NULL);
 
+  /* definition and creation of YuntaiTask */
+  osThreadDef(YuntaiTask, yuntaiTask, osPriorityNormal, 0, 128);
+  YuntaiTaskHandle = osThreadCreate(osThread(YuntaiTask), NULL);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -150,6 +156,24 @@ __weak void test_task(void const * argument)
     osDelay(1);
   }
   /* USER CODE END test_task */
+}
+
+/* USER CODE BEGIN Header_yuntaiTask */
+/**
+* @brief Function implementing the YuntaiTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_yuntaiTask */
+__weak void yuntaiTask(void const * argument)
+{
+  /* USER CODE BEGIN yuntaiTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END yuntaiTask */
 }
 
 /* Private application code --------------------------------------------------*/

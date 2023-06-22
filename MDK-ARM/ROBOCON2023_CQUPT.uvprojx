@@ -11,7 +11,7 @@
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pArmCC>5060960::V5.06 update 7 (build 960)::.\ARMCC</pArmCC>
-      <pCCUsed>5060960::V5.06 update 7 (build 960)::ARMCC</pCCUsed>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\Compiler_5.06u7</pCCUsed>
       <uAC6>8</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -187,6 +187,7 @@
             <RvdsVP>2</RvdsVP>
             <RvdsMve>0</RvdsMve>
             <RvdsCdeCp>0</RvdsCdeCp>
+            <nBranchProt>0</nBranchProt>
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -340,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F427xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Control;../Hardware;../Task;../Middlewares/Third_Party/LetterShell/src;../Middlewares/Third_Party/LetterShell/extensions/log;../Hardware/vesc_uart;../Middlewares/Third_Party;../Middlewares/Third_Party/LetterShell;..\Hardware\flashbd;..\Hardware;..\Hardware;..\Hardware\action_usart</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Control;../Hardware;../Task;../Middlewares/Third_Party/LetterShell/src;../Middlewares/Third_Party/LetterShell/extensions/log;../Hardware/vesc_uart;../Middlewares/Third_Party;../Middlewares/Third_Party/LetterShell;../Hardware/flashbd;../Hardware/action_usart</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -774,6 +775,11 @@
               <FileName>solenoid_task.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Task\solenoid_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>yutai_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\yutai_task.c</FilePath>
             </File>
           </Files>
         </Group>

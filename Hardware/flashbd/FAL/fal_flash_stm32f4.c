@@ -157,7 +157,7 @@ static uint32_t stm32_get_sector(uint32_t addr)
 
 static int init(void)
 {
-	
+	return 0;
 }
 
 static int read(long offset, uint8_t *buf, size_t size)

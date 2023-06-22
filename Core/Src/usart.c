@@ -31,31 +31,33 @@
 #include "stdlib.h"
 #include "stdio.h"
 
-/* USER CODE END 0 */
 
- //全场定位数据  串口2
+
+//全场定位数据  串口6
 #define BUFFERSIZE 255	//可接收的最大数据量
-extern uint8_t Rx_len_Huart6;//串口6接收长度
-extern uint8_t Rx_len_Huart7;//串口7接收长度
-extern uint8_t ReceiveBuff_Huart6[BUFFERSIZE]; //串口6接收缓冲区
-extern uint8_t ReceiveBuff_Huart7[BUFFERSIZE]; //串口7接收缓冲区
-extern int testcount;
-extern float pos_x;//坐标X--ZBx
-extern float pos_y;//坐标Y--ZBy
-extern float zangle;//航向角
-extern float xangle;//俯仰角
-extern float yangle;//横滚角
-extern float w_z;//航向角速
+uint8_t Rx_len_Huart6;//串口6接收长度
+uint8_t Rx_len_Huart7;//串口7接收长度
+uint8_t ReceiveBuff_Huart6[BUFFERSIZE]; //串口6接收缓冲区
+uint8_t ReceiveBuff_Huart7[BUFFERSIZE]; //串口7接收缓冲区
+float pos_x=0;//坐标X--ZBx
+float pos_y=0;//坐标Y--ZBy
+float zangle=0;//航向角
+float xangle=0;//俯仰角
+float yangle=0;//横滚角
+float w_z=0;//航向角速
 
-extern float set_pos_x;
-extern float set_pos_y;
-extern float set_zangle;
-extern int move_flag;
+float set_pos_x;
+float set_pos_y;
+float set_zangle;
+int move_flag;
 
 //串口屏 串口2
-extern uint8_t Rx_len_Huart2;//串口2接收长度
-extern uint8_t ReceiveBuff_Huart2[BUFFERSIZE]; //串口2接收缓冲区
+uint8_t Rx_len_Huart2;//串口2接收长度
+uint8_t ReceiveBuff_Huart2[BUFFERSIZE]; //串口2接收缓冲区
 
+float Read_init_AS5048A[4];//定位初始化的值
+
+/* USER CODE END 0 */
 
 UART_HandleTypeDef huart7;
 UART_HandleTypeDef huart8;
@@ -66,7 +68,6 @@ UART_HandleTypeDef huart6;
 DMA_HandleTypeDef hdma_usart1_rx;
 DMA_HandleTypeDef hdma_usart2_rx;
 DMA_HandleTypeDef hdma_usart6_rx;
-DMA_HandleTypeDef hdma_usart7_rx;
 
 /* UART7 init function */
 void MX_UART7_Init(void)

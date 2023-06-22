@@ -56,30 +56,6 @@ int fputc(int ch,FILE *f)
 }
 
 
-//全场定位数据  串口6
-#define BUFFERSIZE 255	//可接收的最大数据量
-uint8_t Rx_len_Huart6;//串口6接收长度
-uint8_t Rx_len_Huart7;//串口7接收长度
-uint8_t ReceiveBuff_Huart6[BUFFERSIZE]; //串口6接收缓冲区
-uint8_t ReceiveBuff_Huart7[BUFFERSIZE]; //串口7接收缓冲区
-float pos_x=0;//坐标X--ZBx
-float pos_y=0;//坐标Y--ZBy
-float zangle=0;//航向角
-float xangle=0;//俯仰角
-float yangle=0;//横滚角
-float w_z=0;//航向角速
-
-float set_pos_x;
-float set_pos_y;
-float set_zangle;
-int move_flag;
-
-//串口屏 串口2
-uint8_t Rx_len_Huart2;//串口2接收长度
-uint8_t ReceiveBuff_Huart2[BUFFERSIZE]; //串口2接收缓冲区
-
-float Read_init_AS5048A[4];//定位初始化的值
-
 
 
 
