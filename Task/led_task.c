@@ -169,6 +169,23 @@ void led_task(void const * argument)
 
 
 
+
+		
+		printf("");
+		
+		
+		
+		
+		
+		
+		
+		
+		osDelay(5);
+		
+	}
+
+}
+
 //        Usart2Printf("n0.val=%d\xff\xff\xff",(int)pos_y);
 //        Usart2Printf("n1.val=%d\xff\xff\xff",(int)pos_x);
 //        Usart2Printf("n2.val=%d\xff\xff\xff",(int)zangle);
@@ -215,18 +232,4 @@ void led_task(void const * argument)
 //						printf("r\n\n");
 		
 	//			Usart2Printf("\r\n\n");
-		
-		printf("");
-		
-		
-		
-		
-		
-		
-		
-		
-		osDelay(5);
-		
-	}
 
-}

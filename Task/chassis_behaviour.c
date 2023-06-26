@@ -70,27 +70,55 @@ static void chassis_no_move_control(fp32 *Vx_Set, fp32 *Vy_Set, fp32 *Vw_Set, ch
 
 static void chassis_remote_move_control(fp32 *Vx_Set, fp32 *Vy_Set, fp32 *Vw_Set, chassis_move_t *Chassis_Move_Rc_to_Vector)
 {
-    if (Vx_Set == NULL || Vy_Set == NULL || Vw_Set == NULL || Chassis_Move_Rc_to_Vector == NULL)
+    
+		
+		if (Vx_Set == NULL || Vy_Set == NULL || Vw_Set == NULL || Chassis_Move_Rc_to_Vector == NULL)
+    {
+        return;
+    }
+		
+		*Vx_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch1;
+		*Vy_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch2;
+		*Vw_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch3;
+		
+    return;
+		
+}
+
+
+
+static void chassis_local_move_control(fp32 *Vx_Set, fp32 *Vy_Set, fp32 *Vw_Set, chassis_move_t *Chassis_Move_Rc_to_Vector)
+{
+	if (Vx_Set == NULL || Vy_Set == NULL || Vw_Set == NULL || Chassis_Move_Rc_to_Vector == NULL)
     {
         return;
     }
 
 
-    *Vx_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch1 *CHASSIS_OPEN_RC_SCALE;
-    *Vy_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch2 *CHASSIS_OPEN_RC_SCALE;
-    *Vw_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch3 *CHASSIS_OPEN_RC_SCALE;
-
-
-
-
-
-
+		switch(Chassis_Move_Rc_to_Vector->Chassis_RC->ch5) 
+		{
+			case 1:
+				*Vx_Set =0;
+			  *Vy_Set =0;
+			  *Vw_Set =0;
+			
+				break;
+			case 2:
+				*Vx_Set =1000;
+			  *Vy_Set =1000;
+			  *Vw_Set =0;
+			break;
+			case 3:
+				
+				*Vx_Set =2000;
+			  *Vy_Set =2000;
+			  *Vw_Set =0;
+			break;
+			
+		}
 
     return;
 }
-
-
-
 //留意，这个底盘行为模式变量
 chassis_behaviour_mode_e Chassis_Behaviour_Mode = CHASSIS_ZERO_FORCE;
 /**
@@ -107,18 +135,29 @@ void chassis_behaviour_mode_set(chassis_move_t *Chassis_Move_Mode)
 
     //根据行为模式选择一个底盘控制模式
     //添加自己的逻辑判断进入新模式
+		/*
+		此处说明一下
+		九路一档==底盘不上电
+		九路而当==底盘不动
+		九路三档==底盘遥控
+		五路四档==底盘定位
+		
+		这里进行修改
+		把五路的移动到九路2通道
+		
+		*/
     if(Chassis_Move_Mode->Chassis_RC->ch9 == 1)
     {
         Chassis_Behaviour_Mode = CHASSIS_ZERO_FORCE;
     }
-    else if(Chassis_Move_Mode->Chassis_RC->ch9 == 2)
-    {
-        Chassis_Behaviour_Mode = CHASSIS_NO_MOVE;
-    }
-//    else if(Chassis_Move_Mode->Chassis_RC->ch5 == 4)
+//    else if(Chassis_Move_Mode->Chassis_RC->ch9 == 2)
 //    {
-//        Chassis_Behaviour_Mode = CHASSIS_LOCATING_MOVE;
+//        Chassis_Behaviour_Mode = CHASSIS_NO_MOVE;
 //    }
+    else if(Chassis_Move_Mode->Chassis_RC->ch9 == 2)//注意哦
+    {
+        Chassis_Behaviour_Mode = CHASSIS_LOCATING_MOVE;
+    }
     else if(Chassis_Move_Mode->Chassis_RC->ch9 ==3)
     {
         Chassis_Behaviour_Mode = CHASSIS_REMOTE_MOVE;
@@ -160,16 +199,16 @@ void chassis_behaviour_control_set(fp32 *Vx_Set, fp32 *Vy_Set, fp32 *Vw_Set, cha
 
     if (Chassis_Behaviour_Mode == CHASSIS_ZERO_FORCE)  //底盘无力, 跟没上电那样
     {
-
         chassis_zero_force_control(Vx_Set, Vy_Set, Vw_Set, Chassis_Move_Rc_To_Vector);
     }
     else	 if (Chassis_Behaviour_Mode == CHASSIS_NO_MOVE)  //固定底盘 不移动
     {
         chassis_no_move_control(Vx_Set, Vy_Set, Vw_Set, Chassis_Move_Rc_To_Vector);
     }
-    else if (Chassis_Behaviour_Mode == CHASSIS_LOCATING_MOVE)
+    else if (Chassis_Behaviour_Mode == CHASSIS_LOCATING_MOVE)  //底盘定位，现在开始补充
     {
-
+			
+			chassis_local_move_control(Vx_Set, Vy_Set, Vw_Set, Chassis_Move_Rc_To_Vector);
     }
     else if (Chassis_Behaviour_Mode == CHASSIS_REMOTE_MOVE)
     {

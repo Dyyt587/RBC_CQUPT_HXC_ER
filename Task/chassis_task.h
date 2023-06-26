@@ -3,8 +3,7 @@
 #include "main.h"
 #include "chassis_behaviour.h"
 
-typedef float fp32;
-typedef double fp64;
+
 #define MAX_MOTOR_CAN_CURRENT 10000
 /*底盘电机速度环PID*/
 //驱动轮速度环
@@ -33,5 +32,11 @@ extern void chassis_task(void const * argument);
 
 /*底盘初始化自校正*/
 //void chassis_location_init(chassis_move_t *Chassis_Move_Control_Loop);
+
+//全场定位
+//void set_pos(float X_target, float Y_target, float Angle_target,
+//             float X_current, float Y_current, float Angle_current,
+//							 chassis_move_t *Chassis_Move_Control_Loop);
+//void Set_speed(int Velocity_X, int Velocity_Y, int W,chassis_move_t *Chassis_Move_Control_Loop);
 
 #endif

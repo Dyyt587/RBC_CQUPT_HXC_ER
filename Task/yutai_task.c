@@ -56,9 +56,10 @@ void motors_init(void)
 //					10000, 2000, 5.0f, 0.04f, 0.0f);
 //	
         PID_struct_init(&SiGan_Speed_pid,POSITION_PID, 10000, 2000,
-                        400.0f, 0.00f, 10.0);
-        PID_struct_init(&SiGan_Position_pid,POSITION_PID, 8000, 2000,
                         4.5f, 0.08f, 1.5f);
+        PID_struct_init(&SiGan_Position_pid,POSITION_PID, 10000, 2000,
+                        100.0f, 0.00f, 10.0);
+	
 }
 void pid_shoe(pid_t*pid)
 {

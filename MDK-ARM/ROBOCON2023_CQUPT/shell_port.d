@@ -1,7 +1,7 @@
 robocon2023_cqupt\shell_port.o: ..\Middlewares\Third_Party\LetterShell\src\shell_port.c
 robocon2023_cqupt\shell_port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-robocon2023_cqupt\shell_port.o: C:\Keil_v5\ARM\Compiler_5.06u7\Bin\..\include\stddef.h
-robocon2023_cqupt\shell_port.o: C:\Keil_v5\ARM\Compiler_5.06u7\Bin\..\include\stdint.h
+robocon2023_cqupt\shell_port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+robocon2023_cqupt\shell_port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 robocon2023_cqupt\shell_port.o: ../Core/Inc/FreeRTOSConfig.h
 robocon2023_cqupt\shell_port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 robocon2023_cqupt\shell_port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
@@ -52,7 +52,7 @@ robocon2023_cqupt\shell_port.o: ../Middlewares/Third_Party/FreeRTOS/Source/inclu
 robocon2023_cqupt\shell_port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 robocon2023_cqupt\shell_port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 robocon2023_cqupt\shell_port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
-robocon2023_cqupt\shell_port.o: C:\Keil_v5\ARM\Compiler_5.06u7\Bin\..\include\stdbool.h
+robocon2023_cqupt\shell_port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 robocon2023_cqupt\shell_port.o: ../Hardware/vesc_uart/bldc_interface.h
 robocon2023_cqupt\shell_port.o: ../Hardware/vesc_uart/datatypes.h
 robocon2023_cqupt\shell_port.o: ../Hardware/vesc_uart/bldc_interface_uart.h
