@@ -104,14 +104,14 @@ static void chassis_local_move_control(fp32 *Vx_Set, fp32 *Vy_Set, fp32 *Vw_Set,
 			
 				break;
 			case 2:
-				*Vx_Set =1000;
-			  *Vy_Set =1000;
+				*Vx_Set =500;
+			  *Vy_Set =500;
 			  *Vw_Set =0;
 			break;
 			case 3:
 				
-				*Vx_Set =2000;
-			  *Vy_Set =2000;
+				*Vx_Set =1000;
+			  *Vy_Set =1000;
 			  *Vw_Set =0;
 			break;
 			

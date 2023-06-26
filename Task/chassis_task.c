@@ -296,15 +296,15 @@ static void chassis_set_mode(chassis_move_t *Chassis_Move_Mode)
   * @param[out]     chassis_move_transit:"chassis_move"变量指针.
   * @retval         none
   */
-//以下函数待实现或不再使用
-//static void chassis_mode_change_control_transit(chassis_move_t *Chassis_Move_Transit)
-//{
-//    if (Chassis_Move_Transit == NULL)
-//    {
-//        return;
-//    }
-//}
-
+/*以下函数待实现或不再使用
+static void chassis_mode_change_control_transit(chassis_move_t *Chassis_Move_Transit)
+{
+    if (Chassis_Move_Transit == NULL)
+    {
+        return;
+    }
+}
+*/
 
 /**
   * @brief          底盘测量数据更新，包括电机速度，欧拉角度，坐标,机器人速度
@@ -652,6 +652,7 @@ static void set_pos(float X_target, float Y_target, float Angle_target,
     W = W < W_MAX ? W : W_MAX;
     W = W > W_MIN ? W : W_MIN;
    // printf("y:%d	x:%d	w:%d\r\n",(int)Vy,(int)Vx,(int)W);
+		
    Set_speed(Vx, Vy, W,Chassis_Move_Control_Loop);
 }
 
@@ -660,20 +661,35 @@ static void set_pos(float X_target, float Y_target, float Angle_target,
 
 static void Set_speed(int Velocity_X, int Velocity_Y, int W,chassis_move_t *Chassis_Move_Control_Loop) {
     uint8_t i = 0;
-	 /*全向轮小车*/
-	 /*运动学逆解*/
-    int V_wheel_1 = -Velocity_X + L * W;
-    int V_wheel_2 = cosa * Velocity_X - sina * Velocity_Y + L * W;
-    int V_wheel_3 = cosa * Velocity_X + sina * Velocity_Y + L * W;
-		for ( i = 0; i < 4; i++)
+	  //运动分解
+    chassis_set_kinematics(Chassis_Move_Control_Loop->Vx_Set,
+                           Chassis_Move_Control_Loop->Vy_Set,
+                           Chassis_Move_Control_Loop->Vw_Set,
+                           Chassis_Move_Control_Loop);
+
+    //计算pid
+    //驱动轮
+    for ( i = 0; i < 4; i++)
 		
     {
         pid_calc(&Chassis_Move_Control_Loop->Wheel_Speed[i].pid_speed,
                  Chassis_Move_Control_Loop->Wheel_Speed[i].speed,
                  Chassis_Move_Control_Loop->Wheel_Speed[i].speed_set);
     }
-		
-		//赋值电流值
+    //转向轮
+    for ( i = 0; i < 4; i++)
+    {
+
+        pid_calc(&Chassis_Move_Control_Loop->Wheel_Dir[i].pid_pos,
+                 Chassis_Move_Control_Loop->Wheel_Dir[i].angle,//total_angle赋值的
+                 (Chassis_Move_Control_Loop->Wheel_Dir[i].angle_set));//初始化纠正-Read_init_AS5048A[i]//-Init_test_AS5048_test(i)
+
+        pid_calc(&Chassis_Move_Control_Loop->Wheel_Dir[i].pid_speed,
+                 Chassis_Move_Control_Loop->Wheel_Dir[i].speed,
+                 Chassis_Move_Control_Loop->Wheel_Dir[i].pid_pos.pos_out);
+    }
+
+    //赋值电流值
     for ( i = 0; i < 4; i++)
     {
 
@@ -684,9 +700,14 @@ static void Set_speed(int Velocity_X, int Velocity_Y, int W,chassis_move_t *Chas
 			
     }
 
-	
     //发送控制电流
-		set_motor(&CHASSIS_CAN,
+    if(Chassis_Move_Control_Loop->Chassis_Mode == CHASSIS_ZERO_FORCE)
+    {
+        set_motor(&CHASSIS_CAN,0,0,0,0,0,0,0,0);
+    }
+    else 
+		{
+        set_motor(&CHASSIS_CAN,
                   //驱动轮
                   Chassis_Move_Control_Loop->Wheel_Speed[0].give_current,
                   Chassis_Move_Control_Loop->Wheel_Speed[1].give_current,
@@ -698,8 +719,7 @@ static void Set_speed(int Velocity_X, int Velocity_Y, int W,chassis_move_t *Chas
                   Chassis_Move_Control_Loop->Wheel_Dir[2].give_current,
                   Chassis_Move_Control_Loop->Wheel_Dir[3].give_current
                  );
- //   setMotors(V_wheel_1, V_wheel_2, V_wheel_3);
-	
+    }
 	
 }
 /*
