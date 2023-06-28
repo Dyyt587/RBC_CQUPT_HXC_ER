@@ -15,10 +15,10 @@ extern void solenoid_task(void const * argument);
 #define SOL_1_Fetch_Ring_GPIO_Port GPIOF
 
 #define SOL_2_Lifting_Ring_Pin GPIO_PIN_1//¼ÌµçÆ÷IN1
-#define SOL_2_Lifting_Ring_GPIO_Port GPIOF
+#define SOL_2_Lifting_Ring_GPIO_Port GPIOB
 
-#define SOL_1_Shot_Pin GPIO_PIN_2//¼ÌµçÆ÷IN4
-#define SOL_1_Shot_GPIO_Port GPIOC
+#define SOL_1_Shot_Pin GPIO_PIN_1//¼ÌµçÆ÷IN4
+#define SOL_1_Shot_GPIO_Port GPIOB
 
 
 #define SOL_Read_Push_Ring() HAL_GPIO_ReadPin(SOL_3_Push_Ring_GPIO_Port,SOL_3_Push_Ring_Pin)

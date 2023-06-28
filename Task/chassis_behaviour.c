@@ -77,9 +77,9 @@ static void chassis_remote_move_control(fp32 *Vx_Set, fp32 *Vy_Set, fp32 *Vw_Set
         return;
     }
 		
-		*Vx_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch1;
-		*Vy_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch2;
-		*Vw_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch3;
+		*Vx_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch1*4.5;         //test
+		*Vy_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch2*4.5;         //test
+		*Vw_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch3;         //test
 		
     return;
 		
@@ -104,15 +104,15 @@ static void chassis_local_move_control(fp32 *Vx_Set, fp32 *Vy_Set, fp32 *Vw_Set,
 			
 				break;
 			case 2:
-				*Vx_Set =500;
-			  *Vy_Set =500;
+				*Vx_Set =1000;
+			  *Vy_Set =0;
 			  *Vw_Set =0;
 			break;
 			case 3:
 				
-				*Vx_Set =1000;
-			  *Vy_Set =1000;
-			  *Vw_Set =0;
+				*Vx_Set =0;
+			  *Vy_Set =0;
+			  *Vw_Set =90;
 			break;
 			
 		}

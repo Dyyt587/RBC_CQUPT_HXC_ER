@@ -87,7 +87,7 @@ void steer_and_5065motor_handler(const rc_info_t* _rc)
 {
        if(_rc->ch12==1)//通道12为发射机构加速和发射
 		{
-			float data = ((float)rc.ch16+672)*50;
+			float data = ((float)rc.ch16+672)*50; //
 
 			vesc_set_rmp(data);	
 			//vesc_set_rmp(2000);	

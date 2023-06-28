@@ -419,19 +419,20 @@ static void chassis_kinematics_wheel4_speed(const fp32 Vx_set, const fp32 Vy_set
     //                 60  / (0.2*3.14)  *19*1000z                         pik
     //速度计算
     Wheel_Speed[0] = sqrt(pow(Vy_set + Vw_Set * Radius * 0.707107f, 2)
-                          + pow(Vx_set - Vw_Set * Radius * 0.707107f, 2)
+                          + pow(Vx_set - Vw_Set * Radius * 0.707107f, 2)			//y+x-
                          ) * wheel_rpm_ratio;
     Wheel_Speed[1] = sqrt(pow(Vy_set - Vw_Set * Radius * 0.707107f, 2)
-                          + pow(Vx_set - Vw_Set * Radius * 0.707107f, 2)
+                          + pow(Vx_set - Vw_Set * Radius * 0.707107f, 2)				//y-x-
                          ) * wheel_rpm_ratio;
-    Wheel_Speed[2] = sqrt(pow(Vy_set - Vw_Set * Radius * 0.707107f, 2)
-                          + pow(Vx_set + Vw_Set * Radius * 0.707107f, 2)
+    Wheel_Speed[2] = sqrt(pow(Vy_set + Vw_Set * Radius * 0.707107f, 2)
+                          + pow(Vx_set - Vw_Set * Radius * 0.707107f, 2)				//y-x+
                          ) * wheel_rpm_ratio;
     Wheel_Speed[3] = sqrt(pow(Vy_set + Vw_Set * Radius * 0.707107f, 2)
-                          + pow(Vx_set + Vw_Set * Radius * 0.707107f, 2)
-                         ) * wheel_rpm_ratio;
+                          + pow(Vx_set + Vw_Set * Radius * 0.707107f, 2)				//++
+                         ) * wheel_rpm_ratio;//++
     //角度计算
 
+	//atan表示给定atan2（y,x）返回角度
     Wheel_Angle[0] = atan2((Vx_set - Vw_Set * Radius * 0.707107f),(Vy_set + Vw_Set * Radius * 0.707107f))
                      * 180.0f / PI;
     Wheel_Angle[1] = atan2((Vx_set - Vw_Set * Radius * 0.707107f),(Vy_set - Vw_Set * Radius * 0.707107f))
@@ -440,20 +441,20 @@ static void chassis_kinematics_wheel4_speed(const fp32 Vx_set, const fp32 Vy_set
                      * 180.0f / PI;
     Wheel_Angle[3] = atan2((Vx_set + Vw_Set * Radius * 0.707107f),(Vy_set + Vw_Set * Radius * 0.707107f))
                      * 180.0f / PI;
-										 
-		for(int i = 0; i<4 ;i++)    //模型结算后，有些转向看着不舒服，自行加if else判断修改
-		{
-			if(Wheel_Angle[i] < -90 && Wheel_Angle[i] >-181)
-			{
-				Wheel_Angle[i] += 180;
-				Wheel_Speed[i] = -Wheel_Speed[i];
-			}
-			else if(Wheel_Angle[i] > 90 && Wheel_Angle[i] <=181)
-			{
-				Wheel_Angle[i] -= 180;
-				Wheel_Speed[i] = -Wheel_Speed[i];
-			}
-		}
+										 //确实有点傻逼
+//		for(int i = 0; i<4 ;i++)    //模型结算后，有些转向看着不舒服，自行加if else判断修改
+//		{
+//			if(Wheel_Angle[i] < -90 && Wheel_Angle[i] >-181)
+//			{
+//				Wheel_Angle[i] += 180;
+//				Wheel_Speed[i] = -Wheel_Speed[i];
+//			}
+//			else if(Wheel_Angle[i] > 90 && Wheel_Angle[i] <=181)
+//			{
+//				Wheel_Angle[i] -= 180;
+//				Wheel_Speed[i] = -Wheel_Speed[i];
+//			}
+//		}
 }
 
 
@@ -520,7 +521,7 @@ static void chassis_control_loop(chassis_move_t *Chassis_Move_Control_Loop)
     {
 
         pid_calc(&Chassis_Move_Control_Loop->Wheel_Dir[i].pid_pos,
-                 Chassis_Move_Control_Loop->Wheel_Dir[i].angle,//total_angle赋值的
+                 Chassis_Move_Control_Loop->Wheel_Dir[i].angle,//total_angle赋值的、、2006读出来的
                  (Chassis_Move_Control_Loop->Wheel_Dir[i].angle_set));//初始化纠正-Read_init_AS5048A[i]//-Init_test_AS5048_test(i)
 
         pid_calc(&Chassis_Move_Control_Loop->Wheel_Dir[i].pid_speed,
