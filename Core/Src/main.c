@@ -147,7 +147,7 @@ int main(void)
   MX_TIM8_Init();
   /* USER CODE BEGIN 2 */
   dbus_uart_init();
-  TIM8 ->CCR3 = 0;
+  TIM8 ->CCR3 = 2000;
   TIM8 ->CCR4 = 0;
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
   HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_3);
