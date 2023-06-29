@@ -96,7 +96,7 @@ void steer_and_5065motor_handler(const rc_info_t* _rc)
 		else
 		{
 			TIM8 ->CCR3 = 2000;//5%
-			TIM8 ->CCR4 = 2000;
+			//TIM8 ->CCR4 = 2000;
 //			vesc_set_rmp(0);	
 		}
 		if(_rc->ch10 == 3)//初始化通道10处于1，舵机的PWM为1000

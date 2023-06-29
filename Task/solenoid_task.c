@@ -5,7 +5,7 @@
 #include "stdio.h"
 extern	rc_info_t rc;
 unsigned char Ring_Flag=1;
-unsigned char simple_rc_ctrl = 0;//遥控简单控制
+unsigned char simple_rc_ctrl = 1;//遥控简单控制
 
 //隐藏结构体
 typedef enum{
@@ -123,23 +123,9 @@ void solenoid_task(void const * argument)
 		if (simple_rc_ctrl)
 		{
 
-			if (rc.ch7 == 1)
-			{
-				HAL_GPIO_WritePin(SOL_2_Lifting_Ring_GPIO_Port, SOL_2_Lifting_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_2_Lifting_Ring_GPIO_Port, SOL_2_Lifting_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
-			}
-			else
-			{
-				//			HAL_GPIO_WritePin(SOL_1_Fetch_Ring_GPIO_Port, SOL_1_Fetch_Ring_Pin, GPIO_PIN_RESET);
-				HAL_GPIO_WritePin(SOL_2_Lifting_Ring_GPIO_Port, SOL_2_Lifting_Ring_Pin, GPIO_PIN_SET);
-				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
-			}
 			if (rc.ch5 == 1)
 			{
-				HAL_GPIO_WritePin(SOL_1_Fetch_Ring_GPIO_Port, SOL_1_Fetch_Ring_Pin, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_RESET);
 				//			HAL_GPIO_WritePin(SOL_2_Lifting_Ring_GPIO_Port, SOL_2_Lifting_Ring_Pin, GPIO_PIN_RESET);
 				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
 				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
@@ -147,27 +133,14 @@ void solenoid_task(void const * argument)
 			else
 			{
 				//			HAL_GPIO_WritePin(SOL_1_Fetch_Ring_GPIO_Port, SOL_1_Fetch_Ring_Pin, GPIO_PIN_RESET);
-				HAL_GPIO_WritePin(SOL_1_Fetch_Ring_GPIO_Port, SOL_1_Fetch_Ring_Pin, GPIO_PIN_SET);
-				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
-			}
-			if (rc.ch8 == 1)
-			{
-				HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_2_Lifting_Ring_GPIO_Port, SOL_2_Lifting_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
-			}
-			else
-			{
-				//			HAL_GPIO_WritePin(SOL_1_Fetch_Ring_GPIO_Port, SOL_1_Fetch_Ring_Pin, GPIO_PIN_RESET);
-				HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_SET);
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_SET);
 				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
 				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
 			}
 			if (rc.ch6 == 1)
 			{
-				HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_RESET);
+
 				//			HAL_GPIO_WritePin(SOL_2_Lifting_Ring_GPIO_Port, SOL_2_Lifting_Ring_Pin, GPIO_PIN_RESET);
 				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
 				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
@@ -175,7 +148,29 @@ void solenoid_task(void const * argument)
 			else
 			{
 				//			HAL_GPIO_WritePin(SOL_1_Fetch_Ring_GPIO_Port, SOL_1_Fetch_Ring_Pin, GPIO_PIN_RESET);
-				HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_SET);
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_SET);
+				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
+				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
+			}
+			if (rc.ch8 == 1)
+			{
+			//	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);
+
+				TIM8->CCR4 = 500;
+				osDelay(1000);
+								TIM8->CCR4 = 1500;
+				//			HAL_GPIO_WritePin(SOL_2_Lifting_Ring_GPIO_Port, SOL_2_Lifting_Ring_Pin, GPIO_PIN_RESET);
+				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
+				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
+			}
+			else
+			{
+								TIM8->CCR4 = 500;
+				osDelay(1000);
+								TIM8->CCR4 = 1500;
+				//			HAL_GPIO_WritePin(SOL_1_Fetch_Ring_GPIO_Port, SOL_1_Fetch_Ring_Pin, GPIO_PIN_RESET);
+				//HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);
+				
 				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
 				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
 			}
@@ -189,6 +184,7 @@ void solenoid_task(void const * argument)
 			//		}
 
 		}else{
+
 			
 			//自动辅助控制
 switch (state)
