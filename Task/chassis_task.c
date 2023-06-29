@@ -424,8 +424,8 @@ static void chassis_kinematics_wheel4_speed(const fp32 Vx_set, const fp32 Vy_set
     Wheel_Speed[1] = sqrt(pow(Vy_set - Vw_Set * Radius * 0.707107f, 2)
                           + pow(Vx_set - Vw_Set * Radius * 0.707107f, 2)				//y-x-
                          ) * wheel_rpm_ratio;
-    Wheel_Speed[2] = sqrt(pow(Vy_set + Vw_Set * Radius * 0.707107f, 2)
-                          + pow(Vx_set - Vw_Set * Radius * 0.707107f, 2)				//y-x+
+    Wheel_Speed[2] = sqrt(pow(Vy_set - Vw_Set * Radius * 0.707107f, 2)
+                          + pow(Vx_set + Vw_Set * Radius * 0.707107f, 2)				//y-x+
                          ) * wheel_rpm_ratio;
     Wheel_Speed[3] = sqrt(pow(Vy_set + Vw_Set * Radius * 0.707107f, 2)
                           + pow(Vx_set + Vw_Set * Radius * 0.707107f, 2)				//++
@@ -437,24 +437,24 @@ static void chassis_kinematics_wheel4_speed(const fp32 Vx_set, const fp32 Vy_set
                      * 180.0f / PI;
     Wheel_Angle[1] = atan2((Vx_set - Vw_Set * Radius * 0.707107f),(Vy_set - Vw_Set * Radius * 0.707107f))
                      * 180.0f / PI;
-    Wheel_Angle[2] = atan2((Vx_set + Vw_Set * Radius * 0.707107f),(Vy_set - Vw_Set * Radius * 0.707107f))
+    Wheel_Angle[2] = atan2((Vx_set - Vw_Set * Radius * 0.707107f),(Vy_set + Vw_Set * Radius * 0.707107f))//fanfanfan
                      * 180.0f / PI;
     Wheel_Angle[3] = atan2((Vx_set + Vw_Set * Radius * 0.707107f),(Vy_set + Vw_Set * Radius * 0.707107f))
                      * 180.0f / PI;
 										 //确实有点傻逼
-//		for(int i = 0; i<4 ;i++)    //模型结算后，有些转向看着不舒服，自行加if else判断修改
-//		{
-//			if(Wheel_Angle[i] < -90 && Wheel_Angle[i] >-181)
-//			{
-//				Wheel_Angle[i] += 180;
-//				Wheel_Speed[i] = -Wheel_Speed[i];
-//			}
-//			else if(Wheel_Angle[i] > 90 && Wheel_Angle[i] <=181)
-//			{
-//				Wheel_Angle[i] -= 180;
-//				Wheel_Speed[i] = -Wheel_Speed[i];
-//			}
-//		}
+		for(int i = 0; i<4 ;i++)    //模型结算后，有些转向看着不舒服，自行加if else判断修改
+		{
+			if(Wheel_Angle[i] < -90 && Wheel_Angle[i] >-181)
+			{
+				Wheel_Angle[i] += 180;
+				Wheel_Speed[i] = -Wheel_Speed[i];
+			}
+			else if(Wheel_Angle[i] > 90 && Wheel_Angle[i] <=181)
+			{
+				Wheel_Angle[i] -= 180;
+				Wheel_Speed[i] = -Wheel_Speed[i];
+			}
+		}
 }
 
 
