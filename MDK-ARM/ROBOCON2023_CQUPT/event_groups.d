@@ -1,8 +1,8 @@
 robocon2023_cqupt\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
-robocon2023_cqupt\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+robocon2023_cqupt\event_groups.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
 robocon2023_cqupt\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-robocon2023_cqupt\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-robocon2023_cqupt\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+robocon2023_cqupt\event_groups.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+robocon2023_cqupt\event_groups.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 robocon2023_cqupt\event_groups.o: ../Core/Inc/FreeRTOSConfig.h
 robocon2023_cqupt\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 robocon2023_cqupt\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

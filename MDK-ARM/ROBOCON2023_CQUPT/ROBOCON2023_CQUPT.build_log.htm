@@ -3,50 +3,68 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ¦ÌVision V5.36.0.0
-Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: a a, a, LIC=QF82M-XBPRY-2ZTW4-FJYIU-EMB3M-7599R
+IDE-Version: ¦ÌVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a a, a, LIC=47GU5-GV685-PCUJ8-3M9B5-QH6EX-XR8UQ
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
-Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 7 (build 960)
-Assembler:       Armasm.exe V5.06 update 7 (build 960)
-Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
-Library Manager: ArmAr.exe V5.06 update 7 (build 960)
-Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
-CPU DLL:         SARMCM3.DLL V5.36.0.0
-Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      CMSIS_AGDI.dll V1.33.0.0
-Dialog DLL:      TCM.DLL V1.53.0.0
+Toolchain:       MDK-ARM Plus  Version: 5.24.1
+Toolchain Path:  D:\Keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      CMSIS_AGDI.dll V1.28.3.0
+Dialog DLL:      TCM.DLL V1.32.0.0
  
 <h2>Project:</h2>
-C:\Users\dell\Documents\GitHub\RBC_CQUPT_HXC_ER\MDK-ARM\ROBOCON2023_CQUPT.uvprojx
-Project File Date:  06/28/2023
+D:\All_code\RC\RBC_CQUPT_HXC_ER\MDK-ARM\ROBOCON2023_CQUPT.uvprojx
+Project File Date:  06/30/2023
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\Keil5\ARM\ARMCC\Bin'
 Build target 'ROBOCON2023_CQUPT'
-compiling chassis_task.c...
-..\Task\chassis_task.c(620): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-      Angle_target = Angle_target / 180.0 * PI;
-..\Task\chassis_task.c(621): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-      Angle_current = Angle_current / 180.0 * PI;
-..\Task\chassis_task.c(728): warning:  #9-D: nested comment is not allowed
-  /*//////////////////////////////////////////////////////////////////////
-..\Task\chassis_task.c: 3 warnings, 0 errors
+compiling solenoid_task.c...
+..\Task\solenoid_task.h(47): warning:  #1295-D: Deprecated declaration Solenoid_End - give arg types
+  void Solenoid_End();
+..\Task\solenoid_task.h(48): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Task\solenoid_task.c(181): warning:  #188-D: enumerated type mixed with another type
+  			state = 1;
+..\Task\solenoid_task.c(184): warning:  #188-D: enumerated type mixed with another type
+  			state = 0;
+..\Task\solenoid_task.c(197): warning:  #188-D: enumerated type mixed with another type
+  		state = 2;
+..\Task\solenoid_task.c(210): warning:  #188-D: enumerated type mixed with another type
+  		state = 3;
+..\Task\solenoid_task.c(222): warning:  #188-D: enumerated type mixed with another type
+  		state = 0;
+..\Task\solenoid_task.c(236): warning:  #111-D: statement is unreachable
+  	osDelay(10);
+..\Task\solenoid_task.c(320): warning:  #940-D: missing return statement at end of non-void function "Solenoid_Start_Fetch_ring" 
+  }
+..\Task\solenoid_task.c(326): warning:  #940-D: missing return statement at end of non-void function "Solenoid_Start_Lift_ring" 
+  }
+..\Task\solenoid_task.c(332): warning:  #940-D: missing return statement at end of non-void function "Solenoid_Start_Push_ring" 
+  }
+..\Task\solenoid_task.c(339): warning:  #940-D: missing return statement at end of non-void function "Solenoid_Start_Shot_ring" 
+  }
+..\Task\solenoid_task.c: 12 warnings, 0 errors
 linking...
-Program Size: Code=67818 RO-data=6178 RW-data=588 ZI-data=27340  
+Program Size: Code=67990 RO-data=6174 RW-data=588 ZI-data=27412  
 FromELF: creating hex file...
-"ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf" - 0 Error(s), 3 Warning(s).
+"ROBOCON2023_CQUPT\ROBOCON2023_CQUPT.axf" - 0 Error(s), 12 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
-                ARM.CMSIS.5.8.0
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
                 CMSIS (Common Microcontroller Software Interface Standard)
-   * Component: CORE Version: 5.5.0
+   * Component: CORE Version: 5.6.0
 
 Package Vendor: Keil
                 http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
@@ -55,12 +73,12 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\_ROBOCON2023_CQUPT
-  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include
-  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+  D:\Keil5\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  D:\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:5.5.0
+   * Component: ARM::CMSIS:CORE:5.6.0
       Include file:  CMSIS\Core\Include\tz_context.h
 Build Time Elapsed:  00:00:03
 </pre>

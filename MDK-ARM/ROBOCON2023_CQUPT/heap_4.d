@@ -1,8 +1,8 @@
 robocon2023_cqupt\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
-robocon2023_cqupt\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+robocon2023_cqupt\heap_4.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
 robocon2023_cqupt\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-robocon2023_cqupt\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-robocon2023_cqupt\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+robocon2023_cqupt\heap_4.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+robocon2023_cqupt\heap_4.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 robocon2023_cqupt\heap_4.o: ../Core/Inc/FreeRTOSConfig.h
 robocon2023_cqupt\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 robocon2023_cqupt\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp.sp
+--cpu=Cortex-M4.fp
 "robocon2023_cqupt\startup_stm32f427xx.o"
 "robocon2023_cqupt\main.o"
 "robocon2023_cqupt\gpio.o"

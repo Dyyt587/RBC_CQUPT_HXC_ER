@@ -6,6 +6,7 @@
 extern	rc_info_t rc;
 unsigned char Ring_Flag=1;
 unsigned char simple_rc_ctrl = 1;//遥控简单控制
+extern uint8_t shot_flag;
 
 //隐藏结构体
 typedef enum{
@@ -123,47 +124,32 @@ void solenoid_task(void const * argument)
 		if (simple_rc_ctrl)
 		{
 
-			if (rc.ch5 == 1)
+			if (rc.ch5 == 1)//射环
 			{
 				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_RESET);
 			}
 			else
 			{
-				//			HAL_GPIO_WritePin(SOL_1_Fetch_Ring_GPIO_Port, SOL_1_Fetch_Ring_Pin, GPIO_PIN_RESET);
 				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_SET);
 			}
-			if (rc.ch6 == 1)
+			
+			if (rc.ch6 == 1) //抱环
 			{
 				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_RESET);
-
-				//			HAL_GPIO_WritePin(SOL_2_Lifting_Ring_GPIO_Port, SOL_2_Lifting_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
 			}
 			else
 			{
-				//			HAL_GPIO_WritePin(SOL_1_Fetch_Ring_GPIO_Port, SOL_1_Fetch_Ring_Pin, GPIO_PIN_RESET);
 				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_SET);
-				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
 			}
-			if (rc.ch8 == 1)
-			{	
-
-				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);
 			
-
-				//			HAL_GPIO_WritePin(SOL_2_Lifting_Ring_GPIO_Port, SOL_2_Lifting_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
+			if (rc.ch8 == 1) //推环
+			{	
+				TIM8->CCR3 = 3600;
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);
 			}
 			else
 			{
 				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);
-				//HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);
-				
-				//			HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
-				//			HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
 			}
 			
 			if(rc.ch10 ==1)
@@ -183,48 +169,63 @@ void solenoid_task(void const * argument)
 			//		}
 
 		}else{
-
-			
 			//自动辅助控制
 switch (state)
 {
 
 	case None:
-		Solenoid_Reset();//相当于刚开机的初始状态
+		if(Limit_up() == 1)
+		{
+			//控制丝杆不能往上移动
+			
+			state = 1;
+		}else
+		{
+			state = 0;
+		}
 		break;
 	case Fetah_Will_Start:
-
-		state = Fetah_Runing_Start;
-		Fetch_ring(1);
+		shot_flag = 1;
+	  while(shot_flag)
+		{
+			//推环
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);	
+				TIM8->CCR3 = 3600; //抬起舵机
+		}
+		shot_flag = 0;
+//		Fetch_ring(1);
+		state = 2;
 		break;
 	case Lift_Will_Start:
-		
-		state = Lift_Runing_Start;
+		shot_flag = 1;
+		TIM8->CCR3 = 2000; //舵机	 
+	  osDelay(500);
+	  while(shot_flag)
+		{
+			//she环
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_RESET);	
+
+		}
+		shot_flag = 0;		
+		state = 3;
+//		state = Lift_Runing_Start;
 		break;
 	case Push_Will_Start:
-		
-		state = Lift_Runing_Start;
+		shot_flag = 1;
+	  while(shot_flag)
+		{
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_SET);
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_SET);
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);	
+		}
+		shot_flag=0;
+		state = 0;
 		break;
-	case Shot_Will_Start:
-		
-		state = Lift_Runing_Start;
-		break;
+//	case Shot_Will_Start:
+//		
+//		state = Lift_Runing_Start;
+//		break;
 
-	
-//	case Fetah_Will_Start:
-//		break;
-//	case Fetah_Will_Start:
-//		break;
-//	case Fetah_Will_Start:
-//		break;
-//	case Fetah_Will_Start:
-//		break;
-//	case Fetah_Will_Start:
-//		break;
-//	case Fetah_Will_Start:
-//		break;
-//	case Fetah_Will_Start:
-//		break;
 	default:
 		break;
 }

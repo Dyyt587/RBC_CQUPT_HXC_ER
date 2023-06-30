@@ -37,7 +37,7 @@
 #include "commend.h"
 #include <string.h>
 #include <flashdb.h>
-
+uint8_t shot_flag=0;
 static uint32_t boot_count = 0;
 static time_t boot_time[10] = {0, 1, 2, 3};
 struct fdb_kvdb kvdb;
@@ -145,8 +145,10 @@ int main(void)
   MX_UART8_Init();
   MX_TIM4_Init();
   MX_TIM8_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   dbus_uart_init();
+	HAL_TIM_Base_Start_IT(&htim2);
   TIM8 ->CCR3 = 2000;
   TIM8 ->CCR4 = 0;
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
@@ -298,7 +300,16 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
-
+	if(htim->Instance == TIM2)
+	{
+		if(shot_flag == 1)
+		{
+			shot_flag = 0;
+		}else
+		{
+			shot_flag=0;
+		}
+	}
   /* USER CODE END Callback 1 */
 }
 

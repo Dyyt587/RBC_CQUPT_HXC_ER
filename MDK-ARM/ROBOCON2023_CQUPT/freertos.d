@@ -1,7 +1,7 @@
 robocon2023_cqupt\freertos.o: ../Core/Src/freertos.c
 robocon2023_cqupt\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-robocon2023_cqupt\freertos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-robocon2023_cqupt\freertos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+robocon2023_cqupt\freertos.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+robocon2023_cqupt\freertos.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 robocon2023_cqupt\freertos.o: ../Core/Inc/FreeRTOSConfig.h
 robocon2023_cqupt\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 robocon2023_cqupt\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

@@ -28,6 +28,9 @@ extern void solenoid_task(void const * argument);
 
 #define SOL_ERR(x) printf("[Soleniod]: %s\r\n",x)
 
+#define Limit_up() HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_4)
+#define Limit_down() HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_5)
+
 #define Fetch_Ring() do{\
 	HAL_GPIO_WritePin(SOL_1_Fetch_Ring_GPIO_Port, SOL_1_Fetch_Ring_Pin, GPIO_PIN_SET)\
 }while (0)

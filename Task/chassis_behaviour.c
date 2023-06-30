@@ -214,15 +214,12 @@ void chassis_behaviour_control_set(fp32 *Vx_Set, fp32 *Vy_Set, fp32 *Vw_Set, cha
     {
         chassis_remote_move_control(Vx_Set, Vy_Set, Vw_Set, Chassis_Move_Rc_To_Vector);
     }
-
-
     //遥控器设置模式
     //当云台在某些模式下，像初始化， 底盘不动
 //    if (gimbal_cmd_to_chassis_stop())
 //    {
 //        chassis_behaviour_mode = CHASSIS_NO_MOVE;
 //    }
-
 }
 
 

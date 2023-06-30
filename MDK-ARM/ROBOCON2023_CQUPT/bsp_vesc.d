@@ -3,7 +3,7 @@ robocon2023_cqupt\bsp_vesc.o: ..\Hardware\bsp_vesc.h
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/CMSIS/Include/core_cm4.h
-robocon2023_cqupt\bsp_vesc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+robocon2023_cqupt\bsp_vesc.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/CMSIS/Include/cmsis_version.h
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -15,7 +15,7 @@ robocon2023_cqupt\bsp_vesc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-robocon2023_cqupt\bsp_vesc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+robocon2023_cqupt\bsp_vesc.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -34,7 +34,7 @@ robocon2023_cqupt\bsp_vesc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 robocon2023_cqupt\bsp_vesc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 robocon2023_cqupt\bsp_vesc.o: ../Hardware/vesc_uart/datatypes.h
-robocon2023_cqupt\bsp_vesc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+robocon2023_cqupt\bsp_vesc.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdbool.h
 robocon2023_cqupt\bsp_vesc.o: ../Hardware/vesc_uart/bldc_interface.h
 robocon2023_cqupt\bsp_vesc.o: ../Hardware/vesc_uart/bldc_interface_uart.h
 robocon2023_cqupt\bsp_vesc.o: ../Hardware/vesc_uart/packet.h
@@ -42,8 +42,8 @@ robocon2023_cqupt\bsp_vesc.o: ../Hardware/vesc_uart/buffer.h
 robocon2023_cqupt\bsp_vesc.o: ../Hardware/vesc_uart/crc.h
 robocon2023_cqupt\bsp_vesc.o: ../Core/Inc/usart.h
 robocon2023_cqupt\bsp_vesc.o: ../Core/Inc/main.h
-robocon2023_cqupt\bsp_vesc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-robocon2023_cqupt\bsp_vesc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+robocon2023_cqupt\bsp_vesc.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+robocon2023_cqupt\bsp_vesc.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 robocon2023_cqupt\bsp_vesc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/freertos.h
 robocon2023_cqupt\bsp_vesc.o: ../Core/Inc/FreeRTOSConfig.h
 robocon2023_cqupt\bsp_vesc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h

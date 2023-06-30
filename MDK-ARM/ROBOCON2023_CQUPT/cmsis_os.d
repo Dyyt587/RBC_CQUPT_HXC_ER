@@ -1,9 +1,9 @@
 robocon2023_cqupt\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
-robocon2023_cqupt\cmsis_os.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+robocon2023_cqupt\cmsis_os.o: D:\Keil5\ARM\ARMCC\Bin\..\include\string.h
 robocon2023_cqupt\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 robocon2023_cqupt\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-robocon2023_cqupt\cmsis_os.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-robocon2023_cqupt\cmsis_os.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+robocon2023_cqupt\cmsis_os.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+robocon2023_cqupt\cmsis_os.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 robocon2023_cqupt\cmsis_os.o: ../Core/Inc/FreeRTOSConfig.h
 robocon2023_cqupt\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 robocon2023_cqupt\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
