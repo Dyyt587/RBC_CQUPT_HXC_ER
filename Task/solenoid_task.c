@@ -118,15 +118,22 @@ void solenoid_task(void const * argument)
 	HAL_GPIO_WritePin(SOL_2_Lifting_Ring_GPIO_Port, SOL_2_Lifting_Ring_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(SOL_3_Push_Ring_GPIO_Port, SOL_3_Push_Ring_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(SOL_1_Shot_GPIO_Port, SOL_1_Shot_Pin, GPIO_PIN_RESET);
-	
+				state = 0;
 	while (1) {
 		osDelay(100);
+		if(rc.ch11 == 1)
+		{
+			simple_rc_ctrl=1;
+		}else
+		{
+			simple_rc_ctrl=0;			
+		}
 		if (simple_rc_ctrl)
 		{
 
 			if (rc.ch5 == 1)//射环
 			{
-				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_RESET);//liang
 			}
 			else
 			{
@@ -169,34 +176,38 @@ void solenoid_task(void const * argument)
 			//		}
 
 		}else{
+		//	printf();
 			//自动辅助控制
 switch (state)
 {
 
-	case None:
-		if(Limit_up() == 1)
-		{
-			//控制丝杆不能往上移动
-			
-			state = 1;
-		}else
-		{
-			state = 0;
-		}
+	case 0:
+//		if(Limit_up() == 1)
+//		{
+//			//控制丝杆不能往上移动
+//			
+//			state = 1;
+//		}else
+//		{
+//			state = 1;
+//		//	state = 0;
+//		}
+		state = 1;
 		break;
-	case Fetah_Will_Start:
+	case 1:
 		shot_flag = 1;
 	  while(shot_flag)
 		{
-			//推环
-				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);	
 				TIM8->CCR3 = 3600; //抬起舵机
+			//推环
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);	
+
 		}
 		shot_flag = 0;
 //		Fetch_ring(1);
 		state = 2;
 		break;
-	case Lift_Will_Start:
+	case 2:
 		shot_flag = 1;
 		TIM8->CCR3 = 2000; //舵机	 
 	  osDelay(500);
@@ -204,19 +215,18 @@ switch (state)
 		{
 			//she环
 				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_RESET);	
-
 		}
 		shot_flag = 0;		
 		state = 3;
 //		state = Lift_Runing_Start;
 		break;
-	case Push_Will_Start:
+	case 3:
 		shot_flag = 1;
 	  while(shot_flag)
 		{
 				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_SET);
 				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_SET);
-				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);	
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);	
 		}
 		shot_flag=0;
 		state = 0;

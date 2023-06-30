@@ -349,6 +349,9 @@ static void chassis_feedback_update(chassis_move_t *Chassis_Move_Update)
 #define L 0.11f      //长度
 #define sin45 0.707107f  //sin45
 #define cos45 0.707107f  //cos45
+
+#define sin62 0.887010f
+#define cos62 0.461748f
 /**
   * @brief          设置底盘控制设置值, 三运动控制值是通过chassis_behaviour_control_set函数设置的
   * @param[out]     Chassis_Move_Control:"chassis_move_t"变量指针.
@@ -398,6 +401,11 @@ static void chassis_kinematics_omni4_speed(const fp32 Vx_set, const fp32 Vy_set,
     //because the gimbal is in front of chassis, when chassis rotates, wheel 0 and wheel 1 should be slower and wheel 2 and wheel 3 should be faster
     //旋转的时候， 由于云台靠前，所以是前面两轮 0 ，1 旋转的速度变慢， 后面两轮 2,3 旋转的速度变快
     /*运动学逆解*/
+//    Wheel_Speed[0] = -cos45 * Vx_set + sin45 * Vy_set + L * Vw_Set;
+//    Wheel_Speed[1] =  cos62 * Vx_set - sin62 * Vy_set + L * Vw_Set;
+//    Wheel_Speed[2] =  cos62 * Vx_set + sin62 * Vy_set + L * Vw_Set;
+//    Wheel_Speed[3] =  0;
+	
     Wheel_Speed[0] = -cos45 * Vx_set - sin45 * Vy_set + L * Vw_Set;
     Wheel_Speed[1] = -cos45 * Vx_set + sin45 * Vy_set + L * Vw_Set;
     Wheel_Speed[2] =  cos45 * Vx_set - sin45 * Vy_set + L * Vw_Set;
@@ -466,7 +474,7 @@ static void  chassis_set_kinematics(const fp32 Vx_set, const fp32 Vy_set, const 
     }
     float Wheel_Speed[4]= {0};
     float Wheel_Angle[4]= {0};
-
+//模式
     if (Chassis_Move_Kinematics->Chassis_Kinematics_Mode == Omni3_Car)
     {
         chassis_kinematics_omni3_speed(Vx_set,Vy_set,Vw_Set,Wheel_Speed);
@@ -493,7 +501,7 @@ static void  chassis_set_kinematics(const fp32 Vx_set, const fp32 Vy_set, const 
 
 /**
   * @brief          控制循环，根据控制设定值，计算电机电流值，进行控制
-  * @param[out]     chassis_move_control_loop:"chassis_move"变量指针.
+  * @param[out]     chassis_move_control_loop:"chassis_move"变量指针. 地盘pid计算
   * @retval         none
   */
 static void chassis_control_loop(chassis_move_t *Chassis_Move_Control_Loop)
