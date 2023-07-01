@@ -140,7 +140,7 @@ void solenoid_task(void const * argument)
 				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_SET);
 			}
 			
-			if (rc.ch6 == 1) //抱环
+			if (rc.ch6 == 1) //抱环 ch4
 			{
 				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_RESET);
 			}
@@ -176,6 +176,9 @@ void solenoid_task(void const * argument)
 			//		}
 
 		}else{
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);	
 		//	printf();
 			//自动辅助控制
 switch (state)
@@ -200,7 +203,7 @@ switch (state)
 		{
 				TIM8->CCR3 = 3600; //抬起舵机
 			//推环
-				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);	
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);	
 
 		}
 		shot_flag = 0;
@@ -214,7 +217,8 @@ switch (state)
 	  while(shot_flag)
 		{
 			//she环
-				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_RESET);	
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_SET);	
+
 		}
 		shot_flag = 0;		
 		state = 3;
@@ -224,9 +228,9 @@ switch (state)
 		shot_flag = 1;
 	  while(shot_flag)
 		{
-				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_SET);
-				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_SET);
-				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET);	
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);	
 		}
 		shot_flag=0;
 		state = 0;

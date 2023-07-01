@@ -77,7 +77,7 @@ void motor_handler(const rc_info_t* _rc)
 	//sigan_speed= pid_calc(&SiGan_Position_pid, _GET_ANGLE_DEGREE(), sigantarget*8192/19/4);
 	sigan_speed= pid_calc(&SiGan_Position_pid, _GET_ANGLE_DEGREE(), sigantarget*4/360);
 	
-	sigan_speed=rc.ch4*15.0;
+	sigan_speed=-1*rc.ch13*15.0;
 	float __sigan_speed=pid_calc(&SiGan_Speed_pid,GET_SiGan_SPEED(),sigan_speed);//
 	set_motor_A(&hcan2,0,__target,__sigan_speed,0);//
 	

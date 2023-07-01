@@ -111,17 +111,17 @@ void led_task(void const * argument)
 	while(1){
 		
 	  RUN_LED();
-		#if   Print_remote
-        printf("ch1:%4d ch2:%4d ch3:%4d ch4:%4d ch5:%4d ch6:%4d \r\n",rc.ch1,rc.ch2,rc.ch3,rc.ch4,rc.ch5,rc.ch6);
-#endif
-        /*******轮子速度*******/
-#if   Print_Speed
-//		 printf("1:%6d,2:%6d,3:%6d,4:%6d,5:%6d,6:%6d\n",
-//               motor_can1[0].speed_rpm,motor_can1[1].speed_rpm,motor_can1[2].speed_rpm,
-//               motor_can1[3].speed_rpm,motor_can1[4].speed_rpm,motor_can1[5].speed_rpm);
+//		#if   Print_remote
+//        printf("ch1:%4d ch2:%4d ch3:%4d ch4:%4d ch5:%4d ch6:%4d \r\n",rc.ch1,rc.ch2,rc.ch3,rc.ch4,rc.ch5,rc.ch6);
+//#endif
+//        /*******轮子速度*******/
+//#if   Print_Speed
+////		 printf("1:%6d,2:%6d,3:%6d,4:%6d,5:%6d,6:%6d\n",
+////               motor_can1[0].speed_rpm,motor_can1[1].speed_rpm,motor_can1[2].speed_rpm,
+////               motor_can1[3].speed_rpm,motor_can1[4].speed_rpm,motor_can1[5].speed_rpm);
 
-        printf("%f\r\n",(float)motor_can1[0].speed_rpm);
-#endif
+//        printf("%f\r\n",(float)motor_can1[0].speed_rpm);
+//#endif
 
 
 //extern float pos_x;//坐标X--ZBx

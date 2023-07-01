@@ -168,11 +168,11 @@ void Test_AS5048(void)
 	
 	
 	//此为一直发送初始化的值（没啥用）
-	printf("1:%f  2:%f 3:%f  4:%f\r\n",
-	Init_test_AS5048_test(0),
-	Init_test_AS5048_test(1),
-  Init_test_AS5048_test(2),
-  Init_test_AS5048_test(3));
+//	printf("1:%f  2:%f 3:%f  4:%f\r\n",
+//	Init_test_AS5048_test(0),
+//	Init_test_AS5048_test(1),
+//  Init_test_AS5048_test(2),
+//  Init_test_AS5048_test(3));
 
 
 //	printf("a:%f  b:%f c:%f  d:%f\r\n",
@@ -213,11 +213,11 @@ void Init_test_AS5048(void)//由于他在初始化里只执行一次
 //	}
 	//此处将上面的READ套了一个壳
 	//防止程序死机
-	printf("1:%f  2:%f 3:%f  4:%f\r\n",
-	Init_test_AS5048_test(0),
-	Init_test_AS5048_test(1),
-	Init_test_AS5048_test(2),
-	Init_test_AS5048_test(3));
+//	printf("1:%f  2:%f 3:%f  4:%f\r\n",
+//	Init_test_AS5048_test(0),
+//	Init_test_AS5048_test(1),
+//	Init_test_AS5048_test(2),
+//	Init_test_AS5048_test(3));
 	
 	//此处程序是为了检测其是否正常，给定的一些特殊初始值
 	

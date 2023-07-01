@@ -6,10 +6,10 @@
 #include "cmsis_os.h"
 #include "stdio.h"
 #include "bsp_as5048.h"
-
+#include "pid.h"
 #define CHASSIS_CAN hcan1
 #define DECE_RATIO_ER_TR  12
-
+extern rc_info_t rc;
 //全场定位
 //int testcount=0;
 extern float pos_x;//坐标X--ZBx
@@ -22,6 +22,7 @@ typedef float fp32;
 typedef double fp64;
 
 
+motor_measure_t motor[8];
 
 static void chassis_init(chassis_move_t *Chassis_Move_Init);
 
@@ -41,17 +42,81 @@ static void set_pos(float X_target, float Y_target, float Angle_target,
 static void Set_speed(int Velocity_X, int Velocity_Y, int W,chassis_move_t *Chassis_Move_Control_Loop);
 
 extern float Read_init_AS5048A[4];
-
+static void Zi_Xuan(int dirc,float v_zixuan,chassis_move_t *Chassis_Move_Control);
 //底盘运动数据
 chassis_move_t Chassis_Move;
+float p=0,i=0,d=0;				 
+void wheel_dir(chassis_move_t *Chassis_Move_Control_Loop)
+{
+	int i=0;
+			    //转向轮
+    for ( i = 0; i < 4; i++)
+    {
+
+        pid_calc(&Chassis_Move_Control_Loop->Wheel_Dir[i].pid_pos,
+                 Chassis_Move_Control_Loop->Wheel_Dir[i].angle,//total_angle赋值的、、2006读出来的
+                Chassis_Move_Control_Loop->Wheel_Dir[i].angle_set);//初始化纠正-Read_init_AS5048A[i]//-Init_test_AS5048_test(i)
+//			0);
+	//		printf("angle%d=%f\r\n",i,Chassis_Move_Control_Loop->Wheel_Dir[i].angle);
+        pid_calc(&Chassis_Move_Control_Loop->Wheel_Dir[i].pid_speed,
+                 Chassis_Move_Control_Loop->Wheel_Dir[i].speed,
+                 Chassis_Move_Control_Loop->Wheel_Dir[i].pid_pos.pos_out);
+    }
+}
+void xuan()
+{
+				chassis_feedback_update(&Chassis_Move);
+			int i=0;
+	    if(rc.ch4 <40 || rc.ch4> -40)
+			{
+			   Zi_Xuan(1,rc.ch4*0.8,&Chassis_Move);
+			}else 
+			{
+			   Zi_Xuan(1,rc.ch4*5,&Chassis_Move);				
+			}
+		 for ( i = 0; i < 4; i++)
+    {
+        pid_calc(&Chassis_Move.Wheel_Speed[i].pid_speed,
+                 Chassis_Move.Wheel_Speed[i].speed,
+                Chassis_Move.Wheel_Speed[i].speed_set);
+	//		printf("speed%d=%f\r\n",i,Chassis_Move.Wheel_Speed[i].speed);
+    }
+
+    //赋值电流值
+
+
+   wheel_dir(&Chassis_Move);
+		    for ( i = 0; i < 4; i++)
+    {
+
+        Chassis_Move.Wheel_Speed[i].give_current =
+            (int16_t)Chassis_Move.Wheel_Speed[i].pid_speed.pos_out;
+        Chassis_Move.Wheel_Dir[i].give_current =
+            (int16_t)Chassis_Move.Wheel_Dir[i].pid_speed.pos_out;
+    }
+	    //发送控制电流	
+		        set_motor(&CHASSIS_CAN,
+                  //驱动轮
+                  Chassis_Move.Wheel_Speed[0].give_current,
+                  Chassis_Move.Wheel_Speed[1].give_current,
+                  Chassis_Move.Wheel_Speed[2].give_current,
+                  Chassis_Move.Wheel_Speed[3].give_current,
+                  //转向轮
+                  //转向轮
+                  Chassis_Move.Wheel_Dir[0].give_current,
+                  Chassis_Move.Wheel_Dir[1].give_current,
+                  Chassis_Move.Wheel_Dir[2].give_current,
+                  Chassis_Move.Wheel_Dir[3].give_current
+		);
+	
+}
 /**
   * @brief          底盘任务，间隔 CHASSIS_CONTROL_TIME_MS 2ms
   * @param[in]      pvParameters: 空
-  * @retval         none
+* @retval         none 1:
   */
 void chassis_task(void const * argument)
 {
-	
     chassis_init(&Chassis_Move);
 
 //	  Omni3_Car,
@@ -62,37 +127,28 @@ void chassis_task(void const * argument)
     Chassis_Move.Chassis_Kinematics_Mode = Wheel4_Car;
 	  Init_test_AS5048();
 		chassis_location_init(&Chassis_Move);//这两个是自己写的，后期调试
-	
-
+//	
+ 
     while(1)
-    {
+    {       
+		 if(rc.ch4!=0)
+		 {
+			 xuan();
+		 }else
+		 {
         //设置底盘控制模式
         chassis_set_mode(&Chassis_Move);
         //模式切换数据保存
         //chassis_mode_change_control_transit(&Chassis_Move);
 
         //底盘数据更新
-        chassis_feedback_update(&Chassis_Move);
-
+				chassis_feedback_update(&Chassis_Move);
         //底盘控制量设置
         chassis_set_contorl(&Chassis_Move);
-			
         //底盘控制PID计算
-        chassis_control_loop(&Chassis_Move);
-
-      //  chassis_info_print(&Chassis_Move);
-//		 if(count++ >100)
-//		 {
-//			 HAL_GPIO_TogglePin(GPIOE,GPIO_PIN_11);
-//			 count=0;
-//		 }
-//		 if(count%5==0)
-//		 {
-//			chassis_info_print(&Chassis_Move);
-//		 }
-		 
-
-       chassis_info_print(&Chassis_Move);
+        chassis_control_loop(&Chassis_Move);			 
+		 }
+   //    chassis_info_print(&Chassis_Move);
         osDelay(10);
 
     }
@@ -253,12 +309,12 @@ static void chassis_init(chassis_move_t *Chassis_Move_Init)
 //							   WHEEL_DIR_PID_SPEED_KD);                   //转向轮速度Kd         0.01
 		 
         PID_struct_init(&Chassis_Move_Init->Wheel_Speed[i].pid_speed,POSITION_PID, 10000, 2000,
-                        5.0f, 0.04f, 0.0f);
+                        5.0f, 0.04f, 0.0f); //1.5f, 0.02f, 0.0f
         // 5 0.04 0
         PID_struct_init(&Chassis_Move_Init->Wheel_Dir[i].pid_pos,POSITION_PID, 10000, 2000,
-                        400.0f, 0.00f, 10.0);
+                        100.0f, 0.01f, 0.0f);//400 0 10    ***400.0f, 00.0f, 10.0f
         PID_struct_init(&Chassis_Move_Init->Wheel_Dir[i].pid_speed,POSITION_PID, 8000, 2000,
-                        4.5f, 0.08f, 1.5f);
+                        3.0f, 0.0f, 0.0f);//4.5  0.08f, 1.5f   ** 0.3f, 0.05f, 1.5f
     }
     //初始化底盘角度PID
     PID_struct_init(&Chassis_Move_Init->chassis_angle_pid, POSITION_PID, 10000, 2000,
@@ -376,6 +432,74 @@ static void chassis_set_contorl(chassis_move_t *Chassis_Move_Control)
 
 
 
+// ER 自旋解算
+////							1* * * * * * * 2
+////								*          *        ︿   V_Y
+////								 *    @   *         |
+////								  *      *          |             //自转速度 顺时针为正
+////									 *    *           ----->  V_X
+////									  *  *
+////									   *							@ : 旋转圆心
+////                     3
+
+// 3号轮到2号轮线速度转换系数
+#define k_3_2 0.708
+// 1号和2号轮相对于y轴的偏角
+#define aph_1 15.05 
+// 3号轮相对于y轴的偏角
+#define aph_2 90
+
+// 自旋速度
+float v_zixuan = 0;
+
+// 自旋方向 1：顺时针；0：逆时针
+int dirc = 1; 
+
+/**
+自旋函数
+传入参数（旋转方向，旋转速度）
+*/
+static void Zi_Xuan(int dirc,float v_zixuan,chassis_move_t *Chassis_Move_Control)
+{
+	// 1、2、3号线速度
+	float v_1,v_2,v_3;
+	// 1、2、3号相对y轴偏角
+	float a_1,a_2,a_3;
+	
+
+	if(dirc ==1)
+	{
+
+		v_1 = -v_zixuan;
+		v_2 = -v_1;
+		v_3 = -k_3_2*v_1;
+		
+		a_1 = aph_1;
+		a_2 = -a_1;
+		a_3 = aph_2;
+	}
+	if(dirc == 0)
+	{
+
+		v_1 = v_zixuan;
+		v_2 = -v_1;
+		v_3 = -k_3_2*v_1;
+		
+		a_1 = aph_1;
+		a_2 = -a_1;
+		a_3 = aph_2;
+	}
+	Chassis_Move_Control->Wheel_Speed[1].speed_set = v_1;
+	Chassis_Move_Control->Wheel_Speed[2].speed_set = v_2;
+	Chassis_Move_Control->Wheel_Speed[3].speed_set = v_3;
+	
+	
+	Chassis_Move_Control->Wheel_Dir[0].angle_set = a_1;
+	Chassis_Move_Control->Wheel_Dir[2].angle_set = a_2;
+	Chassis_Move_Control->Wheel_Dir[1].angle_set = a_3;
+	
+}
+
 
 ////						3	  **************   2
 ////								*          *        ︿   V_Y
@@ -481,6 +605,7 @@ static void  chassis_set_kinematics(const fp32 Vx_set, const fp32 Vy_set, const 
     }
     else if (Chassis_Move_Kinematics->Chassis_Kinematics_Mode == Omni4_Car)
     {
+//			Zi_Xuan(1,2000,Wheel_Speed,Wheel_Angle);
         chassis_kinematics_omni4_speed(Vx_set,Vy_set,Vw_Set,Wheel_Speed);
     }
     else if (Chassis_Move_Kinematics->Chassis_Kinematics_Mode == Wheel3_Car)

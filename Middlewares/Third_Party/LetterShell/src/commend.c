@@ -16,13 +16,13 @@
 var_list_t var_list;
 var_list_t* _var_begin = 0;
 
-
+extern float p,i,d;
 
 int a = -1234567890;
 int a1 = 0;
 char b = 1;
 double c = -1.123456789;
-float d = 1;
+//float d = 1;
 #define __NAME(restrc,x,name) strcpy(name,#x)
 
 //请在这个函数中添加变量使该变量可以在命令行实时查看和修改
@@ -39,8 +39,10 @@ void var_init(void)
     VAR_CMD_REGISTER(b, _8);
     VAR_CMD_REGISTER(a1, _32);
     VAR_CMD_REGISTER(c, _lf);//double类型
-    VAR_CMD_REGISTER(d, _f);//float类型
-
+  //  VAR_CMD_REGISTER(d, _f);//float类型
+    VAR_CMD_REGISTER(p, _f);
+	    VAR_CMD_REGISTER(i, _f);
+	    VAR_CMD_REGISTER(d, _f);
 //    var_register(&gps_tau1201.latitude,"curlat",_lf);
 //    var_register(&gps_tau1201.longitude,"curlon",_lf);
 
