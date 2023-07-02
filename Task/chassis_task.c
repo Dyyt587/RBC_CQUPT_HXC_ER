@@ -67,13 +67,13 @@ void xuan()
 {
 				chassis_feedback_update(&Chassis_Move);
 			int i=0;
-	    if(rc.ch4 <40 || rc.ch4> -40)
-			{
-			   Zi_Xuan(1,rc.ch4*0.8,&Chassis_Move);
-			}else 
-			{
-			   Zi_Xuan(1,rc.ch4*5,&Chassis_Move);				
-			}
+//	    if(rc.ch4 <40 || rc.ch4> -40)
+//			{
+			   Zi_Xuan(1,rc.ch4*3.0f,&Chassis_Move);
+//			}else 
+//			{
+//			   Zi_Xuan(1,rc.ch4*5.0f,&Chassis_Move);				
+//			}
 		 for ( i = 0; i < 4; i++)
     {
         pid_calc(&Chassis_Move.Wheel_Speed[i].pid_speed,
@@ -131,10 +131,11 @@ void chassis_task(void const * argument)
  
     while(1)
     {       
-		 if(rc.ch4!=0)
+		 if(rc.ch4!=0  )
 		 {
 			 xuan();
-		 }else
+		 }
+		 else //if(rc.ch1 !=0 || rc.ch2 !=0)
 		 {
         //设置底盘控制模式
         chassis_set_mode(&Chassis_Move);
@@ -450,10 +451,10 @@ static void chassis_set_contorl(chassis_move_t *Chassis_Move_Control)
 #define aph_2 90
 
 // 自旋速度
-float v_zixuan = 0;
+//float v_zixuan = 0;
 
 // 自旋方向 1：顺时针；0：逆时针
-int dirc = 1; 
+//int dirc = 1; 
 
 /**
 自旋函数
