@@ -82,7 +82,7 @@ void xuan()
 	//		printf("speed%d=%f\r\n",i,Chassis_Move.Wheel_Speed[i].speed);
     }
 
-    //赋值电流值
+    //赋值电流值 ch3
 
 
    wheel_dir(&Chassis_Move);

@@ -79,7 +79,7 @@ static void chassis_remote_move_control(fp32 *Vx_Set, fp32 *Vy_Set, fp32 *Vw_Set
 		
 		*Vx_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch1*4.5;         //test
 		*Vy_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch2*4.5;         //test
-		*Vw_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch3;         //test
+//		*Vw_Set = Chassis_Move_Rc_to_Vector->Chassis_RC->ch3;         //test
 		
     return;
 		
