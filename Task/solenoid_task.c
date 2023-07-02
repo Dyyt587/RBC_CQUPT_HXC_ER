@@ -43,7 +43,7 @@ typedef enum{
 	Shot_Ended,
 }Solenoid_State_e;
 
-static Solenoid_State_e state;
+ uint8_t state =0;
 void Solenoid_Delay(uint32_t time)
 {
     //HAL_Delay(time);
@@ -185,16 +185,7 @@ switch (state)
 {
 
 	case 0:
-//		if(Limit_up() == 1)
-//		{
-//			//控制丝杆不能往上移动
-//			
-//			state = 1;
-//		}else
-//		{
-//			state = 1;
-//		//	state = 0;
-//		}
+//	  while(!state);
 		state = 1;
 		break;
 	case 1:

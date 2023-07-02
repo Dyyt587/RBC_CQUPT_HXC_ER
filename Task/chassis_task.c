@@ -648,7 +648,7 @@ static void chassis_control_loop(chassis_move_t *Chassis_Move_Control_Loop)
     {
         pid_calc(&Chassis_Move_Control_Loop->Wheel_Speed[i].pid_speed,
                  Chassis_Move_Control_Loop->Wheel_Speed[i].speed,
-                 Chassis_Move_Control_Loop->Wheel_Speed[i].speed_set);
+                 Chassis_Move_Control_Loop->Wheel_Speed[i].speed_set*2.5f);
     }
     //×ªÏòÂÖ
     for ( i = 0; i < 4; i++)
@@ -885,6 +885,7 @@ void chassis_location_init(chassis_move_t *Chassis_Move_Control_Loop)
 	
 	
 }
+
 
 
 

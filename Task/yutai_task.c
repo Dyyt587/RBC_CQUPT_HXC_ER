@@ -17,6 +17,7 @@
 #include <stdlib.h>
 #include "log.h"
 #include "test_task.h"
+#include "solenoid_task.h"
 
 
 #define _SET_TRIPOD_HEAD_ICURRENT(xx) do{set_motor_A(&hcan2,0,xx,0,0);}while(0)
@@ -27,7 +28,7 @@
 	
 #define GET_SiGan_SPEED() motor_can2[2].speed_rpm
 static unsigned int time;
-
+extern uint8_t state;
 float target=30;
 
 float sigan_speed=0;
@@ -79,8 +80,25 @@ void motor_handler(const rc_info_t* _rc)
 	
 	sigan_speed=-1*rc.ch13*15.0;
 	float __sigan_speed=pid_calc(&SiGan_Speed_pid,GET_SiGan_SPEED(),sigan_speed);//
-	set_motor_A(&hcan2,0,__target,__sigan_speed,0);//
-	
+		set_motor_A(&hcan2,0,__target,__sigan_speed,0);//		
+
+//	if(Limit_up() == 0 && Limit_down() == 0)//微动开关全没触碰到
+//	{
+//		set_motor_A(&hcan2,0,__target,__sigan_speed,0);//can2		
+//	}else if(Limit_up() == 1) //微动开关打到上限，使遥控器往上失灵  遥控器向下为-
+//	{
+//		if(rc.ch13 >0)
+//				set_motor_A(&hcan2,0,__target,0,0);
+//		else
+//				set_motor_A(&hcan2,0,__target,__sigan_speed,0);//
+//		
+//	}else if(Limit_down() ==1)
+//	{
+//		if(rc.ch13 < 0)
+//				set_motor_A(&hcan2,0,__target,0,0);
+//		else
+//				set_motor_A(&hcan2,0,__target,__sigan_speed,0);//		
+//	}	
 } 
 
 void steer_and_5065motor_handler(const rc_info_t* _rc)
